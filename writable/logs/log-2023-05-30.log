@@ -1,0 +1,611 @@
+CRITICAL - 2023-05-30 02:02:13 --> "mime_in[dicta_file, application/pdf" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 329.
+ 1 SYSTEMPATH\Validation\Validation.php(329): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mime_in[dicta_file, application/pdf')
+ 2 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('file', 'file', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\ConAdminWorkSaraban.php(32): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:12:49 --> finfo_file(C:\xampp\tmp\phpE9DC.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpE9DC.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\eoffice\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 115)
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpE9DC.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\ConAdminWorkSaraban.php(51): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:12:49 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpE9DC.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'C:\\xampp\\htdocs...', 115)
+#1 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Files\File.php(115): finfo_file(Resource id #145, 'C:\\xampp\\tmp\\ph...')
+#2 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 C:\xampp\htdocs\eoffice\app\Controllers\ConAdminWorkSaraban.php(51): CodeIgniter\Files\File->getRandomName()
+#6 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+#7 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+#8 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eoffice\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-30 02:15:06 --> finfo_file(C:\xampp\tmp\phpFF11.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpFF11.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\eoffice\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 115)
+ 2 SYSTEMPATH\Files\File.php(115): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpFF11.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\ConAdminWorkSaraban.php(51): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:15:06 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpFF11.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'C:\\xampp\\htdocs...', 115)
+#1 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Files\File.php(115): finfo_file(Resource id #141, 'C:\\xampp\\tmp\\ph...')
+#2 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\Files\File.php(127): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 C:\xampp\htdocs\eoffice\app\Controllers\ConAdminWorkSaraban.php(51): CodeIgniter\Files\File->getRandomName()
+#6 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+#7 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+#8 C:\xampp\htdocs\eoffice\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eoffice\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-30 02:20:26 --> Could not move file "phpE374.tmp" to "C:\xampp\htdocs\eoffice\writable\uploads/Admin/Dictation/". Reason: 
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 149.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpE374.tmp', 'C:\\xampp\\htdocs\\eoffice\\writable\\uploads/Admin/Dictation/', '')
+ 2 APPPATH\Controllers\ConAdminWorkSaraban.php(46): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs\\eoffice\\writable\\uploads/Admin/Dictation/', '1685413226.application/pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:21:47 --> Undefined variable $file
+in APPPATH\Controllers\ConAdminWorkSaraban.php on line 45.
+ 1 APPPATH\Controllers\ConAdminWorkSaraban.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConAdminWorkSaraban.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationInsert()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:28:40 --> Undefined variable $title
+in APPPATH\Views\Admin\AdminLeyout\AdminHeader.php on line 17.
+ 1 APPPATH\Views\Admin\AdminLeyout\AdminHeader.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\eoffice\\app\\Views\\Admin\\AdminLeyout\\AdminHeader.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\Admin\\AdminLeyout\\AdminHeader.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/AdminLeyout/AdminHeader', [], true)
+ 5 APPPATH\Controllers\ConAdminWorkSaraban.php(19): view('Admin/AdminLeyout/AdminHeader', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->InstructionMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:43:29 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::fetchAll()
+in APPPATH\Controllers\ConAdminWorkSaraban.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationShowData()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:44:51 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::fetchAll()
+in APPPATH\Controllers\ConAdminWorkSaraban.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationShowData()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 02:49:35 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\ConAdminWorkSaraban.php on line 74.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkSaraban->DictationShowData()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkSaraban))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:50:37 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:52:39 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:53:36 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:54:25 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:56:00 --> Invalid file: "User/UserLeyout/UserMenuLeft.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserMenuLeft.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserMenuLeft')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:56:07 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:56:49 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:57:08 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:57:38 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->UserHome()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:57:54 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:59:05 --> Invalid file: "user/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('user/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 04:59:34 --> Invalid file: "user/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('user/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:00:05 --> Invalid file: "user/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('user/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:00:23 --> Invalid file: "user/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('user/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:00:37 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:01:43 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:02:11 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:02:43 --> Invalid file: "../User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('../User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('../User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:02:50 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:03:04 --> Invalid file: "User/UserHome/UserPageHome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserHome/UserPageHome.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserHome/UserPageHome', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(20): view('User/UserHome/UserPageHome')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:03:24 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:05:23 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:05:38 --> Invalid file: "User\UserLeyout\UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User\\UserLeyout\\UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User\\UserLeyout\\UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User\\UserLeyout\\UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:06:15 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConAdminHome.php(30): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminHome->User()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:06:27 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\Admin\AdminLeyout\AdminMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\Admin\\AdminLeyout\\AdminMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/AdminLeyout/AdminMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConAdminHome.php(20): view('Admin/AdminLeyout/AdminMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:06:51 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:07:11 --> Invalid file: "User/UserLeyout/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserLeyout/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:18:36 --> Invalid file: "User/UserHeader.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserHeader.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserHeader', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(19): view('User/UserHeader', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:19:48 --> Invalid file: "User/UserLeyout/UserMenuLeft.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserLeyout/UserMenuLeft.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:21:43 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:25:00 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(21): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:25:08 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:25:12 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:25:24 --> Invalid file: "User/UserHome/UserPageHome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserHome/UserPageHome.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserHome/UserPageHome', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(21): view('User/UserHome/UserPageHome')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:25:32 --> Invalid file: "User/UserHome/UserPageHome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserHome/UserPageHome.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserHome/UserPageHome', [], true)
+ 3 APPPATH\Controllers\ConUserHome.php(21): view('User/UserHome/UserPageHome')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:27:21 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:27:36 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:28:48 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(24): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:29:11 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(32): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:36:03 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(31): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:38:26 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(31): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 05:38:50 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(31): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(20): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 06:44:31 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(31): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(21): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 06:44:46 --> Request URI segment is out of range: "1"
+in SYSTEMPATH\HTTP\URI.php on line 549.
+ 1 SYSTEMPATH\HTTP\URI.php(549): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(1)
+ 2 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(31): CodeIgniter\HTTP\URI->getSegment(1)
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 6 APPPATH\Controllers\ConUserHome.php(21): view('User/UserLeyout/UserMenuLeft')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 06:45:26 --> Undefined variable $UrlMenu
+in APPPATH\Views\User\UserLeyout\UserMenuLeft.php on line 23.
+ 1 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $UrlMenu', 'C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 5 APPPATH\Controllers\ConUserWorkSaraban.php(20): view('User/UserLeyout/UserMenuLeft')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserWorkSaraban->InstructionMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserWorkSaraban))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 06:47:23 --> Undefined variable $UrlMenuMain
+in APPPATH\Views\User\UserLeyout\UserMenuLeft.php on line 23.
+ 1 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $UrlMenuMain', 'C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 5 APPPATH\Controllers\ConUserWorkSaraban.php(20): view('User/UserLeyout/UserMenuLeft')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserWorkSaraban->InstructionMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserWorkSaraban))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 06:48:29 --> Undefined variable $UrlMenuSub
+in APPPATH\Views\User\UserLeyout\UserMenuLeft.php on line 38.
+ 1 APPPATH\Views\User\UserLeyout\UserMenuLeft.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $UrlMenuSub', 'C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\eoffice\\app\\Views\\User\\UserLeyout\\UserMenuLeft.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserMenuLeft', [], true)
+ 5 APPPATH\Controllers\ConUserHome.php(21): view('User/UserLeyout/UserMenuLeft')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 07:08:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Controllers\ConUserHome.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 07:09:09 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::num_rows()
+in APPPATH\Controllers\ConUserHome.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,18 @@
+CRITICAL - 2023-08-30 14:09:24 --> Invalid file: "User/UserSaraban/UserBookingBookMain.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserSaraban/UserBookingBookMain.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserSaraban/UserBookingBookMain', [], true)
+ 3 APPPATH\Controllers\ConUserBooking.php(29): view('User/UserSaraban/UserBookingBookMain')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 14:10:03 --> Invalid file: "User/UserBooking/UserBookingBookMain.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/UserBooking/UserBookingBookMain.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingBookMain', [], true)
+ 3 APPPATH\Controllers\ConUserBooking.php(29): view('User/UserBooking/UserBookingBookMain')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

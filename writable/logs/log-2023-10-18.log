@@ -1,0 +1,235 @@
+INFO - 2023-10-18 09:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-18 09:20:32 --> mysqli_sql_exception: Table 'skjacth_general.tb_repair' doesn't exist in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `repair_...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `repair_...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `repair_...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `repair_...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConUserRepair.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserRepair->DataTableShowRepari()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 09:20:32 --> Table 'skjacth_general.tb_repair' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `repair_ID`, `repair_order`, `repair_datetime`, `repair_userID`, `repair_phone`, `repair_caselist`, `repair_status`, `pers_prefix`, `pers_firstname`, `pers_lastname`
+FROM `tb_repair`
+JOIN `skjacth_personnel`.`tb_personnel` ON `tb_repair`.`repair_userID` = `tb_personnel`.`pers_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `repair_ID`, `repair_order`, `repair_datetime`, `repair_userID`, `repair_phone`, `repair_caselist`, `repair_status`, `pers_prefix`, `pers_firstname`, `pers_lastname`
+FROM `tb_repair`
+JOIN `skjacth_personnel`.`tb_personnel` ON `tb_repair`.`repair_userID` = `tb_personnel`.`pers_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `repair_ID`, `repair_order`, `repair_datetime`, `repair_userID`, `repair_phone`, `repair_caselist`, `repair_status`, `pers_prefix`, `pers_firstname`, `pers_lastname`
+FROM `tb_repair`
+JOIN `skjacth_personnel`.`tb_personnel` ON `tb_repair`.`repair_userID` = `tb_personnel`.`pers_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `repair_ID`, `repair_order`, `repair_datetime`, `repair_userID`, `repair_phone`, `repair_caselist`, `repair_status`, `pers_prefix`, `pers_firstname`, `pers_lastname`
+FROM `tb_repair`
+JOIN `skjacth_personnel`.`tb_personnel` ON `tb_repair`.`repair_userID` = `tb_personnel`.`pers_id`', [], false)
+ 5 APPPATH\Controllers\ConUserRepair.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->DataTableShowRepari()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:43:06 --> Undefined variable $CountbookingAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 43.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountbookingAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(34): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:44:10 --> Undefined variable $CountLocationRoomAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 26.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountLocationRoomAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(34): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:44:15 --> Undefined variable $CountbookingAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 43.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountbookingAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(34): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:44:43 --> Undefined variable $CountbookingAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 43.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountbookingAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(36): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:44:53 --> Undefined variable $CountbookingAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 43.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountbookingAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(36): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:44:59 --> Undefined variable $CountbookingAll
+in APPPATH\Views\User\UserBooking\UserBookingMain.php on line 43.
+ 1 APPPATH\Views\User\UserBooking\UserBookingMain.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CountbookingAll', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingMain', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(36): view('User/UserBooking/UserBookingMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:47:29 --> Undefined variable $Datethai
+in APPPATH\Views\User\UserBooking\UserBookingView.php on line 45.
+ 1 APPPATH\Views\User\UserBooking\UserBookingView.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Datethai', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(138): view('User/UserBooking/UserBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingView('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:49:06 --> Undefined variable $Datethai
+in APPPATH\Views\User\UserBooking\UserBookingView.php on line 45.
+ 1 APPPATH\Views\User\UserBooking\UserBookingView.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Datethai', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(138): view('User/UserBooking/UserBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingView('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:49:18 --> Class "App\Controllers\Datethai" not found
+in APPPATH\Controllers\ConUserBooking.php on line 124.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingView('8')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:49:33 --> Undefined property: stdClass::$pers_prefix
+in APPPATH\Views\User\UserBooking\UserBookingView.php on line 51.
+ 1 APPPATH\Views\User\UserBooking\UserBookingView.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pers_prefix', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(139): view('User/UserBooking/UserBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingView('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:53:20 --> Undefined property: stdClass::$pers_prefix
+in APPPATH\Views\User\UserBooking\UserBookingView.php on line 51.
+ 1 APPPATH\Views\User\UserBooking\UserBookingView.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pers_prefix', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(140): view('User/UserBooking/UserBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingView('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:54:07 --> Undefined variable $Datethai
+in APPPATH\Views\User\UserBooking\UserBookingAdd.php on line 26.
+ 1 APPPATH\Views\User\UserBooking\UserBookingAdd.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Datethai', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingAdd.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(81): view('User/UserBooking/UserBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingAdd('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 09:54:21 --> Undefined variable $BookignToday
+in APPPATH\Views\User\UserBooking\UserBookingAdd.php on line 36.
+ 1 APPPATH\Views\User\UserBooking\UserBookingAdd.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $BookignToday', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingAdd.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserBooking\\UserBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserBooking/UserBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserBooking.php(82): view('User/UserBooking/UserBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->BookingAdd('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 09:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 09:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-18 10:45:21 --> require(C:\xampp/librarie_skj/google_sheet/vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ConLogin.php on line 15.
+ 1 APPPATH\Controllers\ConLogin.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp/librarie_skj/google_sheet/vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConLogin.php', 15)
+ 2 APPPATH\Controllers\ConLogin.php(15): require()
+ 3 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\ConLogin->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-18 10:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-18 10:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

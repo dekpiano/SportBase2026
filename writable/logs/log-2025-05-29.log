@@ -1,0 +1,460 @@
+INFO - 2025-05-29 14:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 14:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 15:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-29 15:56:47 --> mysqli_sql_exception: Unknown column 'pos.position_name' in 'field list' in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`p...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`p...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`p...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`p...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-05-29 15:56:47 --> Unknown column 'pos.position_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', [], false)
+ 5 APPPATH\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 15:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-29 15:57:38 --> mysqli_sql_exception: Unknown column 'pos.position_name' in 'field list' in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`p...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`p...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`p...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`p...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-05-29 15:57:38 --> Unknown column 'pos.position_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`position_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`position_id` = `pos`.`position_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`person_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', [], false)
+ 5 APPPATH\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-29 16:00:00 --> mysqli_sql_exception: Unknown column 'pos.position_name' in 'order clause' in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`p...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`p...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`p...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`p...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-05-29 16:00:00 --> Unknown column 'pos.position_name' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`posi_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`posi_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`posi_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`posi_name`, COUNT(a.att_id) AS total_days, SUM(CASE WHEN a.att_status = "มา" THEN 1 ELSE 0 END) AS present, SUM(CASE WHEN a.att_status = "สาย" THEN 1 ELSE 0 END) AS late, SUM(CASE WHEN a.att_status = "ขาด" THEN 1 ELSE 0 END) AS absent, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`position_name`
+ORDER BY `pos`.`position_name`', [], false)
+ 5 APPPATH\Controllers\ConAdminSaveAttendance.php(235): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-29 16:05:28 --> mysqli_sql_exception: Unknown column 'pos.position_name' in 'field list' in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`p...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`p...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`p...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`p...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminSaveAttendance.php(233): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-05-29 16:05:28 --> Unknown column 'pos.position_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`position_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`position_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`position_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`position_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`', [], false)
+ 5 APPPATH\Controllers\ConAdminSaveAttendance.php(233): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-29 16:05:37 --> mysqli_sql_exception: Unknown column 'p.person_id' in 'field list' in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`p...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`p...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`p...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`p...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminSaveAttendance.php(233): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-05-29 16:05:37 --> Unknown column 'p.person_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pos`.`posi_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pos`.`posi_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pos`.`posi_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pos`.`posi_name`, COUNT(DISTINCT p.person_id) AS total_person, COUNT(DISTINCT CASE WHEN a.att_status IN ("มา", "สาย") THEN p.person_id END) AS attend_person, SUM(CASE WHEN a.att_status = "ลากิจ" THEN 1 ELSE 0 END) AS personal_leave, SUM(CASE WHEN a.att_status = "ลาป่วย" THEN 1 ELSE 0 END) AS sick_leave, SUM(CASE WHEN a.att_status = "ไปราชการ" THEN 1 ELSE 0 END) AS official_leave, SUM(CASE WHEN a.att_status = "อื่นๆ" THEN 1 ELSE 0 END) AS other_leave
+FROM `tb_personnel` `p`
+LEFT JOIN `skjacth_skj`.`tb_position` `pos` ON `p`.`pers_position` = `pos`.`posi_id`
+LEFT JOIN `skjacth_personnel`.`tb_personnel_attendance` `a` ON `p`.`pers_id` = `a`.`att_person_id` AND `a`.`att_date` BETWEEN \'2025-01-01\' AND \'2025-12-31\'
+GROUP BY `pos`.`posi_name`
+ORDER BY `pos`.`posi_name`', [], false)
+ 5 APPPATH\Controllers\ConAdminSaveAttendance.php(233): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-29 16:39:57 --> Undefined variable $start
+in APPPATH\Controllers\ConAdminSaveAttendance.php on line 228.
+ 1 APPPATH\Controllers\ConAdminSaveAttendance.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $start', 'D:\\xampp\\htdocs\\personnel\\app\\Controllers\\ConAdminSaveAttendance.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPosition()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-29 16:44:33 --> Undefined variable $start
+in APPPATH\Controllers\ConAdminSaveAttendance.php on line 228.
+ 1 APPPATH\Controllers\ConAdminSaveAttendance.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $start', 'D:\\xampp\\htdocs\\personnel\\app\\Controllers\\ConAdminSaveAttendance.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPositionDay()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-29 16:45:04 --> Undefined variable $start
+in APPPATH\Controllers\ConAdminSaveAttendance.php on line 228.
+ 1 APPPATH\Controllers\ConAdminSaveAttendance.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $start', 'D:\\xampp\\htdocs\\personnel\\app\\Controllers\\ConAdminSaveAttendance.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminSaveAttendance->leaveSummaryByPositionDay()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminSaveAttendance))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-29 16:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 16:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-29 17:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

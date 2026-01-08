@@ -1,0 +1,298 @@
+INFO - 2025-06-04 13:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:20:08 --> mysqli_sql_exception: Column 'pers_learning' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:20:08 --> Column 'pers_learning' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:08\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:08\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:08\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:20:31 --> mysqli_sql_exception: Column 'pers_learning' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:20:31 --> Column 'pers_learning' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:31\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:31\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:20:31\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:20:51 --> mysqli_sql_exception: Column 'pers_status' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:20:51 --> Column 'pers_status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:20:51\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:20:51\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:20:51\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:21:41 --> mysqli_sql_exception: Column 'pers_learning' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:21:41 --> Column 'pers_learning' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาง\', \'อิสรีย์\', \'จงเศรษฐี\', \'09-1051-8473\', \'\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:21:41\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาง\', \'อิสรีย์\', \'จงเศรษฐี\', \'09-1051-8473\', \'\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:21:41\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาง\', \'อิสรีย์\', \'จงเศรษฐี\', \'09-1051-8473\', \'\', \'posi_011\', NULL, \'\', \'\', \'2025-06-04 13:21:41\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:21:47 --> mysqli_sql_exception: Column 'pers_status' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:21:47 --> Column 'pers_status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:21:47\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:21:47\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-06-04 13:21:47\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:25:07 --> mysqli_sql_exception: Column 'pers_learning' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:25:07 --> Column 'pers_learning' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นางสาว\', \'อิสรีย์\', \'แสงเดช\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_010\', NULL, \'\', \'\', \'2025-06-04 13:25:07\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นางสาว\', \'อิสรีย์\', \'แสงเดช\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_010\', NULL, \'\', \'\', \'2025-06-04 13:25:07\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นางสาว\', \'อิสรีย์\', \'แสงเดช\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_010\', NULL, \'\', \'\', \'2025-06-04 13:25:07\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(150): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:29:53 --> mysqli_sql_exception: Column 'pers_learning' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:29:53 --> Column 'pers_learning' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', \'11\', NULL, \'\', \'\', \'2025-06-04 13:29:53\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', \'11\', NULL, \'\', \'\', \'2025-06-04 13:29:53\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (\'กำลังใช้งาน\', \'pers_175\', \'นาย\', \'จรินทร\', \'พรมบัว\', \'09-1051-8473\', \'dekpiano@skj.ac.th\', \'posi_011\', \'11\', NULL, \'\', \'\', \'2025-06-04 13:29:53\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_workother_id:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:29:57 --> mysqli_sql_exception: Column 'pers_status' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:29:57 --> Column 'pers_status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:29:57\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:29:57\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:29:57\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_workother_id:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:30:43 --> mysqli_sql_exception: Column 'pers_status' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:30:43 --> Column 'pers_status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:30:43\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:30:43\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:30:43\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_workother_id:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-04 13:31:25 --> mysqli_sql_exception: Column 'pers_id' cannot be null in D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\personnel\app\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+#6 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+#7 D:\xampp\htdocs\personnel\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\personnel\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-06-04 13:31:25 --> Column 'pers_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:31:25\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:31:25\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'\', NULL, NULL, NULL, \'2025-06-04 13:31:25\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_personnel` (`pers_status`, `pers_id`, `pers_prefix`, `pers_firstname`, `pers_lastname`, `pers_phone`, `pers_username`, `pers_position`, `pers_workother_id`, `pers_learning`, `pers_academic`, `pers_groupleade`, `pers_dataUpdate`, `pers_userEdit`) VALUES (:pers_status:, :pers_id:, :pers_prefix:, :pers_firstname:, :pers_lastname:, :pers_phone:, :pers_username:, :pers_position:, :pers_workother_id:, :pers_learning:, :pers_academic:, :pers_groupleade:, :pers_dataUpdate:, :pers_userEdit:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminWorkPerson.php(153): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminWorkPerson->PersonnelInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminWorkPerson))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-06-04 13:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-04 13:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

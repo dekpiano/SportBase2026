@@ -1,0 +1,215 @@
+CRITICAL - 2023-06-01 07:11:00 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:11:27 --> require(C:\xampp\htdocslibrarie_skj/google_sheet/vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ConLogin.php on line 17.
+ 1 APPPATH\Controllers\ConLogin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocslibrarie_skj/google_sheet/vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConLogin.php', 17)
+ 2 APPPATH\Controllers\ConLogin.php(17): require()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:11:41 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:13:40 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:14:23 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:15:29 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:25:02 --> Undefined variable $google_client
+in APPPATH\Controllers\ConLogin.php on line 13.
+ 1 APPPATH\Controllers\ConLogin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $google_client', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConLogin.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\ConLogin->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:25:18 --> Undefined variable $googleClient
+in APPPATH\Controllers\ConLogin.php on line 13.
+ 1 APPPATH\Controllers\ConLogin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $googleClient', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConLogin.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\ConLogin->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:25:35 --> Class "App\Controllers\Google_Client" not found
+in APPPATH\Controllers\ConLogin.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConLogin->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:55:10 --> Undefined variable $googleClient
+in APPPATH\Controllers\ConUserHome.php on line 54.
+ 1 APPPATH\Controllers\ConUserHome.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $googleClient', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConUserHome.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:55:36 --> Undefined variable $googleClient
+in APPPATH\Controllers\ConUserHome.php on line 54.
+ 1 APPPATH\Controllers\ConUserHome.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $googleClient', 'C:\\xampp\\htdocs\\eoffice\\app\\Controllers\\ConUserHome.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 07:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 07:55:53 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(60): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 07:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 07:56:13 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(60): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 07:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 07:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 07:57:10 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(61): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:03:09 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(61): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:06:50 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(61): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:16:09 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(62): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:20:51 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(64): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:21:25 --> Class "App\Controllers\Google_Service_Oauth2" not found
+in APPPATH\Controllers\ConUserHome.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:21:45 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(64): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-01 08:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-01 08:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-01 08:24:50 --> Undefined array key "expires_in"
+in C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php on line 469.
+ 1 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expires_in"', 'C:\\xampp\\htdocs\\librarie_skj\\google_sheet\\vendor\\google\\apiclient\\src\\Google\\Client.php', 469)
+ 2 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(358): Google_Client->isAccessTokenExpired()
+ 3 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Client.php(776): Google_Client->authorize()
+ 4 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient\src\Google\Service\Resource.php(232): Google_Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 5 C:\xampp\htdocs\librarie_skj\google_sheet\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google_Service_Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 6 APPPATH\Controllers\ConUserHome.php(65): Google\Service\Oauth2\Resource\Userinfo->get()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserHome->LoginEoffice()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserHome))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

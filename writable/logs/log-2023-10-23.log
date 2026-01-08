@@ -1,0 +1,230 @@
+INFO - 2023-10-23 10:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:13:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:41:47 --> Undefined array key "username"
+in APPPATH\Views\User\UserRepair\UserRepairMain.php on line 149.
+ 1 APPPATH\Views\User\UserRepair\UserRepairMain.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairMain.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairMain', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(40): view('User/UserRepair/UserRepairMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->RepairMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 10:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:42:00 --> Undefined array key "username"
+in APPPATH\Views\User\UserRepair\UserRepairMain.php on line 149.
+ 1 APPPATH\Views\User\UserRepair\UserRepairMain.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairMain.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairMain', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(40): view('User/UserRepair/UserRepairMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->RepairMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 10:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:50:14 --> Undefined variable $title
+in APPPATH\Views\User\UserLeyout\UserNavbar.php on line 14.
+ 1 APPPATH\Views\User\UserLeyout\UserNavbar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserLeyout\\UserNavbar.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserLeyout\\UserNavbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserLeyout/UserNavbar', [], true)
+ 5 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(9): view('User/UserLeyout/UserNavbar')
+ 6 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 9 APPPATH\Controllers\ConUserRepair.php(286): view('User/UserRepair/UserRepairPrintOrder')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 10:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 11:18:20 --> require(C:\xampp\htdocs/librarie_skj/mpdf/vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ConUserRepair.php on line 274.
+ 1 APPPATH\Controllers\ConUserRepair.php(274): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs/librarie_skj/mpdf/vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConUserRepair.php', 274)
+ 2 APPPATH\Controllers\ConUserRepair.php(274): require()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 11:21:12 --> Class "App\Controllers\Mpdf" not found
+in APPPATH\Controllers\ConUserRepair.php on line 276.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 11:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 11:30:09 --> require(C:\/librarie_skj/mpdf/vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ConUserRepair.php on line 274.
+ 1 APPPATH\Controllers\ConUserRepair.php(274): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\/librarie_skj/mpdf/vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConUserRepair.php', 274)
+ 2 APPPATH\Controllers\ConUserRepair.php(274): require()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 11:30:41 --> Class "mPDF" not found
+in APPPATH\Controllers\ConUserRepair.php on line 276.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 11:38:43 --> Invalid file: "pdf_template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_template.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pdf_template', [], true)
+ 3 APPPATH\Controllers\ConUserRepair.php(292): view('pdf_template', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 11:39:02 --> Invalid file: "UserRepairPrintOrder.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserRepairPrintOrder.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('UserRepairPrintOrder', [], true)
+ 3 APPPATH\Controllers\ConUserRepair.php(292): view('UserRepairPrintOrder', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 11:39:29 --> Invalid file: "UserRepair/UserRepairPrintOrder.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserRepair/UserRepairPrintOrder.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('UserRepair/UserRepairPrintOrder', [], true)
+ 3 APPPATH\Controllers\ConUserRepair.php(292): view('UserRepair/UserRepairPrintOrder', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 13:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 14:48:53 --> Undefined constant "RepairUser"
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 4 APPPATH\Controllers\ConUserRepair.php(301): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230002')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 14:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 15:08:58 --> Undefined variable $Repairman
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 43.
+ 1 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Repairman', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(311): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 15:09:28 --> Uninitialized string offset 0
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 43.
+ 1 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(311): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 15:09:43 --> Attempt to read property "pers_prefix" on string
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 43.
+ 1 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "pers_prefix" on string', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(311): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 15:10:08 --> Attempt to read property "pers_prefix" on string
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 70.
+ 1 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "pers_prefix" on string', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(311): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 15:11:26 --> Undefined variable $Datethai
+in APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php on line 27.
+ 1 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Datethai', 'C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 5 APPPATH\Controllers\ConUserRepair.php(312): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 15:12:03 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Libraries\Datethai.php on line 9.
+ 1 APPPATH\Libraries\Datethai.php(9): date('j', '2023-10-21 12:42:49')
+ 2 APPPATH\Views\User\UserRepair\UserRepairPrintOrder.php(27): App\Libraries\Datethai->thai_date_and_time('2023-10-21 12:42:49')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\User\\UserRepair\\UserRepairPrintOrder.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserRepair/UserRepairPrintOrder', [], true)
+ 6 APPPATH\Controllers\ConUserRepair.php(312): view('User/UserRepair/UserRepairPrintOrder', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserRepair->PrintOrder('SKJRP_20230005')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserRepair))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 15:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

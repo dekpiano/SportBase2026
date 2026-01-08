@@ -1,0 +1,1321 @@
+INFO - 2024-09-04 10:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 10:32:53 --> mysqli_sql_exception: Table 'skjacth_general.tb_car_data' doesn't exist in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(88): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarShowData()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 10:32:53 --> Table 'skjacth_general.tb_car_data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_car_data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_car_data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_car_data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_car_data`', [], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(88): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarShowData()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 10:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 10:45:06 --> mysqli_sql_exception: Table 'skjacth_general.tb_car_data' doesn't exist in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(88): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarShowData()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 10:45:06 --> Table 'skjacth_general.tb_car_data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_car_data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_car_data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_car_data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_car_data`', [], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(88): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarShowData()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 10:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 10:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:06:02 --> Undefined property: stdClass::$location_img
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$location_img', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:06:12 --> Undefined property: stdClass::$location_img
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$location_img', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:06:15 --> Attempt to read property "location_img" on null
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "location_img" on null', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 11:06:30 --> mysqli_sql_exception: Unknown column 'tb_school_car' in 'where clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(121): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 11:06:30 --> Unknown column 'tb_school_car' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1725421976_d7d8d6fe714c62d72419.jpg\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1725421976_d7d8d6fe714c62d72419.jpg\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1725421976_d7d8d6fe714c62d72419.jpg\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = :tb_school_car:', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(121): CodeIgniter\Database\BaseBuilder->delete([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:06:36 --> Attempt to read property "car_img" on null
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "car_img" on null', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:10:47 --> unlink(./uploads/admin/Car/1725421976_d7d8d6fe714c62d72419.jpg): No such file or directory
+in APPPATH\Controllers\ConAdminCar.php on line 121.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(./uploads/admin/Car/1725421976_d7d8d6fe714c62d72419.jpg): No such file or directory', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 121)
+ 2 APPPATH\Controllers\ConAdminCar.php(121): unlink('./uploads/admin/Car/1725421976_d7d8d6fe714c62d72419.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:11:00 --> Attempt to read property "car_img" on null
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "car_img" on null', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 11:14:50 --> mysqli_sql_exception: Unknown column 'tb_school_car' in 'where clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(123): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 11:14:50 --> Unknown column 'tb_school_car' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1701925102_418037f3255d0c03686e.jpg\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1701925102_418037f3255d0c03686e.jpg\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'1701925102_418037f3255d0c03686e.jpg\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = :tb_school_car:', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(123): CodeIgniter\Database\BaseBuilder->delete([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:14:57 --> Attempt to read property "car_img" on null
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "car_img" on null', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:15:33 --> unlink(./uploads/admin/Car/1701925102_418037f3255d0c03686e.jpg): No such file or directory
+in APPPATH\Controllers\ConAdminCar.php on line 122.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(./uploads/admin/Car/1701925102_418037f3255d0c03686e.jpg): No such file or directory', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 122)
+ 2 APPPATH\Controllers\ConAdminCar.php(122): unlink('./uploads/admin/Car/1701925102_418037f3255d0c03686e.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:15:44 --> Attempt to read property "car_img" on null
+in APPPATH\Controllers\ConAdminCar.php on line 118.
+ 1 APPPATH\Controllers\ConAdminCar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "car_img" on null', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 11:16:56 --> mysqli_sql_exception: Unknown column 'tb_school_car' in 'where clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(123): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 11:16:56 --> Unknown column 'tb_school_car' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'456931103_898773395452161_7695232066680707998_n.jpg\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'456931103_898773395452161_7695232066680707998_n.jpg\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = \'456931103_898773395452161_7695232066680707998_n.jpg\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb_school_car`
+WHERE `tb_school_car` = :tb_school_car:', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(123): CodeIgniter\Database\BaseBuilder->delete([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 11:20:55 --> unlink(./uploads/admin/Car/456931103_898773395452161_7695232066680707998_n.jpg): No such file or directory
+in APPPATH\Controllers\ConAdminCar.php on line 122.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(./uploads/admin/Car/456931103_898773395452161_7695232066680707998_n.jpg): No such file or directory', 'D:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 122)
+ 2 APPPATH\Controllers\ConAdminCar.php(122): unlink('./uploads/admin/Car/456931103_898773395452161_7695232066680707998_n.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarDelete()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 11:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 11:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 12:27:52 --> mysqli_sql_exception: Unknown column 'location_ID' in 'where clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(81): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 12:27:52 --> Unknown column 'location_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_school_car`
+WHERE `location_ID` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_school_car`
+WHERE `location_ID` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_school_car`
+WHERE `location_ID` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_school_car`
+WHERE `location_ID` = :location_ID:', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(81): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:52:33 --> Undefined variable $loca
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 15.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loca', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:53:27 --> Undefined variable $loca
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 18.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loca', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:54:06 --> Undefined variable $BookignToday
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 36.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $BookignToday', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:54:23 --> Undefined variable $BookLatest
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 35.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $BookLatest', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:54:46 --> Undefined variable $loca
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 41.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loca', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 12:56:13 --> Undefined array key "username"
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 39.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingAdd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 12:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 12:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 13:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:55:55 --> mysqli_sql_exception: Column 'car_reserv_carID' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:55:55 --> Column 'car_reserv_carID' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'50\', \'2024-09-05\', \'11:57\', \'2024-09-05\', \'18:55\', NULL, \'0910518473\', \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'50\', \'2024-09-05\', \'11:57\', \'2024-09-05\', \'18:55\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'50\', \'2024-09-05\', \'11:57\', \'2024-09-05\', \'18:55\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 13:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:56:03 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:56:03 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 13:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:57:05 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:57:05 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 13:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:57:29 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:57:29 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 13:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:58:16 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:58:16 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 13:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 13:58:40 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 13:58:40 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(119): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:00:34 --> mysqli_sql_exception: Column 'car_reserv_carID' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:00:34 --> Column 'car_reserv_carID' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:00:41 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:00:41 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:03:31 --> mysqli_sql_exception: Column 'car_reserv_order' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:03:31 --> Column 'car_reserv_order' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(121): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:04:06 --> mysqli_sql_exception: Column 'car_reserv_memberID' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:04:06 --> Column 'car_reserv_memberID' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:06:57 --> mysqli_sql_exception: Column 'car_reserv_carID' cannot be null in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:06:57 --> Column 'car_reserv_carID' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (\'OrderCar_20240001\', \'ทดสอบ\', \'สนามโรงเียน\', \'เที่ยว\', \'70\', \'2024-09-04\', \'18:01\', \'2024-09-10\', \'14:02\', NULL, \'0910518473\', \'รอตรวจสอบ\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_reservation` (`car_reserv_order`, `car_reserv_memberID`, `car_reserv_location`, `car_reserv_detail`, `car_reserv_number`, `car_reserv_StartDate`, `car_reserv_StartTime`, `car_reserv_EndDate`, `car_reserv_EndTime`, `car_reserv_carID`, `car_reserv_phone`, `car_reserv_status`) VALUES (:car_reserv_order:, :car_reserv_memberID:, :car_reserv_location:, :car_reserv_detail:, :car_reserv_number:, :car_reserv_StartDate:, :car_reserv_StartTime:, :car_reserv_EndDate:, :car_reserv_EndTime:, :car_reserv_carID:, :car_reserv_phone:, :car_reserv_status:)', [...], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:08:48 --> Object of type CodeIgniter\HTTP\URI is not callable
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 4 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:09:05 --> Object of type CodeIgniter\HTTP\URI is not callable
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 4 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:09:15 --> Call to undefined method CodeIgniter\View\View::uri()
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 4 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:10:16 --> Call to undefined method CodeIgniter\HTTP\URI::segment()
+in APPPATH\Views\User\UserCarBooking\UserCarBookingAdd.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingAdd', [], true)
+ 4 APPPATH\Controllers\ConUserCarBooking.php(95): view('User/UserCarBooking/UserCarBookingAdd')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingAdd('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:21:30 --> Too few arguments to function App\Controllers\ConUserCarBooking::CarBookingView(), 0 passed in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\ConUserCarBooking.php on line 194.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingView()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:23:20 --> Undefined variable $CheckAll
+in APPPATH\Views\User\UserCarBooking\UserCarBookingView.php on line 12.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CheckAll', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(220): view('User/UserCarBooking/UserCarBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:24:12 --> Undefined variable $Title
+in APPPATH\Views\User\UserCarBooking\UserCarBookingView.php on line 14.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingView.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Title', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(220): view('User/UserCarBooking/UserCarBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:24:47 --> Undefined variable $Title
+in APPPATH\Views\User\UserCarBooking\UserCarBookingView.php on line 14.
+ 1 APPPATH\Views\User\UserCarBooking\UserCarBookingView.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Title', 'D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\general\\app\\Views\\User\\UserCarBooking\\UserCarBookingView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('User/UserCarBooking/UserCarBookingView', [], true)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(220): view('User/UserCarBooking/UserCarBookingView')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:44:34 --> syntax error, unexpected single-quoted string "car_reserv_detail", expecting "]"
+in APPPATH\Controllers\ConUserCarBooking.php on line 92.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\general\\app\\Controllers\\ConUserCarBooking.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ConUserCarBooking')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ConUserCarBooking')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\ConUserCarBooking', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:45:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::form()
+in APPPATH\Controllers\ConUserCarBooking.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 14:46:08 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::form()
+in APPPATH\Controllers\ConUserCarBooking.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:46:26 --> mysqli_sql_exception: Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:46:26 --> Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:46:33 --> mysqli_sql_exception: Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:46:33 --> Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:46:36 --> mysqli_sql_exception: Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:46:36 --> Unknown column 'skjacth_general.tb_car_reservation.car_reserv_carI' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_booking`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carI`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:52:23 --> mysqli_sql_exception: Not unique table/alias: 'tb_car_reservation' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:52:23 --> Not unique table/alias: 'tb_car_reservation'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:52:41 --> mysqli_sql_exception: Not unique table/alias: 'tb_car_reservation' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:52:41 --> Not unique table/alias: 'tb_car_reservation'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 14:53:29 --> mysqli_sql_exception: Not unique table/alias: 'tb_car_reservation' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 14:53:29 --> Not unique table/alias: 'tb_car_reservation'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `skjacth_general`.`tb_car_reservation`.*, `skjacth_general`.`tb_school_car`.`car_img`, `skjacth_general`.`tb_school_car`.`car_registration`, `skjacth_general`.`tb_school_car`.`car_province`, `skjacth_general`.`tb_school_car`.`car_category`, `skjacth_personnel`.`tb_personnel`.`pers_prefix`, `skjacth_personnel`.`tb_personnel`.`pers_firstname`, `skjacth_personnel`.`tb_personnel`.`pers_lastname`
+FROM (`tb_car_reservation`, `skjacth_general`.`tb_car_reservation`)
+JOIN `skjacth_general`.`tb_school_car` ON `skjacth_general`.`tb_school_car`.`car_ID` = `skjacth_general`.`tb_car_reservation`.`car_reserv_carID`
+JOIN `skjacth_personnel`.`tb_personnel` ON `skjacth_personnel`.`tb_personnel`.`pers_id` = `skjacth_general`.`tb_car_reservation`.`car_reserv_memberID`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->CarBookingDataTableView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 14:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 14:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-04 15:36:02 --> Cannot redeclare App\Controllers\ConUserCarBooking::ShowTimeCarBooking()
+in APPPATH\Controllers\ConUserCarBooking.php on line 340.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-09-04 15:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-04 15:53:39 --> mysqli_sql_exception: Unknown column 'tb_school_car.car_registration' in 'field list' in D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tb_car_...', 0)
+#1 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_car_...')
+#2 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_car_...')
+#3 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tb_car_...', Array, false)
+#4 D:\xampp\htdocs\general\app\Controllers\ConUserCarBooking.php(338): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->ShowTimeCarBooking()
+#6 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+#7 D:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-04 15:53:39 --> Unknown column 'tb_school_car.car_registration' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tb_car_reservation`.`car_reserv_StartDate`, `tb_car_reservation`.`car_reserv_StartTime`, `tb_car_reservation`.`car_reserv_EndDate`, `tb_car_reservation`.`car_reserv_EndTime`, `tb_car_reservation`.`car_reserv_detail`, `tb_car_reservation`.`car_reserv_id`, `tb_car_reservation`.`car_reserv_location`, `tb_car_reservation`.`car_reserv_status`, `tb_car_reservation`.`car_reserv_carID`, `tb_school_car`.`car_registration`, `tb_school_car`.`car_province`, `tb_school_car`.`car_category`
+FROM `tb_car_reservation`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_car_reservation`.`car_reserv_StartDate`, `tb_car_reservation`.`car_reserv_StartTime`, `tb_car_reservation`.`car_reserv_EndDate`, `tb_car_reservation`.`car_reserv_EndTime`, `tb_car_reservation`.`car_reserv_detail`, `tb_car_reservation`.`car_reserv_id`, `tb_car_reservation`.`car_reserv_location`, `tb_car_reservation`.`car_reserv_status`, `tb_car_reservation`.`car_reserv_carID`, `tb_school_car`.`car_registration`, `tb_school_car`.`car_province`, `tb_school_car`.`car_category`
+FROM `tb_car_reservation`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_car_reservation`.`car_reserv_StartDate`, `tb_car_reservation`.`car_reserv_StartTime`, `tb_car_reservation`.`car_reserv_EndDate`, `tb_car_reservation`.`car_reserv_EndTime`, `tb_car_reservation`.`car_reserv_detail`, `tb_car_reservation`.`car_reserv_id`, `tb_car_reservation`.`car_reserv_location`, `tb_car_reservation`.`car_reserv_status`, `tb_car_reservation`.`car_reserv_carID`, `tb_school_car`.`car_registration`, `tb_school_car`.`car_province`, `tb_school_car`.`car_category`
+FROM `tb_car_reservation`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tb_car_reservation`.`car_reserv_StartDate`, `tb_car_reservation`.`car_reserv_StartTime`, `tb_car_reservation`.`car_reserv_EndDate`, `tb_car_reservation`.`car_reserv_EndTime`, `tb_car_reservation`.`car_reserv_detail`, `tb_car_reservation`.`car_reserv_id`, `tb_car_reservation`.`car_reserv_location`, `tb_car_reservation`.`car_reserv_status`, `tb_car_reservation`.`car_reserv_carID`, `tb_school_car`.`car_registration`, `tb_school_car`.`car_province`, `tb_school_car`.`car_category`
+FROM `tb_car_reservation`', [], false)
+ 5 APPPATH\Controllers\ConUserCarBooking.php(338): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserCarBooking->ShowTimeCarBooking()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserCarBooking))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-04 15:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 15:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-04 16:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

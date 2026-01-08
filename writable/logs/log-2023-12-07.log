@@ -1,0 +1,364 @@
+INFO - 2023-12-07 09:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 09:45:12 --> Undefined variable $data
+in APPPATH\Controllers\ConUserBooking.php on line 322.
+ 1 APPPATH\Controllers\ConUserBooking.php(322): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConUserBooking.php', 322)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConUserBooking->ShowTimeBooking()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConUserBooking))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 09:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 09:53:59 --> Undefined constant "Config\routes"
+in APPPATH\Config\Routes.php on line 93.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 09:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 10:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:03:24 --> Attempt to read property "name_th" on array
+in APPPATH\Controllers\ConAdminCar.php on line 29.
+ 1 APPPATH\Controllers\ConAdminCar.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name_th" on array', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarMain()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:03:33 --> Undefined array key "name_th"
+in APPPATH\Controllers\ConAdminCar.php on line 29.
+ 1 APPPATH\Controllers\ConAdminCar.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name_th"', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarMain()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:03:43 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\ConAdminCar.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarMain()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:06:25 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Admin\AdminCar\AdminCarMain.php on line 84.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/AdminCar/AdminCarMain', [], true)
+ 4 APPPATH\Controllers\ConAdminCar.php(33): view('Admin/AdminCar/AdminCarMain')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarMain()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:13:21 --> Undefined variable $variable
+in APPPATH\Views\Admin\AdminCar\AdminCarMain.php on line 96.
+ 1 APPPATH\Views\Admin\AdminCar\AdminCarMain.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', 'C:\\xampp\\htdocs\\general\\app\\Views\\Admin\\AdminCar\\AdminCarMain.php', 96)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\general\\app\\Views\\Admin\\AdminCar\\AdminCarMain.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Admin/AdminCar/AdminCarMain', [], true)
+ 5 APPPATH\Controllers\ConAdminCar.php(33): view('Admin/AdminCar/AdminCarMain')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarMain()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:41:06 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:41:06 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924065_2128b3fc743cf4b1c5a6.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924065_2128b3fc743cf4b1c5a6.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924065_2128b3fc743cf4b1c5a6.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:41:58 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:41:58 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924118_94c48980642c8e62d100.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924118_94c48980642c8e62d100.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924118_94c48980642c8e62d100.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:42:14 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:42:14 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924134_340cc9a0a0ef6af60ded.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924134_340cc9a0a0ef6af60ded.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924134_340cc9a0a0ef6af60ded.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(82): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:43:05 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(81): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:43:05 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924185_2ea5ddcd022860346866.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924185_2ea5ddcd022860346866.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'ปทุมธานี\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924185_2ea5ddcd022860346866.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(81): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:43:31 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(81): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:43:31 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถตู้\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924211_4c4e72a9a1bbdab6e111.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถตู้\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924211_4c4e72a9a1bbdab6e111.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถตู้\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924211_4c4e72a9a1bbdab6e111.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(81): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:45:28 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(76): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:45:28 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924328_3aeb5892b004ff6e1974.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924328_3aeb5892b004ff6e1974.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924328_3aeb5892b004ff6e1974.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(76): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:45:32 --> Undefined variable $response
+in APPPATH\Controllers\ConAdminCar.php on line 83.
+ 1 APPPATH\Controllers\ConAdminCar.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:48:45 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(72): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:48:45 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924525_6dcf3f015d90962c2c71.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924525_6dcf3f015d90962c2c71.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924525_6dcf3f015d90962c2c71.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(72): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:48:49 --> Undefined variable $response
+in APPPATH\Controllers\ConAdminCar.php on line 79.
+ 1 APPPATH\Controllers\ConAdminCar.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 79)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-07 11:53:21 --> mysqli_sql_exception: Column 'CarD_Details' cannot be null in C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\general\app\Controllers\ConAdminCar.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+#6 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+#7 C:\xampp\htdocs\general\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\general\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-07 11:53:21 --> Column 'CarD_Details' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924801_d3e29d19d3ceddbf7ccd.jpg\', \'pers_021\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924801_d3e29d19d3ceddbf7ccd.jpg\', \'pers_021\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (\'กย 15\', \'สมุทรปราการ\', \'รถกระบะ 4 ประตู\', \'Toyota\', \'Vego\', \'7\', NULL, \'1701924801_d3e29d19d3ceddbf7ccd.jpg\', \'pers_021\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_car_data` (`CarD_Register`, `CarD_Province`, `CarD_Category`, `CarD_Brand`, `CarD_Model`, `CarD_NumberSeats`, `CarD_Details`, `CarD_Img`, `CarD_AdminID`) VALUES (:CarD_Register:, :CarD_Province:, :CarD_Category:, :CarD_Brand:, :CarD_Model:, :CarD_NumberSeats:, :CarD_Details:, :CarD_Img:, :CarD_AdminID:)', [...], false)
+ 5 APPPATH\Controllers\ConAdminCar.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 11:53:28 --> Undefined variable $response
+in APPPATH\Controllers\ConAdminCar.php on line 80.
+ 1 APPPATH\Controllers\ConAdminCar.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\xampp\\htdocs\\general\\app\\Controllers\\ConAdminCar.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ConAdminCar->CarInsert()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConAdminCar))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-07 11:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 11:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 12:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
