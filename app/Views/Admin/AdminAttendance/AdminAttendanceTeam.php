@@ -61,6 +61,7 @@
     .status-item input[value="sick"]:checked + .status-btn { background: #f59e0b; color: white; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
     .status-item input[value="personal"]:checked + .status-btn { background: #3b82f6; color: white; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); }
     .status-item input[value="home"]:checked + .status-btn { background: #ef4444; color: white; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3); }
+    .status-item input[value="competition"]:checked + .status-btn { background: #8b5cf6; color: white; box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3); }
 
     /* Card Layout for Mobile */
     .mobile-athlete-card {
@@ -162,10 +163,11 @@
                 <div class="card-header bg-white border-bottom py-3 d-flex flex-wrap justify-content-between align-items-center gap-3">
                     <h5 class="mb-0 fw-bold text-heading">ระบบลงเวลาการซ้อมประจำวัน</h5>
                     <div class="d-flex gap-2 flex-wrap">
-                        <div class="badge bg-label-success rounded-pill px-3 py-2 fw-bold" id="presentBadge">0 มาซ้อม</div>
+                        <div class="badge bg-label-success rounded-pill px-3 py-2 fw-bold" id="presentBadge">0 อยู่</div>
                         <div class="badge bg-label-warning rounded-pill px-3 py-2 fw-bold" id="sickBadge">0 ลาป่วย</div>
                         <div class="badge bg-label-info rounded-pill px-3 py-2 fw-bold" id="personalBadge">0 ลากิจ</div>
                         <div class="badge bg-label-danger rounded-pill px-3 py-2 fw-bold" id="homeBadge">0 กลับบ้าน</div>
+                        <div class="badge rounded-pill px-3 py-2 fw-bold" id="competitionBadge" style="background: rgba(139, 92, 246, 0.16); color: #8b5cf6;">0 แข่งขัน</div>
                     </div>
                 </div>
                 
@@ -179,7 +181,7 @@
                                 <th width="120">รหัส</th>
                                 <th>ชื่อ - นามสกุล</th>
                                 <th width="80" class="text-center">ชั้น</th>
-                                <th width="380">บันทึกสถานะ</th>
+                                <th width="450">บันทึกสถานะ</th>
                                 <th width="150" class="text-center">หมายเหตุ</th>
                             </tr>
                         </thead>
@@ -218,8 +220,8 @@
                                         <td>
                                             <div class="status-container">
                                                 <div class="status-item">
-                                                    <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="p_<?= $row['StudentID']; ?>" value="present" <?= $currentStatus == 'present' || !$currentStatus ? 'checked' : ''; ?>>
-                                                    <label class="status-btn" for="p_<?= $row['StudentID']; ?>">มาซ้อม</label>
+                                                    <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="p_<?= $row['StudentID']; ?>" value="present" <?= ($currentStatus == 'present') ? 'checked' : ''; ?>>
+                                                    <label class="status-btn" for="p_<?= $row['StudentID']; ?>">อยู่</label>
                                                 </div>
                                                 <div class="status-item">
                                                     <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="s_<?= $row['StudentID']; ?>" value="sick" <?= $currentStatus == 'sick' ? 'checked' : ''; ?>>
@@ -232,6 +234,10 @@
                                                 <div class="status-item">
                                                     <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="h_<?= $row['StudentID']; ?>" value="home" <?= $currentStatus == 'home' ? 'checked' : ''; ?>>
                                                     <label class="status-btn" for="h_<?= $row['StudentID']; ?>">กลับบ้าน</label>
+                                                </div>
+                                                <div class="status-item">
+                                                    <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="c_<?= $row['StudentID']; ?>" value="competition" <?= $currentStatus == 'competition' ? 'checked' : ''; ?>>
+                                                    <label class="status-btn" for="c_<?= $row['StudentID']; ?>">แข่งขัน</label>
                                                 </div>
                                             </div>
                                         </td>
@@ -288,8 +294,8 @@
                                 </div>
                                 <div class="status-container mx-auto">
                                     <div class="status-item">
-                                        <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mp_<?= $row['StudentID']; ?>" value="present" <?= $currentStatus == 'present' || !$currentStatus ? 'checked' : ''; ?>>
-                                        <label class="status-btn" for="mp_<?= $row['StudentID']; ?>">มาซ้อม</label>
+                                        <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mp_<?= $row['StudentID']; ?>" value="present" <?= ($currentStatus == 'present') ? 'checked' : ''; ?>>
+                                        <label class="status-btn" for="mp_<?= $row['StudentID']; ?>">อยู่</label>
                                     </div>
                                     <div class="status-item">
                                         <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="ms_<?= $row['StudentID']; ?>" value="sick" <?= $currentStatus == 'sick' ? 'checked' : ''; ?>>
@@ -302,6 +308,10 @@
                                     <div class="status-item">
                                         <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mh_<?= $row['StudentID']; ?>" value="home" <?= $currentStatus == 'home' ? 'checked' : ''; ?>>
                                         <label class="status-btn" for="mh_<?= $row['StudentID']; ?>">กลับ</label>
+                                    </div>
+                                    <div class="status-item">
+                                        <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mc_<?= $row['StudentID']; ?>" value="competition" <?= $currentStatus == 'competition' ? 'checked' : ''; ?>>
+                                        <label class="status-btn" for="mc_<?= $row['StudentID']; ?>">แข่ง</label>
                                     </div>
                                 </div>
                                 <?php if (!empty($currentNote)): ?>
@@ -347,20 +357,25 @@ $(document).ready(function() {
             }
         });
 
-    // Initial counts
+    // Initial counts - นับเฉพาะ Desktop radio (st_) เพื่อไม่ให้นับซ้ำกับ Mobile (mst_)
     function updateLiveStats() {
-        let p = 0, s = 0, pe = 0, h = 0;
-        $('.status-btn-radio:checked').each(function() {
-            const val = $(this).val();
-            if(val === 'present') p++;
-            else if(val === 'sick') s++;
-            else if(val === 'personal') pe++;
-            else if(val === 'home') h++;
+        let p = 0, s = 0, pe = 0, h = 0, c = 0;
+        $('input.status-btn-radio:checked').each(function() {
+            const name = $(this).attr('name');
+            if (name && name.startsWith('st_')) {
+                const val = $(this).val();
+                if(val === 'present') p++;
+                else if(val === 'sick') s++;
+                else if(val === 'personal') pe++;
+                else if(val === 'home') h++;
+                else if(val === 'competition') c++;
+            }
         });
-        $('#presentBadge').text(p + ' มาซ้อม');
+        $('#presentBadge').text(p + ' อยู่');
         $('#sickBadge').text(s + ' ป่วย');
         $('#personalBadge').text(pe + ' กิจธุระ');
         $('#homeBadge').text(h + ' กลับบ้าน');
+        $('#competitionBadge').text(c + ' แข่งขัน');
     }
     updateLiveStats();
 
@@ -382,13 +397,21 @@ $(document).ready(function() {
             const studentName = row.find('.fw-semibold').text();
             const statusLabel = $(this).next('label').text();
             
+            // กำหนด title และ label ตามประเภทสถานะ
+            let popupTitle = 'บันทึกการลา: ' + studentName;
+            let dateLabel = 'ระบุช่วงวันที่ลา';
+            if (val === 'competition') {
+                popupTitle = 'บันทึกการแข่งขัน: ' + studentName;
+                dateLabel = 'ระบุช่วงวันที่ไปแข่งขัน';
+            }
+            
             Swal.fire({
-                title: 'บันทึกการลา: ' + studentName,
+                title: popupTitle,
                 html: `
                     <div class="text-start mb-3">
                         <p class="mb-2">ประเภท: <span class="badge bg-label-primary">${statusLabel}</span></p>
                         <div class="mb-3">
-                            <label class="form-label fw-bold">ระบุช่วงวันที่ลา</label>
+                            <label class="form-label fw-bold">${dateLabel}</label>
                             <input type="text" id="swal-range-inline" class="form-control" placeholder="คลิกเพื่อเลือกวันที่..." readonly>
                             <small class="text-muted"><i class="bx bx-info-circle"></i> คลิกเลือก 1 วัน หรือ คลิก 2 ครั้งเพื่อเลือกช่วงวัน</small>
                         </div>

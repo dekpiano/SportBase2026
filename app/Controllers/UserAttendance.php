@@ -25,15 +25,16 @@ class UserAttendance extends BaseController
         // ดึงข้อมูลทีมทั้งหมด
         $data['teams'] = $teamModel->findAll();
 
-        // สรุปภาพรวมวันนี้
-        $data['summary'] = $attendanceModel->getTodaySummary();
+        // สรุปภาพรวมของวันที่เลือก
+        $data['summary'] = $attendanceModel->getTodaySummary(null, $date);
         
-        // ดึงข้อมูลการลาทั้งหมดในวันที่เลือก
+        // ดึงข้อมูลการลาทั้งหมดในวันที่เลือก (รวมคนที่ลาคาบเกี่ยวช่วงนี้)
         $data['attendanceList'] = $attendanceModel->db->table('tb_attendance att')
             ->select('att.*, std.StudentCode, std.StudentPrefix, std.StudentFirstName, std.StudentLastName, std.StudentClass, t.team_name, t.team_sport_type')
             ->join('skjacth_academic.tb_students std', 'std.StudentID = att.StudentID')
             ->join('tb_teams t', 't.team_id = att.team_id')
-            ->where('att.att_date', $date)
+            ->where('att.att_start_date <=', $date)
+            ->where('att.att_end_date >=', $date)
             ->get()
             ->getResultArray();
 

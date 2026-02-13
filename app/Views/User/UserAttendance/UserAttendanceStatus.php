@@ -136,7 +136,16 @@
                                                 <i class='bx <?= $sInfo['icon'] ?> me-1'></i> <?= $sInfo['label'] ?>
                                             </span>
                                         </td>
-                                        <td><i class='bx bx-time-five me-1'></i><?= date('H:i', strtotime($att['att_time'])) ?> น.</td>
+                                        <td>
+                                            <?php if (!empty($att['att_start_date']) && !empty($att['att_end_date']) && $att['att_start_date'] !== $att['att_end_date']): ?>
+                                                <div class="fw-bold text-primary" style="font-size: 0.85rem;">
+                                                    <i class='bx bx-calendar me-1'></i><?= date('d/m/y', strtotime($att['att_start_date'])); ?> - <?= date('d/m/y', strtotime($att['att_end_date'])); ?>
+                                                </div>
+                                                <small class="text-muted"><i class='bx bx-time-five me-1'></i>บันทึกเมื่อ: <?= date('H:i', strtotime($att['att_time'])) ?> น.</small>
+                                            <?php else: ?>
+                                                <i class='bx bx-time-five me-1'></i><?= date('H:i', strtotime($att['att_time'])) ?> น.
+                                            <?php endif; ?>
+                                        </td>
                                         <td><small class="text-muted italic"><?= $att['att_note'] ?: '-' ?></small></td>
                                     </tr>
                                 <?php endforeach; ?>

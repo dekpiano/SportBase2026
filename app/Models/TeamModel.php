@@ -127,4 +127,14 @@ class TeamModel extends Model
     {
         return $this->db->table('tb_team_coaches')->where('id', $id)->delete();
     }
+
+    /**
+     * อัปเดตรูปภาพนักกีฬา
+     */
+    public function updateAthleteImage($id, $imageName)
+    {
+        return $this->db->table('tb_team_athletes')
+            ->where('id', $id)
+            ->update(['athlete_image' => $imageName]);
+    }
 }

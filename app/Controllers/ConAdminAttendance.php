@@ -136,8 +136,8 @@ class ConAdminAttendance extends BaseController
             $baseData['att_start_date'] = $date;
             $baseData['att_end_date'] = $endDate;
             
-            // ตรวจสอบว่ามี record อยู่แล้วหรือไม่
-            $existing = $this->attendanceModel->where('StudentID', $studentId)->first();
+            // ตรวจสอบว่ามี record อยู่แล้วหรือไม่ในวันนี้
+            $existing = $this->attendanceModel->getStudentAttendance($studentId, $date);
             
             if ($existing) {
                 // อัปเดต record เดิม

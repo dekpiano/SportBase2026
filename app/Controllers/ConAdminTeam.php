@@ -316,4 +316,50 @@ class ConAdminTeam extends BaseController
             return redirect()->back()->with('error', 'ไม่สามารถลบครูผู้ฝึกสอนได้');
         }
     }
+
+    /**
+     * อัปเดตรูปภาพนักกีฬา (AJAX)
+     */
+    public function updateAthleteImage()
+    {
+        $id = $this->request->getPost('athlete_id');
+        $teamId = $this->request->getPost('team_id');
+        $studentId = $this->request->getPost('StudentID');
+
+        if (!$this->checkPermission($teamId)) {
+            return $this->response->setJSON(['success' => false, 'message' => 'คุณไม่มีสิทธิ์จัดการรุ่นนี้']);
+        }
+
+        $teamModel = new TeamModel();
+        
+        // ดึงข้อมูลเดิมเพื่อลบรูปเก่า
+        $db = \Config\Database::connect();
+        $athlete = $db->table('tb_team_athletes')->where('id', $id)->get()->getRowArray();
+        
+        $croppedImage = $this->request->getPost('cropped_image');
+        if ($croppedImage && strpos($croppedImage, 'data:image') === 0) {
+            $uploadPath = FCPATH . 'uploads/athletes/';
+            
+            // ลบรูปเก่าถ้ามี
+            if ($athlete && !empty($athlete['athlete_image'])) {
+                $oldPath = $uploadPath . $athlete['athlete_image'];
+                if (file_exists($oldPath)) {
+                    unlink($oldPath);
+                }
+            }
+
+            // Decode และบันทึกรูปใหม่
+            $imageData = explode(',', $croppedImage);
+            $imageDecoded = base64_decode($imageData[1]);
+            $imageName = $studentId . '_' . time() . '.jpg';
+            
+            if (file_put_contents($uploadPath . $imageName, $imageDecoded)) {
+                if ($teamModel->updateAthleteImage($id, $imageName)) {
+                    return $this->response->setJSON(['success' => true, 'message' => 'อัปเดตรูปภาพเรียบร้อยแล้ว']);
+                }
+            }
+        }
+
+        return $this->response->setJSON(['success' => false, 'message' => 'ไม่สามารถอัปเดตรูปภาพได้']);
+    }
 }

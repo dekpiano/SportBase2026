@@ -34,7 +34,8 @@ class AttendanceModel extends Model
     public static $statuses = [
         'sick'     => ['label' => 'ลาป่วย', 'color' => 'warning', 'icon' => 'bx-plus-medical'],
         'personal' => ['label' => 'ลากิจธุระ', 'color' => 'info', 'icon' => 'bx-briefcase'],
-        'home'     => ['label' => 'ลากิจกลับบ้าน', 'color' => 'danger', 'icon' => 'bx-home']
+        'home'     => ['label' => 'ลากิจกลับบ้าน', 'color' => 'danger', 'icon' => 'bx-home'],
+        'competition' => ['label' => 'ไปแข่งขัน', 'color' => 'primary', 'icon' => 'bx-trophy']
     ];
 
     /**
@@ -59,7 +60,8 @@ class AttendanceModel extends Model
     {
         return $this->db->table('tb_attendance')
             ->where('StudentID', $studentId)
-            ->where('att_date', $date)
+            ->where('att_start_date <=', $date)
+            ->where('att_end_date >=', $date)
             ->get()
             ->getRowArray();
     }
@@ -90,7 +92,8 @@ class AttendanceModel extends Model
     {
         return $this->db->table('tb_attendance')
             ->where('StudentID', $studentId)
-            ->where('att_date', $date)
+            ->where('att_start_date <=', $date)
+            ->where('att_end_date >=', $date)
             ->delete();
     }
 
@@ -117,13 +120,15 @@ class AttendanceModel extends Model
     }
 
     /**
-     * สรุปจำนวนคนลาวันนี้
+     * สรุปจำนวนคนลาในวันที่กำหนด (ตรวจสอบว่าอยู่ในช่วงลาหรือไม่)
      */
-    public function getTodaySummary($teamId = null)
+    public function getTodaySummary($teamId = null, $date = null)
     {
+        $date = $date ?: date('Y-m-d');
         $builder = $this->db->table('tb_attendance')
             ->select('att_status, COUNT(*) as count')
-            ->where('att_date', date('Y-m-d'))
+            ->where('att_start_date <=', $date)
+            ->where('att_end_date >=', $date)
             ->groupBy('att_status');
 
         if ($teamId) {

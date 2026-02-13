@@ -125,6 +125,17 @@
             font-size: 1.1rem !important;
         }
     }
+
+    /* Ensure Cropper modal is on top of other modals */
+    #modalCropper {
+        z-index: 2000 !important;
+    }
+    .modal-backdrop.show:nth-last-of-type(1) {
+        z-index: 1085 !important;
+    }
+    #modalCropper ~ .modal-backdrop {
+        z-index: 1990 !important;
+    }
 </style>
 
 <!-- Cropper.js CSS -->
@@ -207,14 +218,26 @@
                                                     ? base_url('uploads/athletes/' . $row['athlete_image']) 
                                                     : base_url('assets/img/avatars/default-avatar.png');
                                                 ?>
-                                                <img src="<?= $imagePath; ?>" alt="<?= $row['StudentFirstName']; ?>" 
-                                                     class="rounded border shadow-xs" style="width: 45px; height: 60px; object-fit: cover;">
+                                                <div class="position-relative">
+                                                    <img src="<?= $imagePath; ?>" alt="<?= $row['StudentFirstName']; ?>" 
+                                                         class="rounded border shadow-xs" style="width: 45px; height: 60px; object-fit: cover;">
+                                                </div>
                                                 <span class="fw-semibold"><?= $row['StudentPrefix'] . $row['StudentFirstName'] . ' ' . $row['StudentLastName']; ?></span>
                                             </div>
                                         </td>
                                         <td class="text-center"><span class="badge bg-label-secondary"><?= $row['StudentClass']; ?></span></td>
                                         <td>
-                                            <div class="d-flex justify-content-end">
+                                            <div class="d-flex justify-content-end gap-1">
+                                                <button type="button" 
+                                                        class="btn btn-icon btn-label-primary btn-sm rounded-circle btn-edit-athlete-image" 
+                                                        data-id="<?= $row['id']; ?>"
+                                                        data-student-id="<?= $row['StudentID']; ?>"
+                                                        data-name="<?= $row['StudentFirstName']; ?>"
+                                                        data-code="<?= $row['StudentCode']; ?>"
+                                                        data-image="<?= $imagePath; ?>"
+                                                        title="แก้ไขรูปภาพ">
+                                                    <i class="bx bx-image-add"></i>
+                                                </button>
                                                 <a href="<?= base_url('Admin/Team/RemoveAthlete/' . $row['id'] . '/' . $team['team_id']); ?>" 
                                                    class="btn btn-icon btn-label-danger btn-sm rounded-circle" 
                                                    onclick="return confirm('ยืนยันลบนักกีฬาออกจากรุ่น?')">
@@ -249,12 +272,23 @@
                                         </div>
                                         <small class="text-muted"><?= $row['StudentCode']; ?> • ชั้น <?= $row['StudentClass']; ?></small>
                                     </div>
-                                    <button type="button" 
-                                            class="btn btn-icon btn-label-danger btn-sm rounded-circle btn-remove-athlete"
-                                            data-id="<?= $row['id']; ?>"
-                                            data-name="<?= $row['StudentFirstName']; ?>">
-                                        <i class='bx bx-trash-alt'></i>
-                                    </button>
+                                    <div class="d-flex gap-1">
+                                        <button type="button" 
+                                                class="btn btn-icon btn-label-primary btn-sm rounded-circle btn-edit-athlete-image"
+                                                data-id="<?= $row['id']; ?>"
+                                                data-student-id="<?= $row['StudentID']; ?>"
+                                                data-name="<?= $row['StudentFirstName']; ?>"
+                                                data-code="<?= $row['StudentCode']; ?>"
+                                                data-image="<?= $imagePath; ?>">
+                                            <i class='bx bx-image-add'></i>
+                                        </button>
+                                        <button type="button" 
+                                                class="btn btn-icon btn-label-danger btn-sm rounded-circle btn-remove-athlete"
+                                                data-id="<?= $row['id']; ?>"
+                                                data-name="<?= $row['StudentFirstName']; ?>">
+                                            <i class='bx bx-trash-alt'></i>
+                                        </button>
+                                    </div>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
@@ -398,6 +432,44 @@
     </div>
 </div>
 
+<!-- Modal Edit Athlete Image -->
+<div class="modal fade" id="modalEditAthleteImage" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-bottom py-3">
+                <h5 class="modal-title fw-bold"><i class="bx bx-image-add me-2 text-primary"></i>แก้ไขรูปภาพนักกีฬา</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="<?= base_url('Admin/Team/UpdateAthleteImage'); ?>" method="post" enctype="multipart/form-data" id="formEditAthleteImage">
+                <input type="hidden" name="team_id" value="<?= $team['team_id']; ?>">
+                <input type="hidden" name="athlete_id" id="edit_athlete_id">
+                <input type="hidden" name="StudentID" id="edit_student_id">
+                <div class="modal-body p-4 text-center">
+                    <div class="mb-3">
+                        <h6 id="edit_athlete_name" class="fw-bold mb-1"></h6>
+                        <small id="edit_athlete_code" class="text-muted d-block mb-3"></small>
+                    </div>
+                    <div class="mb-4">
+                        <img id="editImagePreview" src="" 
+                             alt="Preview" class="rounded shadow-sm" 
+                             style="width: 120px; height: 160px; object-fit: cover; border: 3px solid #f8f9fa;">
+                    </div>
+                    <div class="text-start">
+                        <label class="form-label fw-semibold">เลือกรูปภาพใหม่</label>
+                        <input type="file" class="form-control" id="editAthleteImageInput" accept="image/*">
+                        <input type="hidden" id="editCroppedImageData" name="cropped_image">
+                        <div class="form-text mt-2"><i class='bx bx-info-circle me-1'></i> รูปภาพจะถูกครอบตัดเป็นแนวตั้ง (3:4) อัตโนมัติ</div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 pb-4 px-4">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm">บันทึกรูปภาพ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // DataTables setup
@@ -435,74 +507,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cropper.js Setup
     let cropper = null;
+    let cropperContext = 'add'; // 'add' or 'edit'
     
-    // When file is selected, open cropper modal
+    // When file is selected (ADD), open cropper modal
     $('#athleteImageInput').on('change', function() {
-        const file = this.files[0];
+        cropperContext = 'add';
+        handleImageSelection(this);
+    });
+
+    // When file is selected (EDIT), open cropper modal
+    $('#editAthleteImageInput').on('change', function() {
+        cropperContext = 'edit';
+        handleImageSelection(this);
+    });
+
+    function handleImageSelection(input) {
+        const file = input.files[0];
         if (file) {
-            // Validate file size (2MB max)
             if (file.size > 2 * 1024 * 1024) {
                 Swal.fire('ไฟล์ใหญ่เกินไป', 'กรุณาเลือกไฟล์ขนาดไม่เกิน 2MB', 'warning');
                 return;
             }
-            
             const reader = new FileReader();
             reader.onload = function(e) {
-                // Destroy existing cropper
-                if (cropper) {
-                    cropper.destroy();
-                    cropper = null;
-                }
-                
-                // Set image source and show cropper modal
+                if (cropper) { cropper.destroy(); cropper = null; }
                 $('#cropperPreview').attr('src', e.target.result);
                 $('#modalCropper').modal('show');
-                
-                // Initialize cropper after modal is shown
                 $('#modalCropper').one('shown.bs.modal', function() {
                     cropper = new Cropper(document.getElementById('cropperPreview'), {
-                        aspectRatio: 3/4, // Portrait (3:4)
-                        viewMode: 2,
-                        dragMode: 'move',
-                        autoCropArea: 0.8,
-                        restore: false,
-                        guides: true,
-                        center: true,
-                        highlight: false,
-                        cropBoxMovable: true,
-                        cropBoxResizable: true,
-                        toggleDragModeOnDblclick: false
+                        aspectRatio: 3/4, viewMode: 2, dragMode: 'move', autoCropArea: 0.8,
+                        guides: true, center: true, highlight: false,
+                        cropBoxMovable: true, cropBoxResizable: true
                     });
                 });
             };
             reader.readAsDataURL(file);
         }
-    });
+    }
     
     // Crop and apply image
     $('#btnCropImage').on('click', function() {
         if (cropper) {
-            // Get cropped canvas
             const canvas = cropper.getCroppedCanvas({
-                width: 300,
-                height: 400,
-                imageSmoothingEnabled: true,
-                imageSmoothingQuality: 'high'
+                width: 600, height: 800,
+                imageSmoothingEnabled: true, imageSmoothingQuality: 'high'
             });
+            const croppedData = canvas.toDataURL('image/jpeg', 1.0);
             
-            // Convert to base64
-            const croppedData = canvas.toDataURL('image/jpeg', 0.9);
+            if (cropperContext === 'add') {
+                $('#imagePreview').attr('src', croppedData);
+                $('#croppedImageData').val(croppedData);
+            } else {
+                $('#editImagePreview').attr('src', croppedData);
+                $('#editCroppedImageData').val(croppedData);
+            }
             
-            // Set preview
-            $('#imagePreview').attr('src', croppedData);
-            
-            // Store in hidden input
-            $('#croppedImageData').val(croppedData);
-            
-            // Close cropper modal
             $('#modalCropper').modal('hide');
-            
-            // Destroy cropper
             cropper.destroy();
             cropper = null;
         }
@@ -520,14 +580,11 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#formAddAthlete').on('submit', function(e) {
         e.preventDefault();
         const form = $(this);
-        const formData = new FormData(this);
-        
         $.ajax({
             url: form.attr('action'),
             method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
+            data: new FormData(this),
+            processData: false, contentType: false,
             success: function(res) {
                 if(res.success) {
                     $('#modalAddAthlete').modal('hide');
@@ -535,9 +592,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     Swal.fire('ผิดพลาด', res.message, 'error');
                 }
-            },
-            error: function() {
-                Swal.fire('ผิดพลาด', 'ไม่สามารถเพิ่มนักกีฬาได้', 'error');
+            }
+        });
+    });
+
+    // Open Edit Image Modal
+    $(document).on('click', '.btn-edit-athlete-image', function() {
+        $('#edit_athlete_id').val($(this).data('id'));
+        $('#edit_student_id').val($(this).data('student-id'));
+        $('#edit_athlete_name').text($(this).data('name'));
+        $('#edit_athlete_code').text('รหัสประจำตัว: ' + $(this).data('code'));
+        $('#editImagePreview').attr('src', $(this).data('image'));
+        $('#editCroppedImageData').val(''); 
+        $('#editAthleteImageInput').val('');
+        $('#modalEditAthleteImage').modal('show');
+    });
+
+    // AJAX for Updating Athlete Image
+    $('#formEditAthleteImage').on('submit', function(e) {
+        e.preventDefault();
+        const croppedData = $('#editCroppedImageData').val();
+        if (!croppedData) {
+            Swal.fire('ไม่มีการเปลี่ยนแปลง', 'กรุณาเลือกรูปภาพใหม่และทำการครอบตัดก่อนบันทึก', 'info');
+            return;
+        }
+        const form = $(this);
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: new FormData(this),
+            processData: false, contentType: false,
+            success: function(res) {
+                if(res.success) {
+                    $('#modalEditAthleteImage').modal('hide');
+                    Swal.fire('สำเร็จ', res.message, 'success').then(() => location.reload());
+                } else {
+                    Swal.fire('ผิดพลาด', res.message, 'error');
+                }
             }
         });
     });

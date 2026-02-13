@@ -60,6 +60,7 @@ $routes->post('Admin/Team/Create', 'ConAdminTeam::create');
 $routes->get('Admin/Team/Delete/(:num)', 'ConAdminTeam::delete/$1');
 $routes->get('Admin/Team/SearchStudents', 'ConAdminTeam::searchStudents');
 $routes->post('Admin/Team/AddAthlete', 'ConAdminTeam::addAthlete');
+$routes->post('Admin/Team/UpdateAthleteImage', 'ConAdminTeam::updateAthleteImage');
 $routes->get('Admin/Team/RemoveAthlete/(:num)/(:num)', 'ConAdminTeam::removeAthlete/$1/$2');
 $routes->post('Admin/Team/AddCoach', 'ConAdminTeam::addCoach');
 $routes->get('Admin/Team/RemoveCoach/(:num)/(:num)', 'ConAdminTeam::removeCoach/$1/$2');
