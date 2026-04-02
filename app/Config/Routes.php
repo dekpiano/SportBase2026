@@ -32,7 +32,7 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'ConUserHome::index');
 //User งานจองห้อง
 
-$routes->get('/LoginOfficerSportBase', 'ConLogin::LoginOfficerSportBase');
+$routes->match(['get', 'post'], '/LoginOfficerSportBase', 'ConLogin::LoginOfficerSportBase');
 $routes->get('/LogoutOfficerSportBase', 'ConLogin::LogoutOfficerSportBase');
 $routes->get('/LoginOfficerBudgetPlan', 'ConLogin::LoginOfficerBudgetPlan');
 $routes->get('/LogoutOfficerBudgetPlan', 'ConLogin::LogoutOfficerBudgetPlan');
