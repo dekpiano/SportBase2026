@@ -29,7 +29,7 @@ class ConAdminRoles extends BaseController
     public function DataMain()
     {
         $data['full_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $data['uri'] = service('uri');
+        $data['uri'] = service('uri')->setSilent(true);
         return $data;
     }
 
@@ -46,7 +46,7 @@ class ConAdminRoles extends BaseController
         // ดึงรายชื่อบุคลากรสำหรับเลือก
         $dbPersonnel = \Config\Database::connect('personnel');
         $data['personnel'] = $dbPersonnel->table('tb_personnel')
-            ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position')
+            ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position, pers_img')
             ->where('pers_status', 'กำลังใช้งาน')
             ->orderBy('pers_firstname', 'ASC')
             ->get()->getResultArray();

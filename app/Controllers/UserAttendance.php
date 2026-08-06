@@ -12,7 +12,7 @@ class UserAttendance extends BaseController
         $data['title'] = "สถานะภาพนักกีฬาประจำวัน";
         $data['UrlMenuMain'] = "Attendance";
         $data['full_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $data['uri'] = service('uri'); 
+        $data['uri'] = service('uri')->setSilent(true); 
         $data['description'] = "ตรวจสอบสถานะภาพนักกีฬา รายงานการลาประจำวัน โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์";
 
         $attendanceModel = new AttendanceModel();

@@ -392,6 +392,10 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#modalAddTeam form').on('submit', function(e) {
         e.preventDefault();
         const form = $(this);
+        const btn = form.find('button[type="submit"]');
+        const originalHtml = btn.html();
+        btn.prop('disabled', true).html("<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังบันทึกข้อมูล...");
+
         $.ajax({
             url: form.attr('action'),
             method: form.attr('method'),
@@ -402,7 +406,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     Swal.fire({ icon: 'success', title: 'สำเร็จ', text: res.message }).then(() => location.reload());
                 } else {
                     Swal.fire('ผิดพลาด', res.message, 'error');
+                    btn.prop('disabled', false).html(originalHtml);
                 }
+            },
+            error: function() {
+                Swal.fire('ผิดพลาด', 'เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์', 'error');
+                btn.prop('disabled', false).html(originalHtml);
             }
         });
     });

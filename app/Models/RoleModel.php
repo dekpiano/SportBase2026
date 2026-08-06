@@ -54,7 +54,7 @@ class RoleModel extends Model
         
         foreach ($roles as $role) {
             $person = $dbPersonnel->table('tb_personnel')
-                ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position')
+                ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position, pers_img')
                 ->where('pers_id', $role['pers_id'])
                 ->get()
                 ->getRowArray();
@@ -80,7 +80,7 @@ class RoleModel extends Model
         
         foreach ($roles as $role) {
             $person = $dbPersonnel->table('tb_personnel')
-                ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position')
+                ->select('pers_id, pers_prefix, pers_firstname, pers_lastname, pers_position, pers_img')
                 ->where('pers_id', $role['pers_id'])
                 ->get()
                 ->getRowArray();

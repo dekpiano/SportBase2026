@@ -61,17 +61,17 @@
 
     </html>
 
-    <?php if($uri->getSegment(2) == 'WorkPerson') : ?>
+    <?php if($uri->getSegment(2, '') == 'WorkPerson') : ?>
     <script src="<?=base_url()?>/assets/js/Admin/AdminPersonnal/AdminPersonnalMain.js?v=16.2"></script>
     <script src="<?=base_url()?>/assets/js/Admin/AdminPersonnal/AdminPersonnelApiProvince.js?v=1.2"></script>
     <?php endif;?>
-    <?php if($uri->getSegment(2) == 'SaveAttendance') : ?>
+    <?php if($uri->getSegment(2, '') == 'SaveAttendance') : ?>
     <script src="<?=base_url()?>/assets/js/Admin/AdminSaveAttendance/AdminSaveAttendance.js?v=1.7"></script>
      <script src="<?=base_url()?>/assets/js/Admin/AdminSaveAttendance/AdminStaffLeaveReport.js?v=1"></script>
      <script src="<?=base_url()?>/assets/js/Admin/AdminSaveAttendance/AdminReportPositionLeave.js?v=1.1"></script>
     <?php endif;?>
 
-    <?php if($uri->getSegment(2) == 'Rloes') : ?>
+    <?php if($uri->getSegment(2, '') == 'Rloes') : ?>
     <script src="<?=base_url()?>/assets/js/Admin/AdminRoles/AdminRolesMain.js?v=3"></script>
     <?php endif;?>
 

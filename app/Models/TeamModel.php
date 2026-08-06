@@ -33,7 +33,11 @@ class TeamModel extends Model
         $builder = $this->db->table('tb_teams')
             ->select('tb_teams.*, 
                       (SELECT COUNT(*) FROM tb_team_athletes WHERE tb_team_athletes.team_id = tb_teams.team_id) as athlete_count,
-                      (SELECT COUNT(*) FROM tb_team_coaches WHERE tb_team_coaches.team_id = tb_teams.team_id) as coach_count');
+                      (SELECT COUNT(*) FROM tb_team_coaches WHERE tb_team_coaches.team_id = tb_teams.team_id) as coach_count,
+                      (SELECT GROUP_CONCAT(CONCAT(pers.pers_prefix, pers.pers_firstname, " ", pers.pers_lastname) SEPARATOR ", ")
+                       FROM tb_team_coaches tc
+                       JOIN skjacth_personnel.tb_personnel pers ON pers.pers_id = tc.coach_id
+                       WHERE tc.team_id = tb_teams.team_id) as coach_names');
         
         if ($coachId) {
             $builder->join('tb_team_coaches', 'tb_team_coaches.team_id = tb_teams.team_id')
@@ -75,7 +79,7 @@ class TeamModel extends Model
     public function getTeamCoaches($teamId)
     {
         return $this->db->table('tb_team_coaches tc')
-            ->select('tc.*, pers.pers_prefix, pers.pers_firstname, pers.pers_lastname')
+            ->select('tc.*, pers.pers_prefix, pers.pers_firstname, pers.pers_lastname, pers.pers_img')
             ->join('skjacth_personnel.tb_personnel pers', 'pers.pers_id = tc.coach_id')
             ->where('tc.team_id', $teamId)
             ->get()

@@ -1,16 +1,111 @@
+<?php 
+$seg2 = $uri->getSegment(2, '');
+$seg3 = $uri->getSegment(3, '');
+
+$isHome = in_array($seg2, ['Home', '']);
+$isTeam = ($seg2 == 'Team');
+$isMatch = ($seg2 == 'Match');
+$isAttendanceMain = ($seg2 == 'Attendance' && $seg3 != 'History');
+$isAttendanceHistory = ($seg2 == 'Attendance' && $seg3 == 'History');
+$isRoles = ($seg2 == 'Roles');
+?>
+
+<style>
+    /* Premium Sidebar UX/UI Styling */
+    #layout-menu {
+        background: #ffffff !important;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.08) !important;
+        border-right: 1px solid #f1f5f9;
+    }
+
+    @media (max-width: 1199.98px) {
+        #layout-menu {
+            width: 280px !important;
+        }
+        .app-brand {
+            padding: 1.1rem 1.1rem 0.75rem 1.1rem !important;
+        }
+    }
+    
+    .app-brand {
+        padding: 1.25rem 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .app-brand-logo-img {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        filter: drop-shadow(0 4px 10px rgba(253, 126, 20, 0.25));
+    }
+    
+    .app-brand-link:hover .app-brand-logo-img {
+        transform: scale(1.1) rotate(-4deg);
+    }
+    
+    .menu-header-text {
+        font-size: 0.68rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.8px;
+        color: #94a3b8 !important;
+    }
+
+    .menu-inner .menu-item .menu-link {
+        border-radius: 12px !important;
+        margin: 0.2rem 0.8rem !important;
+        padding: 0.68rem 1rem !important;
+        transition: all 0.25s ease-in-out !important;
+        color: #475569 !important;
+        font-weight: 600 !important;
+    }
+
+    .menu-inner .menu-item .menu-link:hover {
+        background: rgba(253, 126, 20, 0.08) !important;
+        color: #fd7e14 !important;
+        transform: translateX(4px) !important;
+    }
+
+    .menu-inner .menu-item .menu-link:hover .menu-icon {
+        color: #fd7e14 !important;
+    }
+
+    /* Active State styling */
+    .menu-inner .menu-item.active > .menu-link {
+        background: linear-gradient(135deg, #fd7e14 0%, #ff9e43 100%) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 15px rgba(253, 126, 20, 0.35) !important;
+        font-weight: 700 !important;
+    }
+
+    .menu-inner .menu-item.active > .menu-link .menu-icon {
+        color: #ffffff !important;
+    }
+
+    .admin-badge {
+        background: rgba(253, 126, 20, 0.12);
+        color: #fd7e14;
+        font-size: 0.65rem;
+        font-weight: 800;
+        padding: 2px 8px;
+        border-radius: 20px;
+        letter-spacing: 0.5px;
+    }
+</style>
+
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
         <!-- Menu -->
-
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="<?=base_url('Admin/Home');?>" class="app-brand-link">
+                <a href="<?=base_url('Admin/Home');?>" class="app-brand-link d-flex align-items-center gap-2">
                     <span class="app-brand-logo demo">
-                        <img src="https://skj.ac.th/uploads/logoSchool/LogoSKJ_4.png" alt="" width="40">
+                        <img src="https://skj.ac.th/uploads/logoSchool/LogoSKJ_4.png" alt="Logo" width="38" class="app-brand-logo-img">
                     </span>
-                    <span class="app-brand-text menu-text fw-bolder ms-2">SKJ SportBase 2026
-                        <small>(Admin)</small></span>
+                    <div class="d-flex flex-column">
+                        <span class="app-brand-text menu-text fw-bold text-dark fs-6 lh-1">SportBase 2026</span>
+                        <div class="mt-1">
+                            <span class="admin-badge">ADMIN</span>
+                        </div>
+                    </div>
                 </a>
 
                 <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -20,20 +115,21 @@
 
             <div class="menu-inner-shadow"></div>
 
-            <ul class="menu-inner py-1">
+            <ul class="menu-inner py-2">
                 <!-- Dashboard -->
-                <li class="menu-item <?php echo ($uri->getSegment(2) == "Home"?"active":"")?>">
+                <li class="menu-item <?= ($isHome ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Home');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Analytics">หน้าแรก </div>
+                        <div data-i18n="Analytics">หน้าแรก</div>
                     </a>
                 </li>
+
                 <?php if(in_array(session()->get('status'), ["admin", "super_admin", "coach"])) : ?>
-                <li class="menu-header small text-uppercase">
+                <li class="menu-header small text-uppercase mt-2">
                     <span class="menu-header-text">จัดการข้อมูลนักกีฬา</span>
                 </li>
 
-                <li class="menu-item <?php echo ($uri->getSegment(2) == "Team"?"active":"")?>">
+                <li class="menu-item <?= ($isTeam ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Team');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-group"></i>
                         <div data-i18n="Analytics">รุ่นนักกีฬา</div>
@@ -41,57 +137,48 @@
                 </li>
                 <?php endif; ?>
 
-                <li class="menu-header small text-uppercase">
-                    <span class="menu-header-text">การแข่งขัน</span>
+                <li class="menu-header small text-uppercase mt-2">
+                    <span class="menu-header-text">การแข่งขัน & กิจกรรม</span>
                 </li>
 
-                <li class="menu-item <?php echo ($uri->getSegment(2) == "Match"?"active":"")?>">
+                <li class="menu-item <?= ($isMatch ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Match');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-trophy"></i>
                         <div data-i18n="Analytics">ตารางแข่งขัน</div>
                     </a>
                 </li>
 
-                <li class="menu-header small text-uppercase">
-                    <span class="menu-header-text">การติดตามผล</span>
+                <li class="menu-header small text-uppercase mt-2">
+                    <span class="menu-header-text">การติดตามผลนักกีฬา</span>
                 </li>
 
-                <li class="menu-item <?php echo ($uri->getSegment(2) == "Attendance" && $uri->getSegment(3) == "" ?"active":"")?>">
+                <li class="menu-item <?= ($isAttendanceMain ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Attendance');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-calendar-check"></i>
                         <div data-i18n="Analytics">บันทึกการลานักกีฬา</div>
                     </a>
                 </li>
 
-                <li class="menu-item <?php echo ($uri->getSegment(2) == "Attendance" && $uri->getSegment(3) == "History" ?"active":"")?>">
+                <li class="menu-item <?= ($isAttendanceHistory ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Attendance/History');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-history"></i>
                         <div data-i18n="Analytics">สรุปการลาทั้งหมด</div>
                     </a>
                 </li>
 
-            
+                <?php if(in_array(session()->get('status'), ["admin", "super_admin"])) : ?>
+                <li class="menu-header small text-uppercase mt-2">
+                    <span class="menu-header-text">ตั้งค่าระบบ</span>
+                </li>
 
-
-
-                <!-- Layouts -->
-                <?php $SubRloes = explode(',', (session()->get('rloes') ?? 'Member')); ?>
-
-
+                <li class="menu-item <?= ($isRoles ? 'active' : '') ?>">
+                    <a href="<?=base_url('Admin/Roles/Setting');?>" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-shield-quarter"></i>
+                        <div data-i18n="Analytics">กำหนดสิทธิ์ใช้งาน</div>
+                    </a>
+                </li>
+                <?php endif; ?>
 
             </ul>
-
-            <?php if(session()->get('status') == "admin" || session()->get('status') == "super_admin" ) : ?>
-            <div>
-                <ul class="menu-inner py-1">
-                    <li class="menu-item <?php echo $uri->getSegment(2) == "Roles"?"active":""?>">
-                        <a href="<?=base_url('Admin/Roles/Setting');?>" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-spreadsheet"></i>
-                            <div data-i18n="Analytics">กำหนดสิทธิ์ใช้งาน </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <?php endif; ?>
         </aside>
         <!-- / Menu -->

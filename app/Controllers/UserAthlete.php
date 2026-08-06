@@ -11,7 +11,7 @@ class UserAthlete extends BaseController
         $data['title'] = "ทำเนียบนักกีฬา";
         $data['UrlMenuMain'] = "Athlete";
         $data['full_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $data['uri'] = service('uri'); 
+        $data['uri'] = service('uri')->setSilent(true); 
         $data['description'] = "ทำเนียบนักกีฬาและผู้มีทักษะด้านกีฬา โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์";
 
         $teamModel = new TeamModel();

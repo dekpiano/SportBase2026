@@ -85,14 +85,18 @@
     }
 
     .avatar-wrapper {
-        width: 45px;
-        height: 45px;
+        width: 48px;
+        height: 48px;
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.2rem;
         background: #f0f2f5;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 2px solid #ffffff;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
 
     .bg-light-red { background: #ffebeb; color: #ff4d4d; }
@@ -220,13 +224,21 @@
                                 <p class="text-muted mt-2">ยังไม่มีข้อมูล</p>
                             </div>
                         <?php else : ?>
-                            <?php foreach ($admins as $role) : ?>
+                            <?php foreach ($admins as $role) : 
+                                $persName = $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname'];
+                                $persImgUrl = !empty($role['person']['pers_img']) 
+                                    ? 'https://personnel.skj.ac.th/uploads/admin/Personnal/' . $role['person']['pers_img'] 
+                                    : 'https://ui-avatars.com/api/?name=' . urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) . '&background=ffebeb&color=ff4d4d&size=100';
+                            ?>
                                 <div class="person-item">
                                     <div class="avatar-wrapper bg-light-red">
-                                        <i class='bx bxs-shield-alt'></i>
+                                        <img src="<?= $persImgUrl ?>" 
+                                             alt="<?= $role['person']['pers_firstname'] ?>" 
+                                             style="width: 100%; height: 100%; object-fit: cover;"
+                                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=<?= urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) ?>&background=ffebeb&color=ff4d4d';">
                                     </div>
                                     <div class="person-info">
-                                        <span class="person-name"><?= $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']; ?></span>
+                                        <span class="person-name"><?= $persName; ?></span>
                                         <span class="person-title"><i class='bx bx-badge-check me-1'></i><?= $role['role_position']; ?></span>
                                     </div>
                                     <a href="<?= base_url('Admin/Roles/Delete/' . $role['id']); ?>" 
@@ -264,13 +276,21 @@
                                 <p class="text-muted mt-2">ยังไม่มีข้อมูล</p>
                             </div>
                         <?php else : ?>
-                            <?php foreach ($managers as $role) : ?>
+                            <?php foreach ($managers as $role) : 
+                                $persName = $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname'];
+                                $persImgUrl = !empty($role['person']['pers_img']) 
+                                    ? 'https://personnel.skj.ac.th/uploads/admin/Personnal/' . $role['person']['pers_img'] 
+                                    : 'https://ui-avatars.com/api/?name=' . urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) . '&background=fff9e6&color=ffcc00&size=100';
+                            ?>
                                 <div class="person-item">
                                     <div class="avatar-wrapper bg-light-yellow">
-                                        <i class='bx bxs-crown'></i>
+                                        <img src="<?= $persImgUrl ?>" 
+                                             alt="<?= $role['person']['pers_firstname'] ?>" 
+                                             style="width: 100%; height: 100%; object-fit: cover;"
+                                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=<?= urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) ?>&background=fff9e6&color=ffcc00';">
                                     </div>
                                     <div class="person-info">
-                                        <span class="person-name"><?= $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']; ?></span>
+                                        <span class="person-name"><?= $persName; ?></span>
                                         <span class="person-title"><i class='bx bx-bookmark-alt-minus me-1'></i><?= $role['role_position']; ?></span>
                                     </div>
                                     <a href="<?= base_url('Admin/Roles/Delete/' . $role['id']); ?>" 
@@ -308,13 +328,21 @@
                                 <p class="text-muted mt-2">ยังไม่มีข้อมูล</p>
                             </div>
                         <?php else : ?>
-                            <?php foreach ($coaches as $role) : ?>
+                            <?php foreach ($coaches as $role) : 
+                                $persName = $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname'];
+                                $persImgUrl = !empty($role['person']['pers_img']) 
+                                    ? 'https://personnel.skj.ac.th/uploads/admin/Personnal/' . $role['person']['pers_img'] 
+                                    : 'https://ui-avatars.com/api/?name=' . urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) . '&background=e6faff&color=00d2ff&size=100';
+                            ?>
                                 <div class="person-item">
                                     <div class="avatar-wrapper bg-light-blue">
-                                        <i class='bx bxs-user-voice'></i>
+                                        <img src="<?= $persImgUrl ?>" 
+                                             alt="<?= $role['person']['pers_firstname'] ?>" 
+                                             style="width: 100%; height: 100%; object-fit: cover;"
+                                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=<?= urlencode($role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']) ?>&background=e6faff&color=00d2ff';">
                                     </div>
                                     <div class="person-info">
-                                        <span class="person-name"><?= $role['person']['pers_prefix'] . $role['person']['pers_firstname'] . ' ' . $role['person']['pers_lastname']; ?></span>
+                                        <span class="person-name"><?= $persName; ?></span>
                                         <span class="person-title"><i class='bx bx-run me-1'></i><?= $role['role_position']; ?></span>
                                     </div>
                                     <a href="<?= base_url('Admin/Roles/Delete/' . $role['id']); ?>" 
@@ -354,8 +382,12 @@
                         <label for="pers_id" class="form-label fw-semibold">เลือกบุคลากร</label>
                         <select id="pers_id" name="pers_id" class="form-select select2-premium" required>
                             <option value="">ค้นหาด้วยชื่อหรือนามสกุล...</option>
-                            <?php foreach($personnel as $p): ?>
-                                <option value="<?= $p['pers_id']; ?>"><?= $p['pers_prefix'].$p['pers_firstname'].' '.$p['pers_lastname']; ?> (<?= $p['pers_position']; ?>)</option>
+                            <?php foreach($personnel as $p): 
+                                $pImgUrl = !empty($p['pers_img']) 
+                                    ? 'https://personnel.skj.ac.th/uploads/admin/Personnal/' . $p['pers_img'] 
+                                    : 'https://ui-avatars.com/api/?name=' . urlencode($p['pers_firstname'] . ' ' . $p['pers_lastname']) . '&background=random&size=80';
+                            ?>
+                                <option value="<?= $p['pers_id']; ?>" data-img="<?= $pImgUrl ?>"><?= $p['pers_prefix'].$p['pers_firstname'].' '.$p['pers_lastname']; ?> (<?= $p['pers_position']; ?>)</option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -405,11 +437,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize Select2 with premium styling
+    function formatPersonnel(state) {
+        if (!state.id) return state.text;
+        const imgUrl = $(state.element).data('img');
+        if (!imgUrl) return state.text;
+        return $(`
+            <div class="d-flex align-items-center gap-2">
+                <img src="${imgUrl}" class="rounded-circle border" style="width: 28px; height: 28px; object-fit: cover;" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(state.text)}&background=random';">
+                <span>${state.text}</span>
+            </div>
+        `);
+    }
+
+    // Initialize Select2 with premium styling & images
     setTimeout(() => {
         $('.select2-premium').select2({
             dropdownParent: $('#modalAddRole'),
-            width: '100%'
+            width: '100%',
+            templateResult: formatPersonnel,
+            templateSelection: formatPersonnel
         });
     }, 200);
 

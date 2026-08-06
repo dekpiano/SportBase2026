@@ -35,7 +35,7 @@ class ConAdminAttendance extends BaseController
     public function index()
     {
         $data['title'] = 'บันทึกการลานักกีฬา';
-        $data['uri'] = service('uri');
+        $data['uri'] = service('uri')->setSilent(true);
 
         $coachId = (session()->get('status') == 'coach') ? session()->get('id') : null;
         $data['teams'] = $this->teamModel->getTeamsWithCounts($coachId);
@@ -78,7 +78,7 @@ class ConAdminAttendance extends BaseController
         }
 
         $data['title'] = 'บันทึกการลา: ' . $team['team_name'];
-        $data['uri'] = service('uri');
+        $data['uri'] = service('uri')->setSilent(true);
         $data['team'] = $team;
         $data['athletes'] = $athletes;
         $data['attendanceMap'] = $attendanceMap;
@@ -179,7 +179,7 @@ class ConAdminAttendance extends BaseController
     public function history($teamId = null)
     {
         $data['title'] = 'ประวัติการบันทึกการลา';
-        $data['uri'] = service('uri');
+        $data['uri'] = service('uri')->setSilent(true);
         
         $coachId = (session()->get('status') == 'coach') ? session()->get('id') : null;
         $data['teams'] = $this->teamModel->getTeamsWithCounts($coachId);

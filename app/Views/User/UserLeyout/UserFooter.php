@@ -69,13 +69,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js"></script>
 
-    <?php if($uri->getSegment(1) == 'Booking') : ?>       
+    <?php if($uri->getSegment(1, '') == 'Booking') : ?>       
     <script src="<?=base_url()?>/assets/js/User/UserBooking/UserBooking.js?v=22.5"></script>
     <script src="<?=base_url()?>/assets/js/User/UserBooking/UserBookingSignature.js?v=1.3"></script>
     
-    <?php elseif($uri->getSegment(1) == 'Repair') : ?>
+    <?php elseif($uri->getSegment(1, '') == 'Repair') : ?>
     <script src="<?=base_url()?>/assets/js/User/UserRepair/UserRepair.js?v=18"></script>
-    <?php elseif($uri->getSegment(1) == 'CarBooking') : ?>
+    <?php elseif($uri->getSegment(1, '') == 'CarBooking') : ?>
         <script src="<?=base_url()?>/assets/js/User/UserCarReservation/UserCarReservation.js?v=2"></script>
     <?php endif; ?>
 

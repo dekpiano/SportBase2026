@@ -21,9 +21,9 @@
     <meta property="og:title" content="<?=$title;?>" />
     <meta property="og:description" content="<?= $description ?>" />
     <meta property="og:type" content="website" />
-    <?php if($uri->getSegment(1) == 'Booking') : ?>
+    <?php if($uri->getSegment(1, '') == 'Booking') : ?>
     <meta property="og:image" content="<?=base_url();?>uploads/banner/booking/bannerBooking.png" />
-    <?php elseif($uri->getSegment(1) == 'Repair'): ?>
+    <?php elseif($uri->getSegment(1, '') == 'Repair'): ?>
     <meta property="og:image" content="<?=base_url();?>uploads/banner/repair/bannerRepair.jpg" />
     <?php else: ?>
     <meta property="og:image" content="<?=base_url();?>uploads/banner/home/bannerHome.png" />
@@ -167,6 +167,11 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: var(--sb-orange-warm);
+        }
+
+        /* SweetAlert2 High Priority Overlay */
+        .swal2-container {
+            z-index: 99999 !important;
         }
     </style>
 

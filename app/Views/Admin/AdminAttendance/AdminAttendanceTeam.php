@@ -114,6 +114,76 @@
         padding: 10px;
     }
 
+    /* Swal Popup Responsive */
+    .swal2-popup {
+        width: 92% !important;
+        max-width: 460px !important;
+        padding: 1.25rem 1rem !important;
+        border-radius: 24px !important;
+    }
+    .swal2-container { z-index: 99999 !important; }
+
+    /* Inline Calendar inside Swal - scoped */
+    .swal-calendar-wrap .flatpickr-calendar {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+    }
+
+    .swal-calendar-wrap .flatpickr-months {
+        padding: 6px 0 !important;
+    }
+
+    .swal-calendar-wrap .flatpickr-days,
+    .swal-calendar-wrap .dayContainer {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .swal-calendar-wrap .flatpickr-day {
+        max-width: 14.28% !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+    }
+
+    .swal-calendar-wrap .flatpickr-day.selected,
+    .swal-calendar-wrap .flatpickr-day.startRange,
+    .swal-calendar-wrap .flatpickr-day.endRange {
+        background: var(--sb-orange) !important;
+        border-color: var(--sb-orange) !important;
+    }
+    .swal-calendar-wrap .flatpickr-day.inRange {
+        background: rgba(249, 115, 22, 0.15) !important;
+        border-color: rgba(249, 115, 22, 0.15) !important;
+    }
+
+    .quick-date-preset {
+        border-radius: 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.4rem 0.65rem;
+        transition: all 0.2s ease;
+    }
+    .quick-date-preset:hover, .quick-date-preset:focus {
+        transform: translateY(-2px);
+    }
+    .quick-date-preset.active-preset {
+        background: var(--sb-orange) !important;
+        border-color: var(--sb-orange) !important;
+        color: white !important;
+    }
+
     @media (max-width: 768px) {
         .attendance-header {
             padding: 1.5rem;
@@ -125,6 +195,12 @@
         .status-btn {
             height: 44px;
             font-size: 0.8rem;
+        }
+        .swal2-popup {
+            padding: 1rem 0.75rem !important;
+        }
+        .swal2-title {
+            font-size: 1.1rem !important;
         }
     }
 </style>
@@ -211,7 +287,7 @@
                                                 $att = $attendanceMap[$row['StudentID']];
                                                 if (!empty($att['att_start_date']) && !empty($att['att_end_date']) && $att['att_start_date'] !== $att['att_end_date']): ?>
                                                     <small class="text-primary d-block fw-bold" style="font-size: 0.7rem;">
-                                                        <i class="bx bx-calendar-event"></i> ลา: <?= date('d/m/y', strtotime($att['att_start_date'])); ?> - <?= date('d/m/y', strtotime($att['att_end_date'])); ?>
+                                                        <i class="bx bx-calendar-event"></i> ลา: <?= date('d/m', strtotime($att['att_start_date'])) . '/' . (date('y', strtotime($att['att_start_date'])) + 43); ?> - <?= date('d/m', strtotime($att['att_end_date'])) . '/' . (date('y', strtotime($att['att_end_date'])) + 43); ?>
                                                     </small>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -286,7 +362,7 @@
                                             $att = $attendanceMap[$row['StudentID']];
                                             if (!empty($att['att_start_date']) && !empty($att['att_end_date']) && $att['att_start_date'] !== $att['att_end_date']): ?>
                                                 <small class="text-primary d-block fw-bold mt-1" style="font-size: 0.7rem;">
-                                                    <i class="bx bx-calendar-event"></i> ลา: <?= date('d/m/y', strtotime($att['att_start_date'])); ?> - <?= date('d/m/y', strtotime($att['att_end_date'])); ?>
+                                                    <i class="bx bx-calendar-event"></i> ลา: <?= date('d/m', strtotime($att['att_start_date'])) . '/' . (date('y', strtotime($att['att_start_date'])) + 43); ?> - <?= date('d/m', strtotime($att['att_end_date'])) . '/' . (date('y', strtotime($att['att_end_date'])) + 43); ?>
                                                 </small>
                                             <?php endif; ?>
                                         <?php endif; ?>
@@ -338,24 +414,47 @@
 $(document).ready(function() {
     const teamId = <?= $team['team_id']; ?>;
     
+    // Helper: แปลงปีค.ศ. ในข้อความ altInput เป็น พ.ศ.
+    function toBuddhistYearText(text) {
+        return text.replace(/(\d{4})/, function(match) {
+            return parseInt(match) + 543;
+        });
+    }
+
     // Flatpickr setup with Thai Locale and Buddhist Year
     flatpickr("#attendanceDate", {
         locale: "th",
         dateFormat: "Y-m-d",
-            altInput: true,
-            altFormat: "j F Y",
-            onChange: function(selectedDates, dateStr) {
-                window.location.href = '<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>?date=' + dateStr;
-            },
-            onReady: function(selectedDates, dateStr, instance) {
-                const year = instance.currentYear + 543;
-                instance.calendarContainer.querySelector('.cur-year').textContent = year;
-            },
-            onYearChange: function(selectedDates, dateStr, instance) {
-                const year = instance.currentYear + 543;
-                instance.calendarContainer.querySelector('.cur-year').textContent = year;
+        altInput: true,
+        altFormat: "j F Y",
+        onChange: function(selectedDates, dateStr) {
+            window.location.href = '<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>?date=' + dateStr;
+        },
+        onReady: function(selectedDates, dateStr, instance) {
+            if (instance.calendarContainer) {
+                const el = instance.calendarContainer.querySelector('.cur-year');
+                if (el) el.textContent = instance.currentYear + 543;
             }
-        });
+            // แปลง altInput เป็น พ.ศ.
+            if (instance.altInput) {
+                instance.altInput.value = toBuddhistYearText(instance.altInput.value);
+            }
+        },
+        onValueUpdate: function(selectedDates, dateStr, instance) {
+            // แปลง altInput เป็น พ.ศ. ทุกครั้งที่ค่าเปลี่ยน
+            if (instance.altInput) {
+                setTimeout(() => {
+                    instance.altInput.value = toBuddhistYearText(instance.altInput.value);
+                }, 0);
+            }
+        },
+        onYearChange: function(selectedDates, dateStr, instance) {
+            if (instance.calendarContainer) {
+                const el = instance.calendarContainer.querySelector('.cur-year');
+                if (el) el.textContent = instance.currentYear + 543;
+            }
+        }
+    });
 
     // Initial counts - นับเฉพาะ Desktop radio (st_) เพื่อไม่ให้นับซ้ำกับ Mobile (mst_)
     function updateLiveStats() {
@@ -394,48 +493,117 @@ $(document).ready(function() {
             saveStudentAttendance(row);
             updateLiveStats();
         } else {
-            const studentName = row.find('.fw-semibold').text();
+            // หาชื่อนักเรียนจาก Desktop (.fw-semibold) หรือ Mobile (.fw-bold)
+            const studentName = row.find('.fw-semibold').text() || row.find('.fw-bold.text-dark').first().text() || 'นักกีฬา';
             const statusLabel = $(this).next('label').text();
             
+            // ดึงรูปภาพนักเรียนจาก img ในแถว
+            const studentImg = row.find('img.athlete-avatar, .athlete-avatar-box img').first();
+            const studentPhotoUrl = studentImg.length ? studentImg.attr('src') : '';
+            
             // กำหนด title และ label ตามประเภทสถานะ
-            let popupTitle = 'บันทึกการลา: ' + studentName;
+            let popupTitle = 'บันทึกการลา';
             let dateLabel = 'ระบุช่วงวันที่ลา';
             if (val === 'competition') {
-                popupTitle = 'บันทึกการแข่งขัน: ' + studentName;
+                popupTitle = 'บันทึกการแข่งขัน';
                 dateLabel = 'ระบุช่วงวันที่ไปแข่งขัน';
             }
             
             Swal.fire({
                 title: popupTitle,
                 html: `
-                    <div class="text-start mb-3">
-                        <p class="mb-2">ประเภท: <span class="badge bg-label-primary">${statusLabel}</span></p>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">${dateLabel}</label>
-                            <input type="text" id="swal-range-inline" class="form-control" placeholder="คลิกเพื่อเลือกวันที่..." readonly>
-                            <small class="text-muted"><i class="bx bx-info-circle"></i> คลิกเลือก 1 วัน หรือ คลิก 2 ครั้งเพื่อเลือกช่วงวัน</small>
+                    <div class="text-start mb-2">
+                        <!-- Student Info Header with Photo -->
+                        <div class="d-flex align-items-center gap-3 mb-3 p-2 rounded-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                            ${studentPhotoUrl ? `<img src="${studentPhotoUrl}" style="width: 50px; height: 66px; object-fit: cover; border-radius: 10px; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" onerror="this.style.display='none'">` : ''}
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 1rem;">${studentName.trim()}</div>
+                                <span class="badge bg-label-primary fs-6">${statusLabel}</span>
+                            </div>
                         </div>
+                        
                         <div class="mb-3">
-                            <label class="form-label fw-bold">หมายเหตุ</label>
-                            <input type="text" id="swal-note-inline" class="form-control" placeholder="ระบุเหตุผล (ถ้ามี)...">
+                            <label class="form-label fw-bold text-dark mb-1">${dateLabel}</label>
+                            
+                            <!-- Quick Preset Buttons -->
+                            <div class="d-flex gap-1 mb-2 flex-wrap" id="swalPresetButtons">
+                                <button type="button" class="btn btn-sm btn-outline-primary quick-date-preset active-preset" data-days="1">⚡ วันนี้</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary quick-date-preset" data-days="2">⚡ 2 วัน</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary quick-date-preset" data-days="3">⚡ 3 วัน</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary quick-date-preset" data-days="7">⚡ 1 สัปดาห์</button>
+                            </div>
+
+                            <!-- Inline Calendar Container -->
+                            <div class="swal-calendar-wrap" id="swalCalendarContainer"></div>
+                            <small class="text-muted d-block mt-1 text-center" style="font-size: 0.75rem;"><i class="bx bx-info-circle me-1"></i> แตะ 1 ครั้ง = เลือก 1 วัน, แตะ 2 ครั้ง = เลือกช่วงวัน</small>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <label class="form-label fw-bold text-dark mb-1">หมายเหตุ</label>
+                            <input type="text" id="swal-note-inline" class="form-control" placeholder="ระบุเหตุผลการลา (ถ้ามี)...">
                         </div>
                     </div>
                 `,
                 didOpen: () => {
-                    window.rangePicker = flatpickr("#swal-range-inline", {
+                    const currentDateStr = $('#attendanceDate').val() || new Date().toISOString().split('T')[0];
+                    const baseDate = new Date(currentDateStr);
+
+                    window.rangePicker = flatpickr("#swalCalendarContainer", {
                         mode: "range",
                         locale: "th",
                         dateFormat: "Y-m-d",
-                        static: true,
-                        appendTo: document.querySelector('.swal2-container'),
+                        defaultDate: [baseDate],
+                        disableMobile: true,
+                        inline: true,
                         onChange: function(selectedDates, dateStr, instance) {
                             window.selectedRangeDates = selectedDates;
+                            setBuddhistYear(instance);
+                        },
+                        onReady: function(selectedDates, dateStr, instance) {
+                            setBuddhistYear(instance);
+                        },
+                        onMonthChange: function(selectedDates, dateStr, instance) {
+                            setBuddhistYear(instance);
+                        },
+                        onYearChange: function(selectedDates, dateStr, instance) {
+                            setBuddhistYear(instance);
                         }
                     });
-                    window.selectedRangeDates = [];
+
+                    // Helper: แปลงปี ค.ศ. → พ.ศ. ในปฏิทิน inline
+                    function setBuddhistYear(instance) {
+                        if (!instance.calendarContainer) return;
+                        const buddhistYear = instance.currentYear + 543;
+                        // Handle <input class="cur-year"> (inline mode)
+                        const yearInput = instance.calendarContainer.querySelector('input.cur-year');
+                        if (yearInput) {
+                            yearInput.value = buddhistYear;
+                            return;
+                        }
+                        // Handle <span class="cur-year"> (popup mode)
+                        const yearSpan = instance.calendarContainer.querySelector('.cur-year');
+                        if (yearSpan) yearSpan.textContent = buddhistYear;
+                    }
+                    window.selectedRangeDates = [baseDate];
+
+                    // Quick Preset Click Handler
+                    $(document).off('click', '.quick-date-preset').on('click', '.quick-date-preset', function() {
+                        const days = parseInt($(this).data('days')) || 1;
+                        const startDate = new Date(currentDateStr);
+                        const endDate = new Date(currentDateStr);
+                        endDate.setDate(startDate.getDate() + (days - 1));
+
+                        // Handle array return from flatpickr
+                        const picker = Array.isArray(window.rangePicker) ? window.rangePicker[0] : window.rangePicker;
+                        picker.setDate([startDate, endDate], true);
+                        window.selectedRangeDates = [startDate, endDate];
+                        
+                        $('.quick-date-preset').removeClass('btn-primary text-white').addClass('btn-outline-primary');
+                        $(this).removeClass('btn-outline-primary').addClass('btn-primary text-white');
+                    });
                 },
                 showCancelButton: true,
-                confirmButtonText: 'บันทึก',
+                confirmButtonText: '<i class="bx bx-save me-1"></i> บันทึกข้อมูล',
                 cancelButtonText: 'ยกเลิก',
                 allowOutsideClick: false,
                 preConfirm: () => {
@@ -502,6 +670,17 @@ $(document).ready(function() {
             },
             success: function(res) {
                 if(res.success) {
+                    // ถ้าเปลี่ยนเป็น "อยู่" ให้ลบป้ายวันลาและหมายเหตุออกจาก UI ทันที
+                    if (status === 'present') {
+                        // ลบป้ายวันลาทั้ง Desktop และ Mobile ที่ตรงกับ student ID เดียวกัน
+                        $(`.athlete-row[data-student-id="${studentId}"]`).each(function() {
+                            $(this).find('.text-primary.fw-bold').remove();  // ป้ายช่วงวันลา
+                            $(this).find('.text-muted.italic').remove();     // หมายเหตุ
+                            // เปลี่ยนข้อความหมายเหตุในตาราง Desktop ให้เป็น "-"
+                            $(this).find('td.text-center .text-muted.small').text('-');
+                        });
+                    }
+
                     const Toast = Swal.mixin({
                         toast: true,
                         position: 'top',

@@ -133,6 +133,11 @@
     .was-validated .is-invalid + .select2 .select2-selection {
         border-color: #ff3e1d !important;
     }
+
+    /* SweetAlert2 High Priority Overlay */
+    .swal2-container {
+        z-index: 99999 !important;
+    }
   </style>
 
   <body style="font-family:'Sarabun'">

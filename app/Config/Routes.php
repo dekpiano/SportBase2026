@@ -76,9 +76,13 @@ $routes->get('Admin/Attendance/History/(:num)', 'ConAdminAttendance::history/$1'
 $routes->get('Admin/Match', 'ConAdminMatch::index');
 $routes->post('Admin/Match/Save', 'ConAdminMatch::save');
 $routes->get('Admin/Match/Delete/(:num)', 'ConAdminMatch::delete/$1');
+$routes->get('Admin/Match/GetReport/(:num)', 'ConAdminMatch::getReport/$1');
+$routes->post('Admin/Match/SaveReport', 'ConAdminMatch::saveReport');
+$routes->post('Admin/Match/DeleteReportPhoto', 'ConAdminMatch::deleteReportPhoto');
 
 // Public Match Schedule
 $routes->get('User/Match', 'UserMatch::index');
+$routes->get('User/Match/GetReport/(:num)', 'UserMatch::getReport/$1');
 $routes->get('User/Athlete', 'UserAthlete::index');
 $routes->get('User/Attendance', 'UserAttendance::index');
 

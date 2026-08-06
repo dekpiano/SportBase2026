@@ -109,6 +109,49 @@
         border-radius: 8px;
         object-fit: cover;
     }
+
+    /* Modern Image Upload Zone & 3:4 Previews */
+    .image-upload-zone {
+        border: 2px dashed #cbd5e1;
+        border-radius: 16px;
+        padding: 1.25rem;
+        text-align: center;
+        background: #f8fafc;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .image-upload-zone:hover {
+        border-color: #fd7e14;
+        background: #fffaf5;
+    }
+    .image-preview-34 {
+        width: 120px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 3px solid #ffffff;
+    }
+    .cropper-container-wrapper {
+        max-height: 55vh;
+        min-height: 260px;
+        background: #0f172a;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cropper-container-wrapper img {
+        max-width: 100%;
+        max-height: 55vh;
+    }
+    .cropper-toolbar {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     
     @media (max-width: 768px) {
         .premium-header-card {
@@ -123,6 +166,10 @@
         }
         .stats-pill .fs-4 {
             font-size: 1.1rem !important;
+        }
+        .cropper-container-wrapper {
+            max-height: 45vh;
+            min-height: 220px;
         }
     }
 
@@ -140,6 +187,11 @@
 
 <!-- Cropper.js CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+
+<?php
+// Default User Avatar Icon (3:4 aspect ratio vector SVG)
+$defaultUserIcon = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 133' width='100' height='133'%3E%3Crect width='100%25' height='100%25' fill='%23e2e8f0'/%3E%3Ccircle cx='50' cy='45' r='20' fill='%2394a3b8'/%3E%3Cpath fill='%2394a3b8' d='M15 115 c0-22 15-35 35-35 s35 13 35 35 Z'/%3E%3C/svg%3E";
+?>
 
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Header -->
@@ -214,13 +266,15 @@
                                         <td>
                                             <div class="d-flex align-items-center gap-3">
                                                 <?php 
-                                                $imagePath = !empty($row['athlete_image']) 
+                                                $hasImage = !empty($row['athlete_image']) && file_exists(FCPATH . 'uploads/athletes/' . $row['athlete_image']);
+                                                $imagePath = $hasImage 
                                                     ? base_url('uploads/athletes/' . $row['athlete_image']) 
-                                                    : base_url('assets/img/avatars/default-avatar.png');
+                                                    : $defaultUserIcon;
                                                 ?>
                                                 <div class="position-relative">
                                                     <img src="<?= $imagePath; ?>" alt="<?= $row['StudentFirstName']; ?>" 
-                                                         class="rounded border shadow-xs" style="width: 45px; height: 60px; object-fit: cover;">
+                                                         class="rounded border shadow-xs" style="width: 45px; height: 60px; object-fit: cover;"
+                                                         onerror="this.onerror=null; this.src='<?= $defaultUserIcon; ?>';">
                                                 </div>
                                                 <span class="fw-semibold"><?= $row['StudentPrefix'] . $row['StudentFirstName'] . ' ' . $row['StudentLastName']; ?></span>
                                             </div>
@@ -261,11 +315,13 @@
                             <?php foreach ($athletes as $row) : ?>
                                 <div class="mobile-athlete-card shadow-sm">
                                     <?php 
-                                    $imagePath = !empty($row['athlete_image']) 
+                                    $hasImage = !empty($row['athlete_image']) && file_exists(FCPATH . 'uploads/athletes/' . $row['athlete_image']);
+                                    $imagePath = $hasImage 
                                         ? base_url('uploads/athletes/' . $row['athlete_image']) 
-                                        : base_url('assets/img/avatars/default-avatar.png');
+                                        : $defaultUserIcon;
                                     ?>
-                                    <img src="<?= $imagePath; ?>" class="athlete-img" alt="Athlete">
+                                    <img src="<?= $imagePath; ?>" class="athlete-img" alt="Athlete"
+                                         onerror="this.onerror=null; this.src='<?= $defaultUserIcon; ?>';">
                                     <div class="flex-grow-1">
                                         <div class="fw-bold text-heading" style="font-size: 0.9rem;">
                                             <?= $row['StudentPrefix'] . $row['StudentFirstName'] . ' ' . $row['StudentLastName']; ?>
@@ -311,12 +367,19 @@
                         <div class="coach-list">
                             <?php foreach ($teamCoaches as $coach) : ?>
                                 <div class="coach-item">
-                                    <div class="avatar-icon text-warning bg-label-warning">
-                                        <i class="bx bxs-user-voice"></i>
-                                    </div>
+                                    <?php 
+                                    $coachImgUrl = !empty($coach['pers_img']) 
+                                        ? 'https://personnel.skj.ac.th/uploads/admin/Personnal/' . $coach['pers_img'] 
+                                        : $defaultUserIcon;
+                                    ?>
+                                    <img src="<?= $coachImgUrl; ?>" 
+                                         alt="<?= $coach['pers_firstname']; ?>" 
+                                         class="rounded-circle border shadow-xs" 
+                                         style="width: 45px; height: 45px; object-fit: cover;"
+                                         onerror="this.onerror=null; this.src='<?= $defaultUserIcon; ?>';">
                                     <div class="flex-grow-1">
                                         <span class="fw-bold d-block text-heading" style="font-size: 0.9rem;"><?= $coach['pers_prefix'] . $coach['pers_firstname'] . ' ' . $coach['pers_lastname']; ?></span>
-                                        <small class="text-muted"><i class='bx bx-check-shield'></i> ผู้ฝึกสอนหลัก</small>
+                                        <small class="text-muted"><i class='bx bx-check-shield text-warning me-1'></i>ผู้ฝึกสอนประจำรุ่น</small>
                                     </div>
                                     <button type="button" 
                                        class="btn-action-minimal btn-label-danger-hover text-danger border-0 bg-transparent btn-remove-coach" 
@@ -350,29 +413,36 @@
             <form action="<?= base_url('Admin/Team/AddAthlete'); ?>" method="post" enctype="multipart/form-data" id="formAddAthlete">
                 <input type="hidden" name="team_id" value="<?= $team['team_id']; ?>">
                 <div class="modal-body p-4">
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="searchStudent" class="form-label fw-semibold">ค้นชื่อนักเรียนในระบบสถาบัน</label>
                         <select id="searchStudent" name="StudentID" class="form-select select2-premium" required>
-                            <option value="">ค้นหาด้วยชื่อหรือรหัสผ่าน...</option>
+                            <option value="">ค้นหาด้วยชื่อหรือรหัส...</option>
                         </select>
                         <div class="form-text mt-2"><i class='bx bx-info-circle me-1'></i> ระบุชื่อ 2 ตัวอักษรขึ้นไปเพื่อเริ่มค้นหา</div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label fw-semibold">รูปภาพนักกีฬา</label>
-                        <div class="text-center mb-3">
-                            <img id="imagePreview" src="<?= base_url('assets/img/avatars/default-avatar.png'); ?>" 
-                                 alt="Preview" class="rounded" 
-                                 style="width: 90px; height: 120px; object-fit: cover; border: 3px solid #e9ecef; cursor: pointer;"
-                                 title="คลิกเพื่อเลือกรูป">
+                        <label class="form-label fw-semibold d-flex justify-content-between align-items-center">
+                            <span>รูปภาพนักกีฬา</span>
+                            <span class="badge bg-label-primary">อัตราส่วน 3:4</span>
+                        </label>
+                        <div class="image-upload-zone" onclick="document.getElementById('athleteImageInput').click();">
+                            <div class="text-center mb-2">
+                                <img id="imagePreview" src="<?= $defaultUserIcon; ?>" 
+                                     alt="Preview" class="image-preview-34"
+                                     onerror="this.onerror=null; this.src='<?= $defaultUserIcon; ?>';">
+                            </div>
+                            <div class="mt-2 text-primary fw-semibold">
+                                <i class='bx bx-camera me-1 fs-5 align-middle'></i> แตะหรือคลิกเพื่อเลือกรูปภาพ
+                            </div>
+                            <small class="text-muted d-block mt-1">รองรับทุกขนาดไฟล์ (ระบบย่อและตัดเป็น 3:4 อัตโนมัติ)</small>
                         </div>
-                        <input type="file" class="form-control" id="athleteImageInput" accept="image/*">
+                        <input type="file" class="form-control d-none" id="athleteImageInput" accept="image/*">
                         <input type="hidden" id="croppedImageData" name="cropped_image">
-                        <div class="form-text"><i class='bx bx-crop me-1'></i> เลือกรูปแล้วกดครอบตัด (รองรับ JPG, PNG ไม่เกิน 2MB)</div>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 pb-4 px-4">
                     <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-                    <button type="submit" class="btn btn-primary px-4 shadow-sm">เพิ่มเข้าทีม</button>
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm"><i class='bx bx-check me-1'></i> เพิ่มเข้าทีม</button>
                 </div>
             </form>
         </div>
@@ -384,17 +454,30 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 shadow-lg">
             <div class="modal-header border-bottom py-3">
-                <h5 class="modal-title fw-bold"><i class="bx bx-crop me-2 text-primary"></i>ครอบตัดรูปภาพ</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <h5 class="modal-title fw-bold mb-0"><i class="bx bx-crop me-2 text-primary"></i>ครอบตัดรูปภาพ</h5>
+                    <span class="badge bg-label-primary">อัตราส่วน 3:4</span>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body p-4">
-                <div class="text-center">
+            <div class="modal-body p-3 p-md-4">
+                <div class="cropper-container-wrapper shadow-sm mb-3">
                     <img id="cropperPreview" src="" alt="Crop Preview">
+                </div>
+                <!-- Cropper Mobile-friendly Toolbar -->
+                <div class="cropper-toolbar">
+                    <div class="btn-group shadow-sm" role="group" aria-label="Cropper controls">
+                        <button type="button" class="btn btn-outline-secondary" id="btnZoomIn" title="ขยายภาพ"><i class="bx bx-zoom-in fs-5"></i></button>
+                        <button type="button" class="btn btn-outline-secondary" id="btnZoomOut" title="ย่อภาพ"><i class="bx bx-zoom-out fs-5"></i></button>
+                        <button type="button" class="btn btn-outline-secondary" id="btnRotateLeft" title="หมุนซ้าย 90°"><i class="bx bx-rotate-left fs-5"></i></button>
+                        <button type="button" class="btn btn-outline-secondary" id="btnRotateRight" title="หมุนขวา 90°"><i class="bx bx-rotate-right fs-5"></i></button>
+                        <button type="button" class="btn btn-outline-secondary" id="btnResetCrop" title="รีเซ็ตตำแหน่ง"><i class="bx bx-reset fs-5"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer border-top py-3">
                 <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-                <button type="button" class="btn btn-primary" id="btnCropImage">
+                <button type="button" class="btn btn-primary px-4 shadow-sm" id="btnCropImage">
                     <i class="bx bx-check me-1"></i> ตกลง ใช้รูปนี้
                 </button>
             </div>
@@ -449,16 +532,23 @@
                         <h6 id="edit_athlete_name" class="fw-bold mb-1"></h6>
                         <small id="edit_athlete_code" class="text-muted d-block mb-3"></small>
                     </div>
-                    <div class="mb-4">
-                        <img id="editImagePreview" src="" 
-                             alt="Preview" class="rounded shadow-sm" 
-                             style="width: 120px; height: 160px; object-fit: cover; border: 3px solid #f8f9fa;">
-                    </div>
-                    <div class="text-start">
-                        <label class="form-label fw-semibold">เลือกรูปภาพใหม่</label>
-                        <input type="file" class="form-control" id="editAthleteImageInput" accept="image/*">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold d-flex justify-content-between align-items-center mb-2">
+                            <span>รูปภาพใหม่ (อัตราส่วน 3:4)</span>
+                            <span class="badge bg-label-primary">3:4</span>
+                        </label>
+                        <div class="image-upload-zone" onclick="document.getElementById('editAthleteImageInput').click();">
+                            <div class="text-center mb-2">
+                                <img id="editImagePreview" src="" alt="Preview" class="image-preview-34"
+                                     onerror="this.onerror=null; this.src='<?= $defaultUserIcon; ?>';">
+                            </div>
+                            <div class="mt-2 text-primary fw-semibold">
+                                <i class='bx bx-camera me-1 fs-5 align-middle'></i> แตะหรือคลิกเพื่อเปลี่ยนรูปภาพ
+                            </div>
+                            <small class="text-muted d-block mt-1">ไม่จำกัดขนาดไฟล์ (ระบบจะตัดเป็น 3:4 ให้อัตโนมัติ)</small>
+                        </div>
+                        <input type="file" class="form-control d-none" id="editAthleteImageInput" accept="image/*">
                         <input type="hidden" id="editCroppedImageData" name="cropped_image">
-                        <div class="form-text mt-2"><i class='bx bx-info-circle me-1'></i> รูปภาพจะถูกครอบตัดเป็นแนวตั้ง (3:4) อัตโนมัติ</div>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 pb-4 px-4">
@@ -524,10 +614,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleImageSelection(input) {
         const file = input.files[0];
         if (file) {
-            if (file.size > 2 * 1024 * 1024) {
-                Swal.fire('ไฟล์ใหญ่เกินไป', 'กรุณาเลือกไฟล์ขนาดไม่เกิน 2MB', 'warning');
-                return;
-            }
             const reader = new FileReader();
             reader.onload = function(e) {
                 if (cropper) { cropper.destroy(); cropper = null; }
@@ -535,24 +621,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('#modalCropper').modal('show');
                 $('#modalCropper').one('shown.bs.modal', function() {
                     cropper = new Cropper(document.getElementById('cropperPreview'), {
-                        aspectRatio: 3/4, viewMode: 2, dragMode: 'move', autoCropArea: 0.8,
-                        guides: true, center: true, highlight: false,
-                        cropBoxMovable: true, cropBoxResizable: true
+                        aspectRatio: 3 / 4,
+                        viewMode: 1,
+                        dragMode: 'move',
+                        autoCropArea: 0.9,
+                        guides: true,
+                        center: true,
+                        highlight: false,
+                        cropBoxMovable: true,
+                        cropBoxResizable: true,
+                        toggleDragModeOnDblclick: false
                     });
                 });
             };
             reader.readAsDataURL(file);
         }
     }
+
+    // Cropper Toolbar Controls
+    $('#btnZoomIn').on('click', function() { if (cropper) cropper.zoom(0.1); });
+    $('#btnZoomOut').on('click', function() { if (cropper) cropper.zoom(-0.1); });
+    $('#btnRotateLeft').on('click', function() { if (cropper) cropper.rotate(-90); });
+    $('#btnRotateRight').on('click', function() { if (cropper) cropper.rotate(90); });
+    $('#btnResetCrop').on('click', function() { if (cropper) cropper.reset(); });
     
-    // Crop and apply image
+    // Crop and apply image (3:4 aspect ratio -> 600x800 px)
     $('#btnCropImage').on('click', function() {
         if (cropper) {
             const canvas = cropper.getCroppedCanvas({
-                width: 600, height: 800,
-                imageSmoothingEnabled: true, imageSmoothingQuality: 'high'
+                width: 600,
+                height: 800,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: 'high'
             });
-            const croppedData = canvas.toDataURL('image/jpeg', 1.0);
+            const croppedData = canvas.toDataURL('image/jpeg', 0.9);
             
             if (cropperContext === 'add') {
                 $('#imagePreview').attr('src', croppedData);
