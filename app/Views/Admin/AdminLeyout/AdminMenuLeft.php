@@ -154,20 +154,20 @@ $isRoles = ($seg2 == 'Roles');
                 </li>
 
                 <li class="menu-header small text-uppercase mt-2">
-                    <span class="menu-header-text">การติดตามผลนักกีฬา</span>
+                    <span class="menu-header-text">ระบบเช็กชื่อ & ติดตามสถานะ</span>
                 </li>
 
                 <li class="menu-item <?= ($isAttendanceMain ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Attendance');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-calendar-check"></i>
-                        <div data-i18n="Analytics">บันทึกการลานักกีฬา</div>
+                        <div data-i18n="Analytics" style="line-height: 1.3;">เช็กชื่อนักเรียน (เช้า/ซ้อม/นอน)</div>
                     </a>
                 </li>
 
                 <li class="menu-item <?= ($isAttendanceHistory ? 'active' : '') ?>">
                     <a href="<?=base_url('Admin/Attendance/History');?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-history"></i>
-                        <div data-i18n="Analytics">สรุปการลาทั้งหมด</div>
+                        <div data-i18n="Analytics" style="line-height: 1.3;">รายงานประวัติเช็กชื่อ & การลา</div>
                     </a>
                 </li>
 

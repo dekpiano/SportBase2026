@@ -108,8 +108,8 @@
     <div class="premium-header">
         <div class="row align-items-center">
             <div class="col-lg-8">
-                <h2 class="text-white fw-bold mb-2">บันทึกการลานักกีฬา</h2>
-                <p class="text-white-50 mb-0">ระบบติดตามการซ้อมและการลาของนักกีฬารายวัน</p>
+                <h2 class="text-white fw-bold mb-2">ระบบเช็กชื่อ & ติดตามสถานะนักเรียน</h2>
+                <p class="text-white-50 mb-0">เช็กชื่อเข้าแถวเช้า • ลงเวลาซ้อมกีฬา • เช็กชื่อเข้าห้องนอน • บันทึกการลา</p>
             </div>
             <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
                 <span class="glass-badge">
@@ -261,8 +261,8 @@
                                     </div>
 
                                     <a href="<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>" 
-                                       class="btn btn-primary w-100 rounded-pill">
-                                        บันทึกการลา <i class="bx bx-chevron-right ms-1"></i>
+                                       class="btn btn-primary w-100 rounded-pill fw-bold">
+                                        <i class="bx bx-calendar-check me-1"></i> เข้าสู่ระบบเช็กชื่อ <i class="bx bx-chevron-right ms-1"></i>
                                     </a>
                                 </div>
                             </div>

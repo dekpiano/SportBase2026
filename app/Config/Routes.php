@@ -68,7 +68,9 @@ $routes->get('Admin/Team/RemoveCoach/(:num)/(:num)', 'ConAdminTeam::removeCoach/
 // Attendance Management (เช็คชื่อนักกีฬา)
 $routes->get('Admin/Attendance', 'ConAdminAttendance::index');
 $routes->get('Admin/Attendance/Team/(:num)', 'ConAdminAttendance::team/$1');
-$routes->post('Admin/Attendance/Save', 'ConAdminAttendance::save');
+$routes->post('Admin/Attendance/Save', 'ConAdminAttendance::Save');
+$routes->post('Admin/Attendance/MarkAllPresent', 'ConAdminAttendance::markAllPresent');
+$routes->post('Admin/Attendance/MarkAllStatus', 'ConAdminAttendance::markAllStatus');
 $routes->get('Admin/Attendance/History', 'ConAdminAttendance::history');
 $routes->get('Admin/Attendance/History/(:num)', 'ConAdminAttendance::history/$1');
 

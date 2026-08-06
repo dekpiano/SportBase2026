@@ -166,7 +166,7 @@ $isAttendance = ($seg1 == 'User' && $seg2 == 'Attendance');
                 <li class="menu-item <?= ($isAttendance ? "active" : "") ?>">
                     <a href="<?= base_url('User/Attendance'); ?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-calendar-check"></i>
-                        <div>สถานะภาพประจำวัน</div>
+                        <div>ตรวจสอบการเช็กชื่อ/การลา</div>
                     </a>
                 </li>
 
