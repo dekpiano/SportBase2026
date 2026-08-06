@@ -11,11 +11,16 @@
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
             <!-- Breadcrumbs / Title -->
             <div class="navbar-nav align-items-center">
-                <div class="nav-item mb-0">
-                    <h5 class="fw-bold mb-0 text-dark" style="font-family: 'Outfit', sans-serif;">
-                        <span class="text-primary">SKJ SportBase</span> 
-                        <span class="text-muted fw-light mx-2 d-none d-md-inline">|</span> 
-                        <span class="opacity-75 d-none d-md-inline"><?= $title; ?></span>
+                <div class="nav-item mb-0 d-flex align-items-center gap-2">
+                    <div class="d-none d-sm-flex align-items-center justify-content-center rounded-circle shadow-sm overflow-hidden flex-shrink-0" style="width: 34px; height: 34px; border: 1.5px solid #FF3D87; background: #0F172A; box-shadow: 0 0 8px rgba(255, 61, 135, 0.3) !important;">
+                        <img src="<?=base_url('assets/img/skj_sportbase_logo.png')?>" alt="SportBase Crest" class="w-100 h-100" style="object-fit: cover; transform: scale(1.18);">
+                    </div>
+                    <h5 class="fw-bold mb-0 text-dark d-flex align-items-center flex-wrap gap-1" style="font-family: 'Outfit', sans-serif;">
+                        <span>SKJ <span style="background: linear-gradient(135deg, #FF3D87 0%, #1E62EB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">SportBase</span></span> 
+                        <span class="text-muted fw-light mx-1 d-none d-md-inline">|</span> 
+                        <span class="badge rounded-pill px-3 py-1 fw-semibold d-none d-md-inline-flex align-items-center shadow-sm" style="background: rgba(30, 98, 235, 0.08); color: #1E62EB; border: 1px solid rgba(30, 98, 235, 0.15); font-size: 0.78rem;">
+                            <i class='bx bxs-shield-alt-2 me-1' style="color: #FF3D87;"></i> <?= $title; ?>
+                        </span>
                     </h5>
                 </div>
             </div>

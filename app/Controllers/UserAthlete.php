@@ -25,12 +25,9 @@ class UserAthlete extends BaseController
             $data['athletes'] = $teamModel->getTeamAthletes($selectedTeam);
             $data['currentTeam'] = $teamModel->find($selectedTeam);
         } else {
-            // ถ้าไม่เลือกทีม ให้ดึงนักกีฬาจากทีมแรกมาแสดงก่อน หรือแสดงทั้งหมดแบบสุ่ม
-            $data['athletes'] = []; 
-            if (!empty($data['teams'])) {
-                $data['athletes'] = $teamModel->getTeamAthletes($data['teams'][0]['team_id']);
-                $data['currentTeam'] = $data['teams'][0];
-            }
+            // ถ้าไม่เลือกทีม ให้แสดงเป็นค่าว่างเพื่อให้ผู้ใช้กดเลือกก่อน
+            $data['athletes'] = null; 
+            $data['currentTeam'] = null;
         }
 
         return view('User/UserLeyout/UserHeader', $data)

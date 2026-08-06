@@ -106,9 +106,14 @@ $('.pers_phone').inputmask('99-9999-9999');
 })()
 
 flatpickr.localize(flatpickr.l10ns.th);
+flatpickr.setDefaults({
+    disableMobile: true
+});
+
 $(".selector").flatpickr({
     dateFormat: "Y-m-d",
     altInput: true,
+    disableMobile: true,
     onChange: (selectedDates, dateStr, instance) => {
         moment.locale('th');
         thai_DM = moment(selectedDates[0]).format('Do MMMM');
@@ -118,11 +123,16 @@ $(".selector").flatpickr({
 });
 
 function setBuddhistYear(instance) {
-    const yearEl = instance.currentYearElement;
-    const buddhistYear = parseInt(yearEl.value);
-    if (buddhistYear < 2500) {
-        yearEl.value = buddhistYear + 543;
+    if (!instance || !instance.calendarContainer) return;
+    let buddhistYear = instance.currentYear;
+    if (buddhistYear < 2500) buddhistYear += 543;
+    const yearInput = instance.calendarContainer.querySelector('input.cur-year') || instance.currentYearElement;
+    if (yearInput) {
+        yearInput.value = buddhistYear;
+        return;
     }
+    const yearSpan = instance.calendarContainer.querySelector('.cur-year');
+    if (yearSpan) yearSpan.textContent = buddhistYear;
 }
 
 
@@ -132,6 +142,7 @@ function selectorEdit() {
         dateFormat: "Y-m-d",
         altInput: true,
         altFormat: "d/m/Y",
+        disableMobile: true,
         parseDate: function(dateStr, format) {
             const parts = dateStr.split('/');
             parts[2] = parseInt(parts[2]) - 543;

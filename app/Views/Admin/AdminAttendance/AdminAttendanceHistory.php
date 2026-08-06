@@ -299,15 +299,22 @@ $(document).ready(function() {
         allowInput: true,
         altInput: true,
         altFormat: "j F Y",
+        disableMobile: true,
         onReady: function(selectedDates, dateStr, instance) {
-            const year = instance.currentYear + 543;
-            const yearElement = instance.calendarContainer.querySelector('.cur-year');
-            if (yearElement) yearElement.textContent = year;
+            const yr = instance.currentYear < 2500 ? instance.currentYear + 543 : instance.currentYear;
+            const el = instance.calendarContainer.querySelector('input.cur-year') || instance.calendarContainer.querySelector('.cur-year') || instance.currentYearElement;
+            if (el) {
+                if (el.tagName === 'INPUT') el.value = yr;
+                else el.textContent = yr;
+            }
         },
         onYearChange: function(selectedDates, dateStr, instance) {
-            const year = instance.currentYear + 543;
-            const yearElement = instance.calendarContainer.querySelector('.cur-year');
-            if (yearElement) yearElement.textContent = year;
+            const yr = instance.currentYear < 2500 ? instance.currentYear + 543 : instance.currentYear;
+            const el = instance.calendarContainer.querySelector('input.cur-year') || instance.calendarContainer.querySelector('.cur-year') || instance.currentYearElement;
+            if (el) {
+                if (el.tagName === 'INPUT') el.value = yr;
+                else el.textContent = yr;
+            }
         }
     };
 

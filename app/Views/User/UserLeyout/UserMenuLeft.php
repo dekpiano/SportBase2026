@@ -2,9 +2,9 @@
 $seg1 = $uri->getSegment(1, '');
 $seg2 = $uri->getSegment(2, '');
 
-$isHome = ($seg1 == '' || $seg1 == 'User' && ($seg2 == '' || $seg2 == 'Home'));
+$isHome = ($seg1 == '' || ($seg1 == 'User' && ($seg2 == '' || $seg2 == 'Home')));
 $isMatch = ($seg1 == 'User' && $seg2 == 'Match');
-$isTeam = ($seg1 == 'User' && $seg2 == 'Team') || ($seg1 == 'Admin' && $seg2 == 'Team');
+$isTeam = ($seg1 == 'User' && $seg2 == 'Athlete');
 $isAttendance = ($seg1 == 'User' && $seg2 == 'Attendance');
 ?>
 
@@ -32,11 +32,21 @@ $isAttendance = ($seg1 == 'User' && $seg2 == 'Attendance');
 
     .user-brand-logo-img {
         transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        filter: drop-shadow(0 3px 8px rgba(253, 126, 20, 0.25));
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+    }
+
+    .suankularb-logo-svg {
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        filter: drop-shadow(0 2px 5px rgba(255, 61, 135, 0.3));
     }
 
     .user-brand-link:hover .user-brand-logo-img {
-        transform: scale(1.08) rotate(-4deg);
+        transform: scale(1.08) rotate(-5deg);
+    }
+
+    .user-brand-link:hover .suankularb-logo-svg {
+        transform: scale(1.12) rotate(6deg);
+        filter: drop-shadow(0 0 10px rgba(255, 61, 135, 0.7));
     }
 
     .menu-header-text {
@@ -94,17 +104,22 @@ $isAttendance = ($seg1 == 'User' && $seg2 == 'Attendance');
         <!-- Menu -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             
-            <!-- Brand Header -->
+            <!-- Brand Header with Suankularb Theme & SVG Crest -->
             <div class="user-brand-header">
-                <a href="<?=base_url();?>" class="user-brand-link d-flex align-items-center gap-2 text-decoration-none">
-                    <img src="https://skj.ac.th/uploads/logoSchool/LogoSKJ_4.png" alt="SKJ Logo" width="36" class="user-brand-logo-img">
+                <a href="<?=base_url();?>" class="user-brand-link d-flex align-items-center gap-2 text-decoration-none" title="ระบบฐานข้อมูลนักกีฬา โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ)">
+                    <div class="d-flex align-items-center me-1">
+                        <!-- Actual Generated Cyber-Athletic Rose Crest Image -->
+                        <div class="position-relative overflow-hidden rounded-circle flex-shrink-0 shadow-sm" style="width: 38px; height: 38px; border: 2px solid #FF3D87; box-shadow: 0 0 10px rgba(255, 61, 135, 0.4) !important;">
+                            <img src="<?=base_url('assets/img/skj_sportbase_logo.png')?>" alt="SportBase Suankularb Crest" class="w-100 h-100 user-brand-logo-img" style="object-fit: cover; transform: scale(1.18);">
+                        </div>
+                    </div>
                     <div class="d-flex flex-column">
-                        <span class="fw-bold text-dark lh-1" style="font-size: 0.98rem; font-family: 'Outfit', sans-serif;">
-                            SKJ <span class="text-orange">SportBase</span>
+                        <span class="fw-bold text-dark lh-1" style="font-size: 1.05rem; font-family: 'Outfit', sans-serif; letter-spacing: -0.3px;">
+                            SKJ <span style="background: linear-gradient(135deg, #FF3D87 0%, #1E62EB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">SportBase</span>
                         </span>
                         <div class="mt-1 d-flex align-items-center gap-1">
-                            <span class="user-badge">2026</span>
-                            <small class="text-muted" style="font-size: 0.62rem;">PUBLIC</small>
+                            <span class="badge rounded-pill text-white fw-bold px-2 py-0" style="background: linear-gradient(135deg, #1E62EB 0%, #00E5FF 100%); font-size: 0.58rem; letter-spacing: 0.5px; line-height: 14px;">2026</span>
+                            <span class="badge rounded-pill text-white fw-bold px-2 py-0" style="background: linear-gradient(135deg, #FF3D87 0%, #FF8A00 100%); font-size: 0.58rem; letter-spacing: 0.4px; line-height: 14px;">SUANKULARB</span>
                         </div>
                     </div>
                 </a>
@@ -134,10 +149,24 @@ $isAttendance = ($seg1 == 'User' && $seg2 == 'Attendance');
                     <span class="menu-header-text">การแข่งขัน & ข้อมูล</span>
                 </li>
                 
+                <li class="menu-item <?= ($isTeam ? "active" : "") ?>">
+                    <a href="<?= base_url('User/Athlete'); ?>" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-run"></i>
+                        <div>ทำเนียบนักกีฬา</div>
+                    </a>
+                </li>
+
                 <li class="menu-item <?= ($isMatch ? "active" : "") ?>">
                     <a href="<?= base_url('User/Match'); ?>" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-trophy"></i>
                         <div>ตารางการแข่งขัน & ผลงาน</div>
+                    </a>
+                </li>
+
+                <li class="menu-item <?= ($isAttendance ? "active" : "") ?>">
+                    <a href="<?= base_url('User/Attendance'); ?>" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-calendar-check"></i>
+                        <div>สถานะภาพประจำวัน</div>
                     </a>
                 </li>
 

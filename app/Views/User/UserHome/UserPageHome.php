@@ -139,11 +139,14 @@
                             ระบบจัดการข้อมูลและติดตามผลการแข่งขันนักกีฬา โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
-                            <a href="<?= base_url('User/Match') ?>" class="btn btn-light text-orange fw-bold rounded-pill px-4 shadow-sm">
-                                <i class="bx bx-calendar-event me-1"></i> ดูตารางแข่งขัน
+                            <a href="<?= base_url('User/Athlete') ?>" class="btn btn-light text-orange fw-bold rounded-pill px-4 shadow-sm">
+                                <i class="bx bx-run me-1"></i> ทำเนียบนักกีฬา
                             </a>
                             <a href="<?= base_url('User/Match') ?>" class="btn btn-outline-light text-white rounded-pill px-4">
-                                <i class="bx bx-trophy me-1"></i> รายงานผลงาน
+                                <i class="bx bx-calendar-event me-1"></i> ดูตารางแข่งขัน
+                            </a>
+                            <a href="<?= base_url('User/Attendance') ?>" class="btn btn-outline-light text-white rounded-pill px-4">
+                                <i class="bx bx-check-double me-1"></i> เช็คสถานะประจำวัน
                             </a>
                         </div>
                     </div>
@@ -152,9 +155,20 @@
 
             <!-- Quick Action Shortcut Chips for Mobile -->
             <div class="row g-2 mb-4">
-                <div class="col-6 col-md-4">
-                    <a href="<?= base_url('User/Match') ?>" class="quick-action-chip">
+                <div class="col-6 col-md-3">
+                    <a href="<?= base_url('User/Athlete') ?>" class="quick-action-chip">
                         <div class="chip-icon-box bg-label-primary text-primary">
+                            <i class="bx bx-run"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">ทำเนียบนักกีฬา</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">รายชื่อ/รุ่นนักกีฬา</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="<?= base_url('User/Match') ?>" class="quick-action-chip">
+                        <div class="chip-icon-box bg-label-success text-success">
                             <i class="bx bx-trophy"></i>
                         </div>
                         <div>
@@ -163,25 +177,25 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-6 col-md-4">
-                    <a href="<?= base_url('User/Match') ?>" class="quick-action-chip">
-                        <div class="chip-icon-box bg-label-warning text-orange">
-                            <i class="bx bx-check-shield"></i>
+                <div class="col-6 col-md-3">
+                    <a href="<?= base_url('User/Attendance') ?>" class="quick-action-chip">
+                        <div class="chip-icon-box bg-label-warning text-warning">
+                            <i class="bx bx-calendar-check"></i>
                         </div>
                         <div>
-                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">รายงานผลงาน</div>
-                            <small class="text-muted" style="font-size: 0.72rem;">ภาพบรรยากาศ</small>
+                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">สถานะประจำวัน</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">การมาซ้อม/การลา</small>
                         </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-6 col-md-3">
                     <a href="<?= base_url('LoginOfficerSportBase') ?>" class="quick-action-chip">
                         <div class="chip-icon-box bg-label-info text-info">
                             <i class="bx bx-user-circle"></i>
                         </div>
                         <div>
-                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">เข้าสู่ระบบเจ้าหน้าที่</div>
-                            <small class="text-muted" style="font-size: 0.72rem;">โค้ช / ผู้จัดการทีม</small>
+                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">ระบบเจ้าหน้าที่</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">ผู้ควบคุม/โค้ชทีม</small>
                         </div>
                     </a>
                 </div>

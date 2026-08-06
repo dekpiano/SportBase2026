@@ -606,10 +606,15 @@ $(document).ready(function() {
         dateFormat: "Y-m-d H:i",
         altInput: true,
         altFormat: "j F Y H:i น.",
+        disableMobile: true,
         onReady: function(selectedDates, dateStr, instance) {
             if (instance && instance.calendarContainer) {
-                const curYear = instance.calendarContainer.querySelector('.cur-year');
-                if (curYear) curYear.textContent = instance.currentYear + 543;
+                const yr = instance.currentYear < 2500 ? instance.currentYear + 543 : instance.currentYear;
+                const el = instance.calendarContainer.querySelector('input.cur-year') || instance.calendarContainer.querySelector('.cur-year') || instance.currentYearElement;
+                if (el) {
+                    if (el.tagName === 'INPUT') el.value = yr;
+                    else el.textContent = yr;
+                }
             }
         },
         onChange: function() {

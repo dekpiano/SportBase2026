@@ -96,14 +96,19 @@ $isRoles = ($seg2 == 'Roles');
         <!-- Menu -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="<?=base_url('Admin/Home');?>" class="app-brand-link d-flex align-items-center gap-2">
-                    <span class="app-brand-logo demo">
-                        <img src="https://skj.ac.th/uploads/logoSchool/LogoSKJ_4.png" alt="Logo" width="38" class="app-brand-logo-img">
-                    </span>
+                <a href="<?=base_url('Admin/Home');?>" class="app-brand-link d-flex align-items-center gap-2 text-decoration-none" title="ระบบจัดการฐานข้อมูลนักกีฬา สวนกุหลาบวิทยาลัย (จิรประวัติ)">
+                    <div class="d-flex align-items-center me-1">
+                        <div class="position-relative overflow-hidden rounded-circle flex-shrink-0 shadow-sm" style="width: 38px; height: 38px; border: 2px solid #FF3D87; box-shadow: 0 0 10px rgba(255, 61, 135, 0.4) !important;">
+                            <img src="<?=base_url('assets/img/skj_sportbase_logo.png')?>" alt="SportBase Crest" class="w-100 h-100 app-brand-logo-img" style="object-fit: cover; transform: scale(1.18);">
+                        </div>
+                    </div>
                     <div class="d-flex flex-column">
-                        <span class="app-brand-text menu-text fw-bold text-dark fs-6 lh-1">SportBase 2026</span>
-                        <div class="mt-1">
-                            <span class="admin-badge">ADMIN</span>
+                        <span class="app-brand-text menu-text fw-bold text-dark fs-6 lh-1" style="font-family: 'Outfit', sans-serif;">
+                            SKJ <span style="background: linear-gradient(135deg, #FF3D87 0%, #1E62EB 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">SportBase</span>
+                        </span>
+                        <div class="mt-1 d-flex align-items-center gap-1">
+                            <span class="badge rounded-pill text-white fw-bold px-2 py-0" style="background: linear-gradient(135deg, #FF3D87 0%, #FF8A00 100%); font-size: 0.58rem; letter-spacing: 0.5px; line-height: 14px;">ADMIN</span>
+                            <span class="badge rounded-pill text-white fw-bold px-2 py-0" style="background: linear-gradient(135deg, #1E62EB 0%, #00E5FF 100%); font-size: 0.58rem; letter-spacing: 0.5px; line-height: 14px;">2026</span>
                         </div>
                     </div>
                 </a>

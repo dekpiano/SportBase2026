@@ -123,10 +123,14 @@ $(function() {
 
     <script>
 flatpickr.localize(flatpickr.l10ns.th);
+flatpickr.setDefaults({
+    disableMobile: true
+});
 
 $(".selector").flatpickr({
     dateFormat: "Y-m-d",
     altInput: true,
+    disableMobile: true,
     onChange: (selectedDates, dateStr, instance) => {
         moment.locale('th');
         thai_DM = moment(selectedDates[0]).format('Do MMMM');
@@ -139,6 +143,7 @@ $(".selectorEdit").flatpickr({
     //dateFormat: "Y-m-d",
     altFormat: "j F Y",
     altInput: true,
+    disableMobile: true,
     onReady: function (selectedDates, dateStr, instance) {
     // ปรับปีในวันที่ที่ถูกเลือก
     const selectedDate = instance.selectedDates[0];
@@ -153,8 +158,71 @@ $(".selectorTime").flatpickr({
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
-    time_24hr: true
+    time_24hr: true,
+    disableMobile: true
 });
+
+// ===== Attendance Page: Flatpickr with Thai Buddhist Year (พ.ศ.) =====
+(function() {
+    var attDateEl = document.getElementById('attendanceDate');
+    if (!attDateEl) return; // ไม่ใช่หน้า Attendance → ข้าม
+
+    function toBuddhistYearText(text) {
+        if (!text) return "";
+        return text.replace(/(\d{4})/, function(match) {
+            var yr = parseInt(match);
+            return yr < 2500 ? yr + 543 : yr;
+        });
+    }
+
+    function setBuddhistYear(instance) {
+        if (!instance || !instance.calendarContainer) return;
+        var buddhistYear = instance.currentYear;
+        if (buddhistYear < 2500) buddhistYear += 543;
+        var yearInput = instance.calendarContainer.querySelector('input.cur-year') || instance.currentYearElement;
+        if (yearInput) {
+            yearInput.value = buddhistYear;
+            return;
+        }
+        var yearSpan = instance.calendarContainer.querySelector('.cur-year');
+        if (yearSpan) yearSpan.textContent = buddhistYear;
+    }
+
+    flatpickr("#attendanceDate", {
+        locale: "th",
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "j F Y",
+        disableMobile: true,
+        altInputClass: "form-control bg-white border-start-0 fw-semibold cursor-pointer py-2",
+        onChange: function(selectedDates, dateStr) {
+            var url = attDateEl.dataset.baseUrl || '<?= base_url("User/Attendance") ?>';
+            window.location.href = url + '?date=' + dateStr;
+        },
+        onReady: function(selectedDates, dateStr, instance) {
+            setTimeout(function() { setBuddhistYear(instance); }, 5);
+            if (instance.altInput) {
+                instance.altInput.value = toBuddhistYearText(instance.altInput.value);
+            }
+        },
+        onValueUpdate: function(selectedDates, dateStr, instance) {
+            if (instance.altInput) {
+                setTimeout(function() {
+                    instance.altInput.value = toBuddhistYearText(instance.altInput.value);
+                }, 0);
+            }
+        },
+        onYearChange: function(selectedDates, dateStr, instance) {
+            setTimeout(function() { setBuddhistYear(instance); }, 5);
+        },
+        onMonthChange: function(selectedDates, dateStr, instance) {
+            setTimeout(function() { setBuddhistYear(instance); }, 5);
+        },
+        onOpen: function(selectedDates, dateStr, instance) {
+            setTimeout(function() { setBuddhistYear(instance); }, 5);
+        }
+    });
+})();
     </script>
 
 <script>

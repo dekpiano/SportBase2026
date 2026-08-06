@@ -427,13 +427,18 @@ $(document).ready(function() {
         dateFormat: "Y-m-d",
         altInput: true,
         altFormat: "j F Y",
+        disableMobile: true,
         onChange: function(selectedDates, dateStr) {
             window.location.href = '<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>?date=' + dateStr;
         },
         onReady: function(selectedDates, dateStr, instance) {
             if (instance.calendarContainer) {
-                const el = instance.calendarContainer.querySelector('.cur-year');
-                if (el) el.textContent = instance.currentYear + 543;
+                const yr = instance.currentYear < 2500 ? instance.currentYear + 543 : instance.currentYear;
+                const el = instance.calendarContainer.querySelector('input.cur-year') || instance.calendarContainer.querySelector('.cur-year') || instance.currentYearElement;
+                if (el) {
+                    if (el.tagName === 'INPUT') el.value = yr;
+                    else el.textContent = yr;
+                }
             }
             // แปลง altInput เป็น พ.ศ.
             if (instance.altInput) {
@@ -450,8 +455,12 @@ $(document).ready(function() {
         },
         onYearChange: function(selectedDates, dateStr, instance) {
             if (instance.calendarContainer) {
-                const el = instance.calendarContainer.querySelector('.cur-year');
-                if (el) el.textContent = instance.currentYear + 543;
+                const yr = instance.currentYear < 2500 ? instance.currentYear + 543 : instance.currentYear;
+                const el = instance.calendarContainer.querySelector('input.cur-year') || instance.calendarContainer.querySelector('.cur-year') || instance.currentYearElement;
+                if (el) {
+                    if (el.tagName === 'INPUT') el.value = yr;
+                    else el.textContent = yr;
+                }
             }
         }
     });
