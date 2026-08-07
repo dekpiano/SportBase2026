@@ -156,6 +156,7 @@
                             <th>รุ่น / ทีม</th>
                             <th>วันที่ - เวลา</th>
                             <th class="text-center">สถานะ</th>
+                            <th class="text-center">ผลการแข่งขัน / รายงานผล</th>
                             <th class="text-end">จัดการ</th>
                         </tr>
                     </thead>
@@ -212,20 +213,41 @@
                                      $text = $statusText[$row['match_status']] ?? $row['match_status'];
                                      ?>
                                      <span class="status-badge bg-label-<?= $color ?>"><?= $text ?></span>
-                                     <?php if(!empty($row['match_result'])): ?>
-                                         <div class="small fw-bold text-orange mt-1" title="ผลการแข่งขัน">
-                                             <i class='bx bx-trophy me-1'></i><?= $row['match_result'] ?>
-                                         </div>
+                                 </td>
+                                 <td class="text-center">
+                                     <?php 
+                                     $canManage = true;
+                                     if ($allowedTeamIds !== null && !in_array($row['team_id'], $allowedTeamIds)) {
+                                         $canManage = false;
+                                     }
+                                     ?>
+                                     <?php if (!empty($row['match_result'])): ?>
+                                         <button type="button" class="btn btn-sm btn-orange btn-report-match rounded-pill px-3 shadow-xs" 
+                                                 data-bs-toggle="modal" data-bs-target="#modalReport"
+                                                 data-id="<?= $row['match_id'] ?>"
+                                                 data-title="<?= htmlspecialchars($row['match_title'], ENT_QUOTES) ?>"
+                                                 data-team="<?= htmlspecialchars($row['team_name'], ENT_QUOTES) ?>"
+                                                 data-date="<?= htmlspecialchars($dateDisplay, ENT_QUOTES) ?>"
+                                                 title="ดู/แก้ไขรายงานผลการแข่งขัน">
+                                             <i class="bx bx-trophy me-1"></i> <?= $row['match_result'] ?>
+                                         </button>
+                                     <?php else: ?>
+                                         <?php if ($canManage): ?>
+                                             <button type="button" class="btn btn-sm btn-label-warning text-orange btn-report-match rounded-pill px-3" 
+                                                     data-bs-toggle="modal" data-bs-target="#modalReport"
+                                                     data-id="<?= $row['match_id'] ?>"
+                                                     data-title="<?= htmlspecialchars($row['match_title'], ENT_QUOTES) ?>"
+                                                     data-team="<?= htmlspecialchars($row['team_name'], ENT_QUOTES) ?>"
+                                                     data-date="<?= htmlspecialchars($dateDisplay, ENT_QUOTES) ?>"
+                                                     title="เพิ่มรายงานผลและภาพถ่ายบรรยากาศ">
+                                                 <i class="bx bx-plus-circle me-1"></i> รายงานผลการแข่งขัน
+                                             </button>
+                                         <?php else: ?>
+                                             <span class="text-muted small">-</span>
+                                         <?php endif; ?>
                                      <?php endif; ?>
                                  </td>
                                  <td class="text-end text-nowrap">
-                                      <?php 
-                                      $canManage = true;
-                                      if ($allowedTeamIds !== null && !in_array($row['team_id'], $allowedTeamIds)) {
-                                          $canManage = false;
-                                      }
-                                      ?>
-                                      
                                       <?php if ($canManage): ?>
                                           <div class="d-inline-flex gap-1 align-items-center">
                                               <!-- Edit Button -->
@@ -238,19 +260,8 @@
                                                       data-date-end="<?= !empty($row['match_end_date']) ? date('Y-m-d H:i', strtotime($row['match_end_date'])) : date('Y-m-d H:i', strtotime($row['match_date'])) ?>"
                                                       data-status="<?= $row['match_status'] ?>"
                                                       data-note="<?= htmlspecialchars($row['match_note'], ENT_QUOTES) ?>"
-                                                      title="แก้ไขข้อมูลการแข่งขัน & ผลงาน">
+                                                      title="แก้ไขข้อมูลการแข่งขัน">
                                                   <i class="bx bx-edit-alt fs-5"></i>
-                                              </button>
-
-                                              <!-- Report & Photos Button -->
-                                              <button type="button" class="btn btn-sm btn-icon btn-label-warning text-orange btn-report-match" 
-                                                      data-bs-toggle="modal" data-bs-target="#modalReport"
-                                                      data-id="<?= $row['match_id'] ?>"
-                                                      data-title="<?= htmlspecialchars($row['match_title'], ENT_QUOTES) ?>"
-                                                      data-team="<?= htmlspecialchars($row['team_name'], ENT_QUOTES) ?>"
-                                                      data-date="<?= htmlspecialchars($dateDisplay, ENT_QUOTES) ?>"
-                                                      title="รายงานผล / ภาพถ่ายบรรยากาศ">
-                                                  <i class="bx bx-trophy fs-5"></i>
                                               </button>
 
                                               <!-- Delete Button -->
@@ -485,6 +496,12 @@
                                     <h6 class="fw-bold text-orange mb-2"><i class='bx bx-cloud-upload me-1'></i>รูปภาพใหม่ที่เลือก (รอการบันทึก)</h6>
                                     <div class="row g-2" id="editNewPhotosPreview"></div>
                                 </div>
+                                <div class="col-12 mt-2" id="editUploadProgressSection" style="display: none;">
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                    </div>
+                                    <small class="text-muted mt-1 d-block text-center" id="editUploadProgressText">กำลังอัปโหลดรูปภาพและบันทึกข้อมูล...</small>
+                                </div>
                                 <div class="col-12 mt-2">
                                     <h6 class="fw-bold mb-2"><i class='bx bx-images me-1'></i>คลังภาพบรรยากาศการแข่งขัน</h6>
                                     <div class="row g-2" id="editPhotosGallery">
@@ -540,6 +557,13 @@
                         <div class="col-12 mt-2" id="pendingPreviewSection" style="display: none;">
                             <h6 class="fw-bold text-orange mb-2"><i class='bx bx-cloud-upload me-1'></i>รูปภาพใหม่ที่เลือก (รอการบันทึก)</h6>
                             <div class="row g-2" id="reportNewPhotosPreview"></div>
+                        </div>
+
+                        <div class="col-12 mt-2" id="reportUploadProgressSection" style="display: none;">
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            </div>
+                            <small class="text-muted mt-1 d-block text-center" id="reportUploadProgressText">กำลังอัปโหลดรูปภาพและบันทึกข้อมูล...</small>
                         </div>
 
                         <div class="col-12 mt-3">
@@ -636,35 +660,123 @@ $(document).ready(function() {
     const fpMatchEndDateInstances = flatpickr("#match_end_date", flatpickrConfig);
     const fpMatchEndDate = Array.isArray(fpMatchEndDateInstances) ? fpMatchEndDateInstances[0] : fpMatchEndDateInstances;
 
-    // Save handler for Match Form (with Multi-part FormData support)
-    $('#formMatch').on('submit', function(e) {
+    // Client-side Image Compression (Canvas-based, เหมือน FoodReport)
+    // บีบอัดรูปภาพก่อนส่ง Server เพื่อแก้ Error 413 จาก Remote Server
+    async function compressImage(file) {
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = (event) => {
+                const img = new Image();
+                img.src = event.target.result;
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const max_size = 1280;
+
+                    if (width > height) {
+                        if (width > max_size) {
+                            height *= max_size / width;
+                            width = max_size;
+                        }
+                    } else {
+                        if (height > max_size) {
+                            width *= max_size / height;
+                            height = max_size;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    canvas.toBlob((blob) => {
+                        let safeName = file.name.split('.').slice(0, -1).join('.')
+                            .replace(/[^\w-]/g, '_')
+                            .replace(/_+/g, '_')
+                            .trim();
+                        safeName = (safeName || 'photo') + '.jpg';
+
+                        resolve(new File([blob], safeName, {
+                            type: 'image/jpeg',
+                            lastModified: Date.now()
+                        }));
+                    }, 'image/jpeg', 0.7);
+                };
+            };
+        });
+    }
+
+    // Save handler for Match Form (with client-side image compression)
+    $('#formMatch').on('submit', async function(e) {
         e.preventDefault();
         const btn = $(this).find('button[type="submit"]');
         const originalHtml = btn.html();
         btn.prop('disabled', true).html("<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังบันทึกข้อมูล...");
 
-        const formData = new FormData(this);
+        try {
+            const formData = new FormData(this);
+            const fileInput = document.getElementById('edit_photos');
+            const files = fileInput ? fileInput.files : [];
 
-        $.ajax({
-            url: '<?= base_url('Admin/Match/Save') ?>',
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function(res) {
-                if(res.success) {
-                    $('#modalMatch').modal('hide');
-                    Swal.fire('สำเร็จ', res.message, 'success').then(() => location.reload());
-                } else {
-                    Swal.fire('ข้อผิดพลาด', res.message || 'ไม่สามารถบันทึกข้อมูลได้', 'error');
+            // ลบไฟล์เดิมออกจาก FormData แล้วใส่ไฟล์ที่บีบอัดแล้วแทน
+            formData.delete('photos[]');
+
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    btn.html(`<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังย่อรูปที่ ${i+1}/${files.length}...`);
+                    if (files[i].type.startsWith('image/')) {
+                        const compressed = await compressImage(files[i]);
+                        formData.append('photos[]', compressed);
+                    } else {
+                        formData.append('photos[]', files[i]);
+                    }
+                }
+            }
+
+            btn.html("<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังอัปโหลดและบันทึก...");
+            $('#editUploadProgressSection').show();
+            $('#editUploadProgressSection .progress-bar').css('width', '0%').attr('aria-valuenow', 0).text('0%');
+
+            $.ajax({
+                url: '<?= base_url('Admin/Match/Save') ?>',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                xhr: function() {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function(evt) {
+                        if (evt.lengthComputable) {
+                            var percentComplete = parseInt((evt.loaded / evt.total) * 100);
+                            $('#editUploadProgressSection .progress-bar').css('width', percentComplete + '%').attr('aria-valuenow', percentComplete).text(percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                success: function(res) {
+                    $('#editUploadProgressSection').hide();
+                    if(res.success) {
+                        $('#modalMatch').modal('hide');
+                        Swal.fire('สำเร็จ', res.message, 'success').then(() => location.reload());
+                    } else {
+                        Swal.fire('ข้อผิดพลาด', res.message || 'ไม่สามารถบันทึกข้อมูลได้', 'error');
+                        btn.prop('disabled', false).html(originalHtml);
+                    }
+                },
+                error: function() {
+                    $('#editUploadProgressSection').hide();
+                    Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์', 'error');
                     btn.prop('disabled', false).html(originalHtml);
                 }
-            },
-            error: function() {
-                Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์', 'error');
-                btn.prop('disabled', false).html(originalHtml);
-            }
-        });
+            });
+        } catch (err) {
+            $('#editUploadProgressSection').hide();
+            Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการบีบอัดรูปภาพ: ' + err.message, 'error');
+            btn.prop('disabled', false).html(originalHtml);
+        }
     });
 
     // Clear form for new match
@@ -709,11 +821,11 @@ $(document).ready(function() {
                 if(res.success && res.report) {
                     $('#edit_match_result').val(res.report.match_result);
                     $('#edit_match_summary').val(res.report.match_summary);
-                    renderEditReportGallery(d.id, res.report.photos);
+                    renderEditReportGallery(d.id, res.report.photos, res.report.photo_urls);
                 } else {
                     $('#edit_match_result').val('');
                     $('#edit_match_summary').val('');
-                    renderEditReportGallery(d.id, []);
+                    renderEditReportGallery(d.id, [], []);
                 }
             }
         });
@@ -749,15 +861,15 @@ $(document).ready(function() {
         section.show();
     });
 
-    function renderEditReportGallery(matchId, photos) {
+    function renderEditReportGallery(matchId, photos, photoUrls) {
         if (!photos || photos.length === 0) {
             $('#editPhotosGallery').html('<div class="col-12 text-muted small p-2"><i class="bx bx-image-alt me-1"></i>ยังไม่มีรูปภาพบรรยากาศการแข่งขัน</div>');
             return;
         }
 
         let html = '';
-        photos.forEach(function(photo) {
-            const photoUrl = '<?= base_url('uploads/matches/') ?>/' + photo;
+        photos.forEach(function(photo, idx) {
+            const photoUrl = (photoUrls && photoUrls[idx]) ? photoUrls[idx] : '<?= base_url('uploads/matches/') ?>/' + photo;
             html += `
                 <div class="col-6 col-sm-4 col-md-3">
                     <div class="position-relative border rounded-12 overflow-hidden shadow-sm">
@@ -848,11 +960,11 @@ $(document).ready(function() {
                 if(res.success && res.report) {
                     $('#report_match_result').val(res.report.match_result);
                     $('#report_match_summary').val(res.report.match_summary);
-                    renderReportGallery(d.id, res.report.photos);
+                    renderReportGallery(d.id, res.report.photos, res.report.photo_urls);
                 } else {
                     $('#report_match_result').val('');
                     $('#report_match_summary').val('');
-                    renderReportGallery(d.id, []);
+                    renderReportGallery(d.id, [], []);
                 }
             }
         });
@@ -860,15 +972,15 @@ $(document).ready(function() {
         $('#modalReport').modal('show');
     });
 
-    function renderReportGallery(matchId, photos) {
+    function renderReportGallery(matchId, photos, photoUrls) {
         if (!photos || photos.length === 0) {
             $('#reportPhotosGallery').html('<div class="col-12 text-muted small p-2"><i class="bx bx-image-alt me-1"></i>ยังไม่มีรูปภาพบรรยากาศการแข่งขัน</div>');
             return;
         }
 
         let html = '';
-        photos.forEach(function(photo) {
-            const photoUrl = '<?= base_url('uploads/matches/') ?>/' + photo;
+        photos.forEach(function(photo, idx) {
+            const photoUrl = (photoUrls && photoUrls[idx]) ? photoUrls[idx] : '<?= base_url('uploads/matches/') ?>/' + photo;
             html += `
                 <div class="col-6 col-sm-4 col-md-3">
                     <div class="position-relative border rounded-12 overflow-hidden shadow-sm">
@@ -942,35 +1054,74 @@ $(document).ready(function() {
         });
     });
 
-    // Save Form Report Handler with Button Loading State
-    $('#formReport').on('submit', function(e) {
+    // Save Form Report Handler with client-side image compression
+    $('#formReport').on('submit', async function(e) {
         e.preventDefault();
         const btn = $(this).find('button[type="submit"]');
         const originalHtml = btn.html();
         btn.prop('disabled', true).html("<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังบันทึกรายงานผล...");
 
-        const formData = new FormData(this);
+        try {
+            const formData = new FormData(this);
+            const fileInput = document.getElementById('report_photos');
+            const files = fileInput ? fileInput.files : [];
 
-        $.ajax({
-            url: '<?= base_url('Admin/Match/SaveReport') ?>',
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function(res) {
-                if(res.success) {
-                    $('#modalReport').modal('hide');
-                    Swal.fire('สำเร็จ', res.message, 'success').then(() => location.reload());
-                } else {
-                    Swal.fire('ข้อผิดพลาด', res.message || 'ไม่สามารถบันทึกรายงานได้', 'error');
+            // ลบไฟล์เดิมออกจาก FormData แล้วใส่ไฟล์ที่บีบอัดแล้วแทน
+            formData.delete('photos[]');
+
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    btn.html(`<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังย่อรูปที่ ${i+1}/${files.length}...`);
+                    if (files[i].type.startsWith('image/')) {
+                        const compressed = await compressImage(files[i]);
+                        formData.append('photos[]', compressed);
+                    } else {
+                        formData.append('photos[]', files[i]);
+                    }
+                }
+            }
+
+            btn.html("<i class='bx bx-loader-alt bx-spin me-1'></i> กำลังอัปโหลดและบันทึก...");
+            $('#reportUploadProgressSection').show();
+            $('#reportUploadProgressSection .progress-bar').css('width', '0%').attr('aria-valuenow', 0).text('0%');
+
+            $.ajax({
+                url: '<?= base_url('Admin/Match/SaveReport') ?>',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                xhr: function() {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function(evt) {
+                        if (evt.lengthComputable) {
+                            var percentComplete = parseInt((evt.loaded / evt.total) * 100);
+                            $('#reportUploadProgressSection .progress-bar').css('width', percentComplete + '%').attr('aria-valuenow', percentComplete).text(percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                success: function(res) {
+                    $('#reportUploadProgressSection').hide();
+                    if(res.success) {
+                        $('#modalReport').modal('hide');
+                        Swal.fire('สำเร็จ', res.message, 'success').then(() => location.reload());
+                    } else {
+                        Swal.fire('ข้อผิดพลาด', res.message || 'ไม่สามารถบันทึกรายงานได้', 'error');
+                        btn.prop('disabled', false).html(originalHtml);
+                    }
+                },
+                error: function() {
+                    $('#reportUploadProgressSection').hide();
+                    Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์', 'error');
                     btn.prop('disabled', false).html(originalHtml);
                 }
-            },
-            error: function() {
-                Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์', 'error');
-                btn.prop('disabled', false).html(originalHtml);
-            }
-        });
+            });
+        } catch (err) {
+            $('#reportUploadProgressSection').hide();
+            Swal.fire('ข้อผิดพลาด', 'เกิดข้อผิดพลาดในการบีบอัดรูปภาพ: ' + err.message, 'error');
+            btn.prop('disabled', false).html(originalHtml);
+        }
     });
 });
 </script>

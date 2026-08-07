@@ -88,7 +88,7 @@ class ConAdminAttendance extends BaseController
         $data['selectedPeriod'] = $period;
         $data['periods'] = AttendanceModel::$periods;
         $data['statuses'] = AttendanceModel::$statuses;
-        $data['periodStatusMap'] = $this->attendanceModel->getPeriodStatusMap($teamId, $date);
+        $data['periodStatusMap'] = $this->attendanceModel->getPeriodStatusMap($teamId, $date, count($athletes));
 
         return view('Admin/AdminAttendance/AdminAttendanceTeam', $data);
     }

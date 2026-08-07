@@ -212,12 +212,12 @@ class ConAdminMatch extends BaseController
 
         $files = $this->request->getFiles();
         if (isset($files['photos'])) {
-            foreach ($files['photos'] as $file) {
-                if ($file && $file->isValid() && !$file->hasMoved()) {
-                    $newName = $file->getRandomName();
-                    $file->move($uploadDir, $newName);
-                    $photosList[] = $newName;
-                }
+            $uploadRes = $this->uploadPhotosToRemoteServer($files['photos'], $matchDate);
+            if (!$uploadRes['success']) {
+                return $this->response->setJSON(['success' => false, 'message' => 'อัปโหลดรูปภาพล้มเหลว: ' . $uploadRes['message']]);
+            }
+            foreach ($uploadRes['uploaded'] as $pName) {
+                $photosList[] = $pName;
             }
         }
 
@@ -255,18 +255,13 @@ class ConAdminMatch extends BaseController
             }
         }
 
-        // ลบไฟล์รูปภาพการแข่งขันในรายงานผลออกจากดิสก์ (ถ้ามี)
+        // ลบไฟล์รูปภาพการแข่งขันในรายงานผล (รองรับ Remote Server)
         $db = \Config\Database::connect();
         $report = $db->table('tb_match_reports')->where('match_id', $id)->get()->getRowArray();
         if ($report && !empty($report['report_photos'])) {
             $photos = json_decode($report['report_photos'], true);
-            if (is_array($photos)) {
-                foreach ($photos as $photoName) {
-                    $filePath = FCPATH . 'uploads/matches/' . $photoName;
-                    if (file_exists($filePath)) {
-                        @unlink($filePath);
-                    }
-                }
+            if (is_array($photos) && !empty($photos)) {
+                $this->deletePhotosFromRemoteServer($photos, $match['match_date']);
             }
             $db->table('tb_match_reports')->where('match_id', $id)->delete();
         }
@@ -286,7 +281,41 @@ class ConAdminMatch extends BaseController
         $report = $db->table('tb_match_reports')->where('match_id', $matchId)->get()->getRowArray();
         
         if ($report) {
-            $report['photos'] = !empty($report['report_photos']) ? json_decode($report['report_photos'], true) : [];
+            $rawPhotos = !empty($report['report_photos']) ? json_decode($report['report_photos'], true) : [];
+            $photos = [];
+            $photoUrls = [];
+            
+            $match = $this->matchModel->find($matchId);
+            $dateFolder = (!empty($match) && !empty($match['match_date'])) ? date('Y-m-d', strtotime($match['match_date'])) : date('Y-m-d');
+            $remoteBaseUrl = env('upload.server.baseurl') ?: getenv('upload.server.baseurl');
+
+            if (is_array($rawPhotos)) {
+                foreach ($rawPhotos as $photo) {
+                    $photos[] = $photo;
+                    if (strpos($photo, 'http://') === 0 || strpos($photo, 'https://') === 0) {
+                        $photoUrls[] = $photo;
+                    } else if ($remoteBaseUrl) {
+                        $cleanRemote = rtrim($remoteBaseUrl, '/');
+                        if (stripos($cleanRemote, 'SportBase/Matches') !== false) {
+                            $base = $cleanRemote;
+                        } else {
+                            $baseUploads = preg_replace('#(/uploads)(/.*)?$#i', '$1', $cleanRemote);
+                            $base = $baseUploads . '/SportBase/Matches';
+                        }
+
+                        if (strpos($photo, '/') !== false) {
+                            $photoUrls[] = $base . '/' . ltrim($photo, '/');
+                        } else {
+                            $photoUrls[] = $base . '/' . $dateFolder . '/' . ltrim($photo, '/');
+                        }
+                    } else {
+                        $photoUrls[] = base_url('uploads/matches/' . $photo);
+                    }
+                }
+            }
+
+            $report['photos'] = $photos;
+            $report['photo_urls'] = $photoUrls;
             return $this->response->setJSON(['success' => true, 'report' => $report]);
         }
         return $this->response->setJSON(['success' => false, 'message' => 'ยังไม่มีรายงานผลการแข่งขัน']);
@@ -318,21 +347,18 @@ class ConAdminMatch extends BaseController
         $photosList = $existingReport && !empty($existingReport['report_photos']) 
             ? json_decode($existingReport['report_photos'], true) 
             : [];
-
-        // Upload Direct Match Photos
-        $uploadDir = FCPATH . 'uploads/matches/';
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0777, true);
+        if (!is_array($photosList)) {
+            $photosList = [];
         }
 
         $files = $this->request->getFiles();
         if (isset($files['photos'])) {
-            foreach ($files['photos'] as $file) {
-                if ($file && $file->isValid() && !$file->hasMoved()) {
-                    $newName = $file->getRandomName();
-                    $file->move($uploadDir, $newName);
-                    $photosList[] = $newName;
-                }
+            $uploadRes = $this->uploadPhotosToRemoteServer($files['photos'], $match['match_date']);
+            if (!$uploadRes['success']) {
+                return $this->response->setJSON(['success' => false, 'message' => 'อัปโหลดรูปภาพล้มเหลว: ' . $uploadRes['message']]);
+            }
+            foreach ($uploadRes['uploaded'] as $pName) {
+                $photosList[] = $pName;
             }
         }
 
@@ -383,20 +409,19 @@ class ConAdminMatch extends BaseController
             }
 
             $newPhotos = [];
+            $deletedPhotos = [];
             $found = false;
             foreach ($photosList as $p) {
                 if (trim((string)$p) === $photoName) {
                     $found = true;
-                    $filePath = FCPATH . 'uploads/matches/' . trim((string)$p);
-                    if (file_exists($filePath)) {
-                        @unlink($filePath);
-                    }
+                    $deletedPhotos[] = trim((string)$p);
                 } else {
                     $newPhotos[] = $p;
                 }
             }
 
             if ($found) {
+                $this->deletePhotosFromRemoteServer($deletedPhotos, $match['match_date']);
                 $db->table('tb_match_reports')
                     ->where('report_id', $report['report_id'])
                     ->update(['report_photos' => json_encode(array_values($newPhotos))]);
@@ -405,5 +430,280 @@ class ConAdminMatch extends BaseController
             }
         }
         return $this->response->setJSON(['success' => false, 'message' => 'ไม่พบรูปภาพที่ระบุ']);
+    }
+
+    /**
+     * อัปโหลดไฟล์ไปยัง Remote Upload Server (ใช้ระบบเดียวกับ ConUserFoodReport)
+     */
+    private function uploadPhotosToRemoteServer($files, $folderDate = '')
+    {
+        $result = ['success' => true, 'uploaded' => [], 'message' => ''];
+        $uploadedNames = [];
+        if (empty($files)) {
+            return $result;
+        }
+        if (!is_array($files)) {
+            $files = [$files];
+        }
+
+        $uploadServerUrl = env('upload.server.url') ?: getenv('upload.server.url');
+        $dateFolder = !empty($folderDate) ? date('Y-m-d', strtotime($folderDate)) : date('Y-m-d');
+
+        // Fallback เป็น Local Storage หากไม่ได้ตั้งค่า upload.server.url
+        if (!$uploadServerUrl) {
+            $uploadDir = FCPATH . 'uploads/matches/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+            foreach ($files as $file) {
+                if ($file && $file->isValid() && !$file->hasMoved()) {
+                    $newName = $file->getRandomName();
+                    $file->move($uploadDir, $newName);
+                    $uploadedNames[] = $newName;
+                }
+            }
+            $result['uploaded'] = $uploadedNames;
+            return $result;
+        }
+
+        $client = \Config\Services::curlrequest([
+            'verify'  => false,
+            'timeout' => 120
+        ]);
+        $remotePath = 'SportBase/Matches/' . $dateFolder;
+
+        foreach ($files as $file) {
+            if ($file && $file->isValid() && !$file->hasMoved()) {
+                $localTempPath = $file->getTempName();
+                $mimeType = $file->getMimeType();
+                $originalName = $file->getName();
+                $compressedPath = null;
+
+                try {
+                    $nameWithoutExt = pathinfo($originalName, PATHINFO_FILENAME);
+                    $sanitizedName = preg_replace('/[^\w-]/', '_', $nameWithoutExt);
+                    $sanitizedName = trim(preg_replace('/_+/', '_', $sanitizedName), '_');
+                    $finalName = ($sanitizedName ?: 'match') . '-' . uniqid() . '.jpg';
+
+                    $originalSize = filesize($localTempPath);
+                    log_message('info', "Match photo upload: {$originalName}, original size: " . round($originalSize/1024) . "KB, mime: {$mimeType}");
+
+                    // บีบอัดรูปภาพก่อนอัปโหลด (แก้ Error 413)
+                    // ลองบีบครั้งแรก: 1280px, quality 70%
+                    $compressedPath = $this->compressImage($localTempPath, $mimeType, 1280, 70);
+                    
+                    if ($compressedPath) {
+                        $compressedSize = filesize($compressedPath);
+                        log_message('info', "Compressed to: " . round($compressedSize/1024) . "KB");
+                        
+                        // ถ้ายังเกิน 1MB ให้บีบอีกครั้งด้วยคุณภาพที่ต่ำลง
+                        if ($compressedSize > 1024 * 1024) {
+                            @unlink($compressedPath);
+                            $compressedPath = $this->compressImage($localTempPath, $mimeType, 1024, 50);
+                            if ($compressedPath) {
+                                log_message('info', "Re-compressed to: " . round(filesize($compressedPath)/1024) . "KB");
+                            }
+                        }
+                    } else {
+                        log_message('warning', "compressImage returned null for {$originalName}. GD library may not be available. Trying original file.");
+                    }
+
+                    $uploadFilePath = $compressedPath ?: $localTempPath;
+                    $uploadMime = $compressedPath ? 'image/jpeg' : $mimeType;
+                    $uploadSize = filesize($uploadFilePath);
+                    log_message('info', "Uploading file size: " . round($uploadSize/1024) . "KB to {$uploadServerUrl}");
+
+                    $response = $client->request('POST', $uploadServerUrl, [
+                        'headers' => ['X-Auth-Token' => 'Dekpiano2025!!'],
+                        'multipart' => [
+                            'file'             => new \CURLFile($uploadFilePath, $uploadMime, $finalName),
+                            'path'             => $remotePath,
+                            'desired_filename' => $finalName,
+                        ]
+                    ]);
+
+                    if ($response->getStatusCode() === 200) {
+                        $body = json_decode($response->getBody());
+                        if ($body && isset($body->status) && $body->status === 'success' && isset($body->filename)) {
+                            $uploadedNames[] = $body->filename;
+                        } else {
+                            $msg = 'Remote file upload failed: ' . $response->getBody();
+                            log_message('error', $msg);
+                            if ($compressedPath && file_exists($compressedPath)) @unlink($compressedPath);
+                            $result['success'] = false;
+                            $result['message'] = $msg;
+                            return $result;
+                        }
+                    } else {
+                        $msg = 'Remote upload server returned status code: ' . $response->getStatusCode() . ' (file size: ' . round($uploadSize/1024) . 'KB)';
+                        log_message('error', $msg);
+                        if ($compressedPath && file_exists($compressedPath)) @unlink($compressedPath);
+                        $result['success'] = false;
+                        $result['message'] = $msg;
+                        return $result;
+                    }
+
+                    // ลบไฟล์ temp ที่บีบอัดแล้ว
+                    if ($compressedPath && file_exists($compressedPath)) {
+                        @unlink($compressedPath);
+                    }
+                } catch (\Exception $e) {
+                    $msg = 'Exception during remote match photo upload: ' . $e->getMessage();
+                    log_message('error', $msg);
+                    if ($compressedPath && file_exists($compressedPath)) @unlink($compressedPath);
+                    $result['success'] = false;
+                    $result['message'] = $msg;
+                    return $result;
+                }
+            }
+        }
+
+        $result['uploaded'] = $uploadedNames;
+        return $result;
+    }
+
+    /**
+     * ลบไฟล์จาก Remote Upload Server
+     */
+    private function deletePhotosFromRemoteServer($photos, $folderDate = '')
+    {
+        if (empty($photos) || !is_array($photos)) {
+            return;
+        }
+
+        $uploadServerDeleteUrl = env('upload.server.delete.url') ?: getenv('upload.server.delete.url');
+        $dateFolder = !empty($folderDate) ? date('Y-m-d', strtotime($folderDate)) : date('Y-m-d');
+
+        if (!$uploadServerDeleteUrl) {
+            foreach ($photos as $photoName) {
+                $filePath = FCPATH . 'uploads/matches/' . trim((string)$photoName);
+                if (file_exists($filePath)) {
+                    @unlink($filePath);
+                }
+            }
+            return;
+        }
+
+        $client = \Config\Services::curlrequest([
+            'verify'  => false,
+            'timeout' => 30
+        ]);
+        $filesToDelete = [];
+        foreach ($photos as $p) {
+            $filenameOnly = basename(trim((string)$p));
+            if (!empty($filenameOnly)) {
+                $filesToDelete[] = $filenameOnly;
+            }
+        }
+
+        if (empty($filesToDelete)) {
+            return;
+        }
+
+        try {
+            $response = $client->request('POST', $uploadServerDeleteUrl, [
+                'headers' => ['X-Auth-Token' => 'Dekpiano2025!!'],
+                'json' => [
+                    'files' => $filesToDelete,
+                    'path'  => 'SportBase/Matches/' . $dateFolder
+                ]
+            ]);
+
+            if ($response->getStatusCode() !== 200) {
+                log_message('error', 'Failed to delete remote match photos. Status: ' . $response->getStatusCode() . ' Body: ' . $response->getBody());
+            }
+        } catch (\Throwable $e) {
+            log_message('error', 'Exception during remote match photo deletion: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * บีบอัดและลดขนาดรูปภาพ (max 1920px, JPEG quality 75%)
+     * เพื่อไม่ให้ไฟล์มีขนาดใหญ่เกินไป แก้ปัญหา Error 413 จาก Remote Server
+     * @return string|null คืน path ของไฟล์ temp ที่บีบอัดแล้ว หรือ null ถ้าไม่สามารถบีบอัดได้
+     */
+    private function compressImage($sourcePath, $mimeType, $maxDimension = 1920, $quality = 75)
+    {
+        try {
+            // สร้าง image resource จากไฟล์ต้นฉบับ
+            switch (strtolower($mimeType)) {
+                case 'image/jpeg':
+                case 'image/jpg':
+                    $sourceImage = @imagecreatefromjpeg($sourcePath);
+                    break;
+                case 'image/png':
+                    $sourceImage = @imagecreatefrompng($sourcePath);
+                    break;
+                case 'image/webp':
+                    if (function_exists('imagecreatefromwebp')) {
+                        $sourceImage = @imagecreatefromwebp($sourcePath);
+                    } else {
+                        return null;
+                    }
+                    break;
+                case 'image/gif':
+                    $sourceImage = @imagecreatefromgif($sourcePath);
+                    break;
+                default:
+                    return null; // ไม่รองรับ format นี้
+            }
+
+            if (!$sourceImage) {
+                return null;
+            }
+
+            $origWidth = imagesx($sourceImage);
+            $origHeight = imagesy($sourceImage);
+
+            // คำนวณขนาดใหม่ โดยรักษาสัดส่วนเดิม
+            $newWidth = $origWidth;
+            $newHeight = $origHeight;
+
+            if ($origWidth > $maxDimension || $origHeight > $maxDimension) {
+                if ($origWidth >= $origHeight) {
+                    $newWidth = $maxDimension;
+                    $newHeight = intval($origHeight * ($maxDimension / $origWidth));
+                } else {
+                    $newHeight = $maxDimension;
+                    $newWidth = intval($origWidth * ($maxDimension / $origHeight));
+                }
+            }
+
+            // สร้าง canvas ใหม่และ resize
+            $resizedImage = imagecreatetruecolor($newWidth, $newHeight);
+
+            // จัดการ transparency สำหรับ PNG
+            if ($mimeType === 'image/png') {
+                imagealphablending($resizedImage, false);
+                imagesavealpha($resizedImage, true);
+                $transparent = imagecolorallocatealpha($resizedImage, 255, 255, 255, 127);
+                imagefilledrectangle($resizedImage, 0, 0, $newWidth, $newHeight, $transparent);
+            } else {
+                // พื้นขาวสำหรับ JPEG
+                $white = imagecolorallocate($resizedImage, 255, 255, 255);
+                imagefilledrectangle($resizedImage, 0, 0, $newWidth, $newHeight, $white);
+            }
+
+            imagecopyresampled($resizedImage, $sourceImage, 0, 0, 0, 0, $newWidth, $newHeight, $origWidth, $origHeight);
+
+            // บันทึกเป็น JPEG ลงไฟล์ temp
+            $tempPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'match_compressed_' . uniqid() . '.jpg';
+            $saved = imagejpeg($resizedImage, $tempPath, $quality);
+
+            imagedestroy($sourceImage);
+            imagedestroy($resizedImage);
+
+            if ($saved && file_exists($tempPath)) {
+                $compressedSize = filesize($tempPath);
+                $originalSize = filesize($sourcePath);
+                log_message('info', "Image compressed: {$origWidth}x{$origHeight} -> {$newWidth}x{$newHeight}, Size: " . round($originalSize/1024) . "KB -> " . round($compressedSize/1024) . "KB");
+                return $tempPath;
+            }
+
+            return null;
+        } catch (\Throwable $e) {
+            log_message('error', 'Image compression failed: ' . $e->getMessage());
+            return null;
+        }
     }
 }

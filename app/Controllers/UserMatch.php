@@ -53,7 +53,42 @@ class UserMatch extends BaseController
         $report = $db->table('tb_match_reports')->where('match_id', $matchId)->get()->getRowArray();
         
         if ($report) {
-            $report['photos'] = !empty($report['report_photos']) ? json_decode($report['report_photos'], true) : [];
+            $rawPhotos = !empty($report['report_photos']) ? json_decode($report['report_photos'], true) : [];
+            $photos = [];
+            $photoUrls = [];
+            
+            $matchModel = new MatchModel();
+            $match = $matchModel->find($matchId);
+            $dateFolder = (!empty($match) && !empty($match['match_date'])) ? date('Y-m-d', strtotime($match['match_date'])) : date('Y-m-d');
+            $remoteBaseUrl = getenv('upload.server.baseurl');
+
+            if (is_array($rawPhotos)) {
+                foreach ($rawPhotos as $photo) {
+                    $photos[] = $photo;
+                    if (strpos($photo, 'http://') === 0 || strpos($photo, 'https://') === 0) {
+                        $photoUrls[] = $photo;
+                    } else if ($remoteBaseUrl) {
+                        $cleanRemote = rtrim($remoteBaseUrl, '/');
+                        if (stripos($cleanRemote, 'SportBase/Matches') !== false) {
+                            $base = $cleanRemote;
+                        } else {
+                            $baseUploads = preg_replace('#(/uploads)(/.*)?$#i', '$1', $cleanRemote);
+                            $base = $baseUploads . '/SportBase/Matches';
+                        }
+
+                        if (strpos($photo, '/') !== false) {
+                            $photoUrls[] = $base . '/' . ltrim($photo, '/');
+                        } else {
+                            $photoUrls[] = $base . '/' . $dateFolder . '/' . ltrim($photo, '/');
+                        }
+                    } else {
+                        $photoUrls[] = base_url('uploads/matches/' . $photo);
+                    }
+                }
+            }
+
+            $report['photos'] = $photos;
+            $report['photo_urls'] = $photoUrls;
             return $this->response->setJSON(['success' => true, 'report' => $report]);
         }
         return $this->response->setJSON(['success' => false, 'message' => 'ยังไม่มีรายงานผลการแข่งขัน']);

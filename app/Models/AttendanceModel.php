@@ -207,13 +207,13 @@ class AttendanceModel extends Model
     /**
      * ตรวจสอบสถานะการเช็กชื่อของแต่ละช่วงเวลาในทีม (ว่าลงเวลาแล้วหรือยังไม่ได้ลงเวลา)
      */
-    public function getPeriodStatusMap($teamId, $date = null)
+    public function getPeriodStatusMap($teamId, $date = null, $totalAthletesCount = 0)
     {
         $this->checkTableColumns();
         $date = $date ?: date('Y-m-d');
         
         $rows = $this->db->table('tb_attendance')
-            ->select('att_period, checked_by, MAX(att_time) as last_time, COUNT(*) as checked_count')
+            ->select('att_period, checked_by, MAX(att_time) as last_time, COUNT(DISTINCT StudentID) as checked_count')
             ->where('team_id', $teamId)
             ->where('att_start_date <=', $date)
             ->where('att_end_date >=', $date)
@@ -222,15 +222,18 @@ class AttendanceModel extends Model
             ->getResultArray();
 
         $map = [
-            'morning'  => ['checked' => false, 'by' => '', 'time' => ''],
-            'training' => ['checked' => false, 'by' => '', 'time' => ''],
-            'night'    => ['checked' => false, 'by' => '', 'time' => '']
+            'morning'  => ['checked' => false, 'by' => '', 'time' => '', 'count' => 0, 'total' => $totalAthletesCount, 'is_complete' => false],
+            'training' => ['checked' => false, 'by' => '', 'time' => '', 'count' => 0, 'total' => $totalAthletesCount, 'is_complete' => false],
+            'night'    => ['checked' => false, 'by' => '', 'time' => '', 'count' => 0, 'total' => $totalAthletesCount, 'is_complete' => false]
         ];
 
         foreach ($rows as $r) {
             $p = $r['att_period'] ?: 'morning';
             if (isset($map[$p])) {
-                $map[$p]['checked'] = ($r['checked_count'] > 0);
+                $cnt = (int)($r['checked_count'] ?? 0);
+                $map[$p]['count'] = $cnt;
+                $map[$p]['checked'] = ($cnt > 0);
+                $map[$p]['is_complete'] = ($totalAthletesCount > 0 && $cnt >= $totalAthletesCount);
                 $map[$p]['by'] = $r['checked_by'] ?? '';
                 $map[$p]['time'] = $r['last_time'] ?? '';
             }

@@ -18,6 +18,21 @@
         box-shadow: var(--sb-shadow);
     }
 
+    /* Mobile First Horizontal Scroll Bar for Batch Actions */
+    .batch-scroll-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        padding-bottom: 4px;
+    }
+    .batch-scroll-container::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
     /* Mobile First Toggle Group */
     .status-container {
         display: flex;
@@ -26,11 +41,18 @@
         border-radius: 14px;
         border: 1px solid #e2e8f0;
         width: 100%;
-        max-width: 400px;
+        max-width: 440px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .status-container::-webkit-scrollbar {
+        display: none;
     }
 
     .status-item {
-        flex: 1;
+        flex: 1 0 auto;
+        min-width: 68px;
         position: relative;
     }
 
@@ -319,18 +341,22 @@
                     <!-- Period Action Buttons -->
                     <div class="nav nav-pills nav-justified gap-2" id="periodTabs" role="tablist">
                         <?php 
+                        $totalAthletes = count($athletes);
                         foreach ($periods as $pKey => $pInfo): 
                             $isActive = ($curPeriod === $pKey);
                             $activeClass = $isActive ? 'active' : 'inactive';
-                            $pStatus = $periodStatusMap[$pKey] ?? ['checked' => false];
-                            $isPChecked = !empty($pStatus['checked']);
+                            $pStatus = $periodStatusMap[$pKey] ?? ['checked' => false, 'count' => 0, 'is_complete' => false];
+                            $pCount = $pStatus['count'] ?? 0;
+                            $isComplete = !empty($pStatus['is_complete']);
                         ?>
                             <a class="nav-link fw-bold d-flex align-items-center justify-content-center gap-2 period-tab-btn <?= $activeClass ?>"
                                href="<?= base_url('Admin/Attendance/Team/' . $team['team_id'] . '?date=' . $selectedDate . '&period=' . $pKey); ?>">
                                 <i class='bx <?= $pInfo['icon'] ?> fs-5'></i>
                                 <span class="fw-bold" style="font-size: 0.9rem; white-space: nowrap;"><?= $pInfo['label'] ?></span>
-                                <?php if ($isPChecked): ?>
-                                    <span class="badge bg-success rounded-pill px-2 py-0.5 fw-bold ms-1" style="font-size: 0.65rem;">✓ บันทึกแล้ว</span>
+                                <?php if ($isComplete): ?>
+                                    <span class="badge bg-success rounded-pill px-2 py-0.5 fw-bold ms-1" style="font-size: 0.65rem;">✓ บันทึกครบแล้ว</span>
+                                <?php elseif ($pCount > 0): ?>
+                                    <span class="badge bg-warning text-dark rounded-pill px-2 py-0.5 fw-bold ms-1" style="font-size: 0.65rem;">! เช็กแล้ว <?= $pCount ?>/<?= $totalAthletes ?></span>
                                 <?php else: ?>
                                     <span class="badge bg-danger rounded-pill px-2 py-0.5 fw-bold ms-1" style="font-size: 0.65rem;">! ยังไม่เช็ก</span>
                                 <?php endif; ?>
@@ -344,53 +370,84 @@
 
     <!-- PROMINENT DAILY CHECK-IN STATUS ALERT BANNER -->
     <?php 
-    $curStatusInfo = $periodStatusMap[$selectedPeriod] ?? ['checked' => false, 'by' => '', 'time' => ''];
-    $isCurrentPeriodChecked = !empty($curStatusInfo['checked']);
+    $curStatusInfo = $periodStatusMap[$selectedPeriod] ?? ['checked' => false, 'by' => '', 'time' => '', 'count' => 0, 'is_complete' => false];
+    $checkedCount = 0;
+    foreach ($athletes as $a) {
+        if (isset($attendanceMap[$a['StudentID']]) && !empty($attendanceMap[$a['StudentID']]['att_status'])) {
+            $checkedCount++;
+        }
+    }
+    $totalCount = count($athletes);
+    $remainingCount = $totalCount - $checkedCount;
+    $isFullyChecked = ($totalCount > 0 && $checkedCount >= $totalCount);
     ?>
-    <?php if ($isCurrentPeriodChecked): ?>
-        <div class="alert alert-success d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3" style="background: #ecfdf5; border-left: 6px solid #10b981 !important;">
-            <div class="d-flex align-items-center gap-3">
-                <div class="avatar avatar-md bg-success text-white rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bx bx-check-circle fs-3"></i>
+
+    <div id="attendanceAlertBanner">
+        <?php if ($isFullyChecked): ?>
+            <div class="alert alert-success d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3" style="background: #ecfdf5; border-left: 6px solid #10b981 !important;">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="avatar avatar-md bg-success text-white rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bx bx-check-circle fs-3"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                            <span>✅ บันทึกการเช็กชื่อครบทุกคนเรียบร้อยแล้ว (<?= $checkedCount ?>/<?= $totalCount ?> คน)</span>
+                            <span class="badge bg-success text-white">ประจำวันที่ <?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?></span>
+                        </h6>
+                        <small class="text-muted d-block mt-1">
+                            <i class="bx bx-user me-1"></i>ผู้ลงเวลาบันทึก: <strong class="text-dark"><?= !empty($curStatusInfo['by']) ? $curStatusInfo['by'] : session()->get('username') ?></strong>
+                            <?php if (!empty($curStatusInfo['time'])): ?>
+                                <span class="ms-2"><i class="bx bx-time me-1"></i>เวลา: <?= date('H:i', strtotime($curStatusInfo['time'])) ?> น.</span>
+                            <?php endif; ?>
+                        </small>
+                    </div>
                 </div>
-                <div>
-                    <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
-                        <span>✅ บันทึกการเช็กชื่อเรียบร้อยแล้ว</span>
-                        <span class="badge bg-success text-white">ประจำวันที่ <?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?></span>
-                    </h6>
-                    <small class="text-muted d-block mt-1">
-                        <i class="bx bx-user me-1"></i>ผู้ลงเวลาบันทึก: <strong class="text-dark"><?= !empty($curStatusInfo['by']) ? $curStatusInfo['by'] : session()->get('username') ?></strong>
-                        <?php if (!empty($curStatusInfo['time'])): ?>
-                            <span class="ms-2"><i class="bx bx-time me-1"></i>เวลา: <?= date('H:i', strtotime($curStatusInfo['time'])) ?> น.</span>
-                        <?php endif; ?>
-                    </small>
-                </div>
+                <span class="badge bg-label-success fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block">
+                    <i class="bx bx-shield-quarter me-1"></i>เช็กชื่อครบแล้ว
+                </span>
             </div>
-            <span class="badge bg-label-success fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block">
-                <i class="bx bx-shield-quarter me-1"></i>บันทึกแล้ว
-            </span>
-        </div>
-    <?php else: ?>
-        <div class="alert alert-warning d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3 animate-pulse-border" style="background: #fff7ed; border-left: 6px solid #f97316 !important;">
-            <div class="d-flex align-items-center gap-3">
-                <div class="avatar avatar-md bg-warning text-white rounded-circle d-flex align-items-center justify-content-center animate-pulse">
-                    <i class="bx bx-error-circle fs-3"></i>
+        <?php elseif ($checkedCount > 0): ?>
+            <div class="alert alert-warning d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3" style="background: #fffbe6; border-left: 6px solid #f59e0b !important;">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="avatar avatar-md bg-warning text-white rounded-circle d-flex align-items-center justify-content-center animate-pulse">
+                        <i class="bx bx-error-circle fs-3"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                            <span class="fw-bold" style="color: #b45309;">⚠️ ยังเช็คชื่อไม่ครบทุกคนในทีม! (เช็กแล้ว <?= $checkedCount ?>/<?= $totalCount ?> คน)</span>
+                            <span class="badge bg-warning text-dark fw-bold">เหลืออีก <?= $remainingCount ?> คนยังไม่ได้เลือก</span>
+                        </h6>
+                        <small class="text-muted d-block mt-1">
+                            กรุณาเลือกสถานะให้นักกีฬาที่เหลืออีก <strong><?= $remainingCount ?> คน</strong> สำหรับช่วงเวลา <strong><?= $periods[$selectedPeriod]['label'] ?? '' ?></strong> (ประจำวันที่ <?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?>)
+                        </small>
+                    </div>
                 </div>
-                <div>
-                    <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
-                        <span class="text-danger fw-bold">⚠️ ยังไม่ได้ลงเวลาเช็กชื่อช่วงเวลานี้!</span>
-                        <span class="badge bg-danger text-white animate-pulse">ยังไม่เช็กชื่อ</span>
-                    </h6>
-                    <small class="text-muted d-block mt-1">
-                        กรุณาลงเวลาเช็กชื่อสำหรับช่วงเวลา <strong><?= $periods[$selectedPeriod]['label'] ?? '' ?></strong> (ประจำวันที่ <?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?>)
-                    </small>
-                </div>
+                <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block">
+                    <i class="bx bx-time-five me-1"></i>ยังเช็กไม่ครบ
+                </span>
             </div>
-            <span class="badge bg-danger text-white fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block animate-pulse">
-                <i class="bx bx-time-five me-1"></i>รอดำเนินการ
-            </span>
-        </div>
-    <?php endif; ?>
+        <?php else: ?>
+            <div class="alert alert-danger d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3 animate-pulse-border" style="background: #fff5f5; border-left: 6px solid #ef4444 !important;">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="avatar avatar-md bg-danger text-white rounded-circle d-flex align-items-center justify-content-center animate-pulse">
+                        <i class="bx bx-x-circle fs-3"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                            <span class="text-danger fw-bold">⚠️ ยังไม่ได้ลงเวลาเช็กชื่อช่วงเวลานี้!</span>
+                            <span class="badge bg-danger text-white animate-pulse">ยังไม่เช็กชื่อ (0/<?= $totalCount ?> คน)</span>
+                        </h6>
+                        <small class="text-muted d-block mt-1">
+                            กรุณาลงเวลาเช็กชื่อสำหรับช่วงเวลา <strong><?= $periods[$selectedPeriod]['label'] ?? '' ?></strong> (ประจำวันที่ <?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?>)
+                        </small>
+                    </div>
+                </div>
+                <span class="badge bg-danger text-white fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block animate-pulse">
+                    <i class="bx bx-time-five me-1"></i>รอดำเนินการ
+                </span>
+            </div>
+        <?php endif; ?>
+    </div>
 
     <!-- Header Section -->
     <div class="attendance-header">
@@ -427,6 +484,39 @@
         </div>
     </div>
 
+    <!-- Dedicated Batch Action Card (แยกส่วนทางลัดเลือกสถานะทั้งทีม) -->
+    <div class="card border-0 shadow-sm rounded-20 mb-3 overflow-hidden" style="background: #ffffff; border: 1px solid #fed7aa !important;">
+        <div class="card-body p-3">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2.5">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-warning text-white rounded-circle p-1.5 d-flex align-items-center justify-content-center">
+                        <i class='bx bx-bolt fs-5'></i>
+                    </span>
+                    <span class="fw-bold text-dark fs-6">⚡ ทางลัดเลือกสถานะเดียวกันทั้งทีม (Batch Action 1-Click)</span>
+                </div>
+                <span class="text-muted small"><i class='bx bx-info-circle me-1'></i>แตะเลือกสถานะเพื่อกำหนดให้ทุกคนในทีมพร้อมกัน</span>
+            </div>
+            
+            <div class="batch-scroll-container">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="present">
+                    <i class='bx bx-check-circle fs-5'></i> "มา" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="home">
+                    <i class='bx bx-home fs-5'></i> "กลับบ้าน" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="competition">
+                    <i class='bx bx-trophy fs-5'></i> "ไปแข่งขัน" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-warning btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm text-dark flex-shrink-0" data-status="sick">
+                    <i class='bx bx-plus-medical fs-5'></i> "ลาป่วย" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-info btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="personal">
+                    <i class='bx bx-briefcase fs-5'></i> "ลากิจ" ทั้งทีม
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="row mb-4">
         <div class="col-12">
             <div class="card sb-card shadow-sm">
@@ -440,22 +530,7 @@
                         <div class="badge bg-label-warning rounded-pill px-3 py-2 fw-bold" id="sickBadge">0 ลาป่วย</div>
                         <div class="badge bg-label-info rounded-pill px-3 py-2 fw-bold" id="personalBadge">0 ลากิจ</div>
                         <div class="badge bg-label-danger rounded-pill px-3 py-2 fw-bold" id="homeBadge">0 กลับบ้าน</div>
-                        <div class="badge rounded-pill px-3 py-2 fw-bold me-2" id="competitionBadge" style="background: rgba(139, 92, 246, 0.16); color: #8b5cf6;">0 แข่งขัน</div>
-                        
-                        <!-- Quick Batch Action Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-warning btn-sm rounded-pill fw-bold dropdown-toggle shadow-sm text-white px-3" type="button" data-bs-toggle="dropdown">
-                                <i class="bx bx-bolt me-1"></i>เลือกทั้งทีม (1-Click)
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-16 border-0">
-                                <li><h6 class="dropdown-header text-muted fw-bold">⚡ กำหนดสถานะเดียวกันทั้งทีม:</h6></li>
-                                <li><a class="dropdown-item py-2 fw-bold text-danger quick-mark-all" href="javascript:void(0)" data-status="home"><i class="bx bx-home me-2"></i>"กลับบ้าน" ทั้งหมด</a></li>
-                                <li><a class="dropdown-item py-2 fw-bold text-success quick-mark-all" href="javascript:void(0)" data-status="present"><i class="bx bx-check-circle me-2"></i>"มา" ทั้งหมด</a></li>
-                                <li><a class="dropdown-item py-2 fw-bold text-primary quick-mark-all" href="javascript:void(0)" data-status="competition"><i class="bx bx-trophy me-2"></i>"ไปแข่งขัน" ทั้งหมด</a></li>
-                                <li><a class="dropdown-item py-2 fw-bold text-warning quick-mark-all" href="javascript:void(0)" data-status="sick"><i class="bx bx-plus-medical me-2"></i>"ลาป่วย" ทั้งหมด</a></li>
-                                <li><a class="dropdown-item py-2 fw-bold text-info quick-mark-all" href="javascript:void(0)" data-status="personal"><i class="bx bx-briefcase me-2"></i>"ลากิจ" ทั้งหมด</a></li>
-                            </ul>
-                        </div>
+                        <div class="badge rounded-pill px-3 py-2 fw-bold" id="competitionBadge" style="background: rgba(139, 92, 246, 0.16); color: #8b5cf6;">0 แข่งขัน</div>
                     </div>
                 </div>
                 
@@ -467,28 +542,14 @@
                                 <th width="50" class="text-center">#</th>
                                 <th width="80" class="text-center">รูป</th>
                                 <th>ชื่อ - นามสกุล / ชั้นเรียน</th>
-                                <th width="450">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <span>บันทึกสถานะ</span>
-                                        <div class="dropdown">
-                                            <button class="btn p-0 border-0 text-warning fw-bold small dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                                <i class="bx bx-bolt me-1"></i>เช็กทั้งทีม
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                                                <li><a class="dropdown-item small fw-bold text-danger quick-mark-all" href="javascript:void(0)" data-status="home"><i class="bx bx-home me-1"></i>"กลับบ้าน" ทั้งหมด</a></li>
-                                                <li><a class="dropdown-item small fw-bold text-success quick-mark-all" href="javascript:void(0)" data-status="present"><i class="bx bx-check-circle me-1"></i>"มา" ทั้งหมด</a></li>
-                                                <li><a class="dropdown-item small fw-bold text-primary quick-mark-all" href="javascript:void(0)" data-status="competition"><i class="bx bx-trophy me-1"></i>"ไปแข่งขัน" ทั้งหมด</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </th>
+                                <th width="450">บันทึกสถานะ</th>
                                 <th width="150" class="text-center">หมายเหตุ</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if (!empty($athletes)) : ?>
                                 <?php $i = 1; foreach ($athletes as $row) : 
-                                    $currentStatus = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_status'] : 'present';
+                                    $currentStatus = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_status'] : '';
                                     $currentNote = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_note'] : '';
                                     
                                     // Photo Logic
@@ -510,7 +571,7 @@
                                                 <span class="badge bg-label-primary rounded-pill fw-bold" style="font-size: 0.75rem;"><?= $row['StudentClass']; ?></span>
                                             </div>
                                             <small class="text-muted">#<?= $row['StudentCode']; ?></small>
-                                            <?php if (isset($attendanceMap[$row['StudentID']]) && $currentStatus !== 'present'): 
+                                            <?php if (isset($attendanceMap[$row['StudentID']]) && !empty($currentStatus) && $currentStatus !== 'present'): 
                                                 $att = $attendanceMap[$row['StudentID']];
                                                 $sDate = !empty($att['att_start_date']) ? $att['att_start_date'] : $selectedDate;
                                                 $eDate = !empty($att['att_end_date']) ? $att['att_end_date'] : $sDate;
@@ -571,7 +632,7 @@
                         </div>
                     <?php else : ?>
                         <?php foreach ($athletes as $row) : 
-                            $currentStatus = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_status'] : 'present';
+                            $currentStatus = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_status'] : '';
                             $currentNote = isset($attendanceMap[$row['StudentID']]) ? $attendanceMap[$row['StudentID']]['att_note'] : '';
                             
                             // Photo Logic
@@ -593,7 +654,7 @@
                                             <span class="me-2">#<?= $row['StudentCode']; ?></span>
                                             <span>ชั้น: <?= $row['StudentClass']; ?></span>
                                         </div>
-                                        <?php if (isset($attendanceMap[$row['StudentID']]) && $currentStatus !== 'present'): 
+                                        <?php if (isset($attendanceMap[$row['StudentID']]) && !empty($currentStatus) && $currentStatus !== 'present'): 
                                             $att = $attendanceMap[$row['StudentID']];
                                             $sDate = !empty($att['att_start_date']) ? $att['att_start_date'] : $selectedDate;
                                             $eDate = !empty($att['att_end_date']) ? $att['att_end_date'] : $sDate;
@@ -909,13 +970,27 @@ $(document).ready(function() {
         }
     });
 
-    // Initial counts - นับเฉพาะ Desktop radio (st_) เพื่อไม่ให้นับซ้ำกับ Mobile (mst_)
+    // Initial counts and dynamic banner update
+    const totalAthletesCount = <?= count($athletes); ?>;
+    const selectedPeriodLabel = "<?= $periods[$selectedPeriod]['label'] ?? 'เช็กชื่อ' ?>";
+    const selectedDateFormatted = "<?= date('d/m/', strtotime($selectedDate)) . (date('Y', strtotime($selectedDate)) + 543) ?>";
+    const currentUsername = "<?= session()->get('username') ?>";
+
     function updateLiveStats() {
         let p = 0, s = 0, pe = 0, h = 0, c = 0;
+        let checkedStudentIds = new Set();
+
         $('input.status-btn-radio:checked').each(function() {
             const name = $(this).attr('name');
+            const row = $(this).closest('.athlete-row');
+            const studentId = row.data('student-id');
+            const val = $(this).val();
+
+            if (studentId && val) {
+                checkedStudentIds.add(studentId);
+            }
+
             if (name && name.startsWith('st_')) {
-                const val = $(this).val();
                 if(val === 'present') p++;
                 else if(val === 'sick') s++;
                 else if(val === 'personal') pe++;
@@ -923,11 +998,83 @@ $(document).ready(function() {
                 else if(val === 'competition') c++;
             }
         });
-        $('#presentBadge').text(p + ' อยู่');
+
+        $('#presentBadge').text(p + ' มา');
         $('#sickBadge').text(s + ' ป่วย');
         $('#personalBadge').text(pe + ' กิจธุระ');
         $('#homeBadge').text(h + ' กลับบ้าน');
         $('#competitionBadge').text(c + ' แข่งขัน');
+
+        // Dynamic Alert Banner Update
+        const checkedCount = checkedStudentIds.size;
+        const remainingCount = totalAthletesCount - checkedCount;
+        let bannerHtml = '';
+
+        if (totalAthletesCount > 0 && checkedCount >= totalAthletesCount) {
+            bannerHtml = `
+                <div class="alert alert-success d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3" style="background: #ecfdf5; border-left: 6px solid #10b981 !important;">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-md bg-success text-white rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bx bx-check-circle fs-3"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                                <span>✅ บันทึกการเช็กชื่อครบทุกคนเรียบร้อยแล้ว (${checkedCount}/${totalAthletesCount} คน)</span>
+                                <span class="badge bg-success text-white">ประจำวันที่ ${selectedDateFormatted}</span>
+                            </h6>
+                            <small class="text-muted d-block mt-1">
+                                <i class="bx bx-user me-1"></i>ผู้ลงเวลาบันทึก: <strong class="text-dark">${currentUsername}</strong>
+                            </small>
+                        </div>
+                    </div>
+                    <span class="badge bg-label-success fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block">
+                        <i class="bx bx-shield-quarter me-1"></i>เช็กชื่อครบแล้ว
+                    </span>
+                </div>`;
+        } else if (checkedCount > 0) {
+            bannerHtml = `
+                <div class="alert alert-warning d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3" style="background: #fffbe6; border-left: 6px solid #f59e0b !important;">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-md bg-warning text-white rounded-circle d-flex align-items-center justify-content-center animate-pulse">
+                            <i class="bx bx-error-circle fs-3"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                                <span class="fw-bold" style="color: #b45309;">⚠️ ยังเช็คชื่อไม่ครบทุกคนในทีม! (เช็กแล้ว ${checkedCount}/${totalAthletesCount} คน)</span>
+                                <span class="badge bg-warning text-dark fw-bold">เหลืออีก ${remainingCount} คนยังไม่ได้เลือก</span>
+                            </h6>
+                            <small class="text-muted d-block mt-1">
+                                กรุณาเลือกสถานะให้นักกีฬาที่เหลืออีก <strong>${remainingCount} คน</strong> สำหรับช่วงเวลา <strong>${selectedPeriodLabel}</strong> (ประจำวันที่ ${selectedDateFormatted})
+                            </small>
+                        </div>
+                    </div>
+                    <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block">
+                        <i class="bx bx-time-five me-1"></i>ยังเช็กไม่ครบ
+                    </span>
+                </div>`;
+        } else {
+            bannerHtml = `
+                <div class="alert alert-danger d-flex align-items-center justify-content-between rounded-16 shadow-sm border-0 mb-3 p-3 animate-pulse-border" style="background: #fff5f5; border-left: 6px solid #ef4444 !important;">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-md bg-danger text-white rounded-circle d-flex align-items-center justify-content-center animate-pulse">
+                            <i class="bx bx-x-circle fs-3"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-dark mb-0 d-flex align-items-center gap-2 flex-wrap">
+                                <span class="text-danger fw-bold">⚠️ ยังไม่ได้ลงเวลาเช็กชื่อช่วงเวลานี้!</span>
+                                <span class="badge bg-danger text-white animate-pulse">ยังไม่เช็กชื่อ (0/${totalAthletesCount} คน)</span>
+                            </h6>
+                            <small class="text-muted d-block mt-1">
+                                กรุณาลงเวลาเช็กชื่อสำหรับช่วงเวลา <strong>${selectedPeriodLabel}</strong> (ประจำวันที่ ${selectedDateFormatted})
+                            </small>
+                        </div>
+                    </div>
+                    <span class="badge bg-danger text-white fw-bold px-3 py-2 rounded-pill fs-7 d-none d-md-inline-block animate-pulse">
+                        <i class="bx bx-time-five me-1"></i>รอดำเนินการ
+                    </span>
+                </div>`;
+        }
+        $('#attendanceAlertBanner').html(bannerHtml);
     }
     updateLiveStats();
 
@@ -940,7 +1087,7 @@ $(document).ready(function() {
         // Sync mobile and desktop radios
         $(`.status-btn-radio[name="st_${studentId}"], .status-btn-radio[name="mst_${studentId}"]`).filter(`[value="${val}"]`).prop('checked', true);
         
-        const prevVal = $(this).data('prev') || 'present';
+        const prevVal = $(this).data('prev') || '';
 
         if (val === 'present') {
             saveStudentAttendance(row);
@@ -1091,7 +1238,10 @@ $(document).ready(function() {
                     updateLiveStats();
                 } else {
                     // Revert to previous value
-                    $(`.status-btn-radio[name="st_${studentId}"], .status-btn-radio[name="mst_${studentId}"]`).filter(`[value="${prevVal}"]`).prop('checked', true);
+                    $(`.status-btn-radio[name="st_${studentId}"], .status-btn-radio[name="mst_${studentId}"]`).prop('checked', false);
+                    if (prevVal) {
+                        $(`.status-btn-radio[name="st_${studentId}"], .status-btn-radio[name="mst_${studentId}"]`).filter(`[value="${prevVal}"]`).prop('checked', true);
+                    }
                     updateLiveStats();
                 }
             });
@@ -1099,9 +1249,9 @@ $(document).ready(function() {
     });
 
     // Store previous value before change
-    $('.status-btn-radio').on('click', function() {
+    $('.status-btn-radio').on('focus mousedown', function() {
         const name = $(this).attr('name');
-        const currentChecked = $(this).closest('.status-container').find('.status-btn-radio:checked').val();
+        const currentChecked = $(this).closest('.status-container').find('.status-btn-radio:checked').val() || '';
         $(this).data('prev', currentChecked);
     });
 

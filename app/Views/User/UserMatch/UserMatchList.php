@@ -277,11 +277,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         $('#userReportSummaryContainer').hide();
                     }
 
-                    renderUserReportGallery(res.report.photos);
+                    renderUserReportGallery(res.report.photos, res.report.photo_urls);
                 } else {
                     $('#user_report_result').text('ยังไม่มีการลงบันทึกผลการแข่งขัน');
                     $('#userReportSummaryContainer').hide();
-                    renderUserReportGallery([]);
+                    renderUserReportGallery([], []);
                 }
             }
         });
@@ -289,18 +289,18 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#modalUserReport').modal('show');
     });
 
-    function renderUserReportGallery(photos) {
+    function renderUserReportGallery(photos, photoUrls) {
         if (!photos || photos.length === 0) {
             $('#userReportGallery').html('<div class="col-12 text-muted small p-2"><i class="bx bx-image-alt me-1"></i>ยังไม่มีรูปภาพบรรยากาศการแข่งขัน</div>');
             return;
         }
 
         let html = '';
-        photos.forEach(function(photo) {
-            const photoUrl = '<?= base_url('uploads/matches/') ?>/' + photo;
+        photos.forEach(function(photo, idx) {
+            const photoUrl = (photoUrls && photoUrls[idx]) ? photoUrls[idx] : '<?= base_url('uploads/matches/') ?>/' + photo;
             html += `
                 <div class="col-6 col-sm-4 col-md-3">
-                    <div class="position-relative border rounded-16 overflow-hidden shadow-sm user-photo-card style="cursor: pointer;" onclick="openLightbox('${photoUrl}')">
+                    <div class="position-relative border rounded-16 overflow-hidden shadow-sm user-photo-card" style="cursor: pointer;" onclick="openLightbox('${photoUrl}')">
                         <img src="${photoUrl}" class="w-100 object-fit-cover hover-zoom" style="height: 140px; transition: transform 0.3s ease;" alt="ภาพการแข่งขัน">
                     </div>
                 </div>
