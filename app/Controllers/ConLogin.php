@@ -21,13 +21,17 @@ class ConLogin extends BaseController
 
     public function LoginOfficerSportBase()
     {
+        $session = session();
+        if ($session->get('logged_in') || $session->get('username')) {
+            return redirect()->to(base_url('Admin/Home'));
+        }
+
         $data = $this->DataMain();
         $data['title'] = "หน้าแรก";
         $data['description'] = "เข้าสู่ระบบ";
         $data['UrlMenuMain'] = 'LoginOfficerSportBase';
         $data['UrlMenuSub'] = '';
 
-        $session = session();
         $credential = $this->request->getPost('credential');
 
         if ($credential) {

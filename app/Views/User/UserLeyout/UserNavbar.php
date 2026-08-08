@@ -27,7 +27,14 @@
 
             <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <?php if(isset($_SESSION['username'])): ?>
-                <li class="nav-item me-3 text-end">
+                <li class="nav-item me-2 me-md-3">
+                    <a href="<?= base_url('Admin/Home') ?>" class="btn btn-sm btn-warning text-white rounded-pill px-3 shadow-sm d-flex align-items-center gap-1 fw-bold">
+                        <i class='bx bxs-dashboard fs-6'></i>
+                        <span class="d-none d-sm-inline">กลับไประบบ Admin</span>
+                        <span class="d-inline d-sm-none">Admin</span>
+                    </a>
+                </li>
+                <li class="nav-item me-3 text-end d-none d-md-block">
                     <div class="fw-bold text-dark lh-1" style="font-size: calc(0.7rem + 0.3vw);"><?= $_SESSION['username'] ?></div>
                     <?php 
                         $statusClass = 'bg-label-primary';

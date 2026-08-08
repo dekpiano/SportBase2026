@@ -92,7 +92,7 @@ class AttendanceModel extends Model
             $builder->groupStart()
                     ->where('att.att_period', $period)
                     ->orWhere('att.att_period IS NULL')
-                    ->orWhere('att.att_status !=', 'present')
+                    ->orWhereNotIn('att.att_status', ['present', 'absent'])
                     ->groupEnd();
         }
 
@@ -114,7 +114,7 @@ class AttendanceModel extends Model
             $builder->groupStart()
                     ->where('att_period', $period)
                     ->orWhere('att_period IS NULL')
-                    ->orWhere('att_status !=', 'present')
+                    ->orWhereNotIn('att_status', ['present', 'absent'])
                     ->groupEnd();
         }
 
@@ -150,16 +150,23 @@ class AttendanceModel extends Model
             ->delete();
     }
 
-    /**
-     * ลบการลาในช่วงวันที่คาบเกี่ยวกัน (สำหรับอัปเดตช่วงลาใหม่ให้ไม่ซ้ำซ้อน)
-     */
-    public function removeAttendanceRange($studentId, $startDate, $endDate)
+    public function removeAttendanceRange($studentId, $startDate, $endDate, $period = null)
     {
-        return $this->db->table('tb_attendance')
+        $builder = $this->db->table('tb_attendance')
             ->where('StudentID', $studentId)
             ->where('att_start_date <=', $endDate)
-            ->where('att_end_date >=', $startDate)
-            ->delete();
+            ->where('att_end_date >=', $startDate);
+
+        if ($period) {
+            // ลบเฉพาะข้อมูลที่ตรงกับช่วงเวลา (Period) หรือข้อมูลที่เป็นใบลาพักข้ามวัน (att_status != present/absent)
+            $builder->groupStart()
+                    ->where('att_period', $period)
+                    ->orWhere('att_period IS NULL')
+                    ->orWhereNotIn('att_status', ['present', 'absent'])
+                    ->groupEnd();
+        }
+
+        return $builder->delete();
     }
 
     /**

@@ -130,6 +130,13 @@
         box-shadow: 0 4px 14px rgba(139, 92, 246, 0.45); 
         animation: btnSelectPulse 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .status-item input[value="absent"]:checked + .status-btn { 
+        background: #64748b; 
+        color: white; 
+        border-color: #475569; 
+        box-shadow: 0 4px 14px rgba(100, 116, 139, 0.45); 
+        animation: btnSelectPulse 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     @keyframes btnSelectPulse {
         0% { transform: scale(0.92); }
@@ -259,22 +266,153 @@
     }
 
     @media (max-width: 768px) {
-        .attendance-header {
-            padding: 1.5rem;
-            text-align: center;
+        .container-p-y {
+            padding-top: 0.35rem !important;
+            padding-bottom: 0.75rem !important;
         }
+
+        /* SECTION 1: Attendance Header Card */
+        .attendance-header {
+            padding: 0.75rem 0.9rem !important;
+            border-radius: 12px !important;
+            margin-bottom: 0.45rem !important;
+            text-align: left !important;
+        }
+        .attendance-header h2 {
+            font-size: 1.05rem !important;
+            margin-bottom: 0.15rem !important;
+        }
+        .attendance-header .breadcrumb {
+            margin-bottom: 0.15rem !important;
+            font-size: 0.68rem !important;
+        }
+        .attendance-header .date-card {
+            padding: 0.35rem 0.6rem !important;
+            margin-top: 0.35rem !important;
+            border-radius: 8px !important;
+        }
+        .attendance-header .date-card label {
+            font-size: 0.68rem !important;
+            margin-bottom: 0.1rem !important;
+        }
+        .attendance-header .date-card input {
+            font-size: 0.8rem !important;
+            height: 30px !important;
+        }
+
+        /* SECTION 2: Period Selector Banner */
+        .period-selector-card {
+            margin-bottom: 0.45rem !important;
+            border-radius: 12px !important;
+        }
+        .period-selector-card .card-body {
+            padding: 0.4rem 0.5rem !important;
+        }
+        .period-tab-btn {
+            padding: 0.35rem 0.45rem !important;
+            border-radius: 8px !important;
+        }
+        .period-tab-btn span.fw-bold {
+            font-size: 0.76rem !important;
+        }
+        .period-tab-btn .badge {
+            font-size: 0.58rem !important;
+            padding: 1px 4px !important;
+        }
+
+        /* SECTION 3: Status Alert Banner */
+        #attendanceAlertBanner {
+            margin-bottom: 0.45rem !important;
+        }
+        #attendanceAlertBanner .alert {
+            padding: 0.45rem 0.65rem !important;
+            margin-bottom: 0.45rem !important;
+            border-radius: 12px !important;
+        }
+        #attendanceAlertBanner .avatar {
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            font-size: 0.9rem !important;
+        }
+        #attendanceAlertBanner h6 {
+            font-size: 0.82rem !important;
+        }
+        #attendanceAlertBanner small {
+            font-size: 0.68rem !important;
+        }
+
+        /* SECTION 4: Dedicated Batch Action 1-Click Card */
+        .batch-action-card {
+            margin-bottom: 0.45rem !important;
+            border-radius: 12px !important;
+        }
+        .batch-action-card .card-body {
+            padding: 0.45rem 0.6rem !important;
+        }
+        .batch-action-card .d-flex {
+            margin-bottom: 0.25rem !important;
+        }
+        .quick-mark-all {
+            padding: 0.2rem 0.55rem !important;
+            font-size: 0.72rem !important;
+            border-radius: 20px !important;
+        }
+
+        /* SECTION 5: Main Card Header & Counters */
+        .sb-card {
+            border-radius: 12px !important;
+        }
+        .sb-card .card-header {
+            padding: 0.45rem 0.65rem !important;
+        }
+        .sb-card .card-header h5 {
+            font-size: 0.84rem !important;
+        }
+        .sb-card .card-header .badge {
+            padding: 2px 6px !important;
+            font-size: 0.65rem !important;
+        }
+        .sb-card .card-body {
+            padding: 0.45rem !important;
+        }
+
+        /* Student Status Selector Buttons */
         .status-container {
-            max-width: 100%;
+            max-width: 100% !important;
+            padding: 2px !important;
+            border-radius: 8px !important;
         }
         .status-btn {
-            height: 44px;
-            font-size: 0.8rem;
+            height: 34px !important;
+            font-size: 0.76rem !important;
+            border-radius: 6px !important;
+            margin: 1px !important;
         }
+
+        /* Student Mobile Card Item */
+        .mobile-athlete-card {
+            padding: 0.5rem 0.65rem !important;
+            margin-bottom: 0.4rem !important;
+            border-radius: 12px !important;
+        }
+        .athlete-info {
+            margin-bottom: 0.35rem !important;
+        }
+        .athlete-avatar-box {
+            width: 36px !important;
+            height: 46px !important;
+            border-radius: 6px !important;
+            margin-right: 8px !important;
+        }
+
+        /* SweetAlert Popup */
         .swal2-popup {
-            padding: 1rem 0.75rem !important;
+            padding: 0.85rem 0.65rem !important;
+            border-radius: 16px !important;
         }
         .swal2-title {
-            font-size: 1.1rem !important;
+            font-size: 1.05rem !important;
         }
     }
     /* Interactive Period Selection Buttons */
@@ -326,10 +464,45 @@
 </style>
 
 <div class="container-xxl flex-grow-1 container-p-y">
+    <!-- Header Section (Moved to Top) -->
+    <div class="attendance-header">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-style2 mb-2">
+                        <li class="breadcrumb-item"><a href="<?= base_url('Admin/Attendance'); ?>" class="text-white opacity-75">ระบบเช็กชื่อ & ติดตามสถานะ</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page"><?= $team['team_name']; ?></li>
+                    </ol>
+                </nav>
+                <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
+                    <h2 class="text-white fw-bold mb-0 me-2"><?= $periods[$selectedPeriod]['label'] ?? 'เช็กชื่อนักเรียน' ?>: <?= $team['team_name']; ?></h2>
+                    <span class="badge bg-white text-dark fw-bold rounded-pill px-3 py-1 shadow-sm">
+                        <i class='bx <?= $periods[$selectedPeriod]['icon'] ?? 'bx-sun' ?> text-warning me-1'></i>
+                        <?= $periods[$selectedPeriod]['label'] ?? 'เช็กเข้าแถวเช้า' ?> (<?= $periods[$selectedPeriod]['time'] ?? '' ?>)
+                    </span>
+                </div>
+                <div class="mt-2 text-white-50 small">
+                    <span class="me-3"><i class='bx bx-run me-1'></i> <?= $team['team_sport_type']; ?></span>
+                    <span class="me-3"><i class='bx bx-group me-1'></i> ทั้งหมด <?= count($athletes); ?> คน</span>
+                    <span><i class='bx bx-user-check me-1'></i> ผู้คุม/ผู้บันทึก: <strong class="text-white"><?= session()->get('username') ?></strong></span>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3 mt-md-0">
+                <div class="date-card p-3">
+                    <label class="form-label fw-bold text-dark small mb-1">เลือกวันที่เช็กชื่อ</label>
+                    <div class="input-group input-group-merge">
+                        <span class="input-group-text border-0 bg-light"><i class='bx bx-calendar-event'></i></span>
+                        <input type="text" id="attendanceDate" class="form-control border-0 bg-light fw-bold" value="<?= $selectedDate; ?>" data-base-url="<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>" data-period="<?= $selectedPeriod; ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Period Selector Banner (Interactive Buttons with Status Badges) -->
-    <div class="card border-0 shadow-sm rounded-20 mb-3 overflow-hidden" style="background: #f8fafc; border: 1px solid #e2e8f0 !important;">
+    <div class="card period-selector-card border-0 shadow-sm rounded-20 mb-3 overflow-hidden" style="background: #f8fafc; border: 1px solid #e2e8f0 !important;">
         <div class="card-body p-2.5">
-            <div class="text-muted small fw-bold mb-2 px-1 d-flex align-items-center justify-content-between">
+            <div class="text-muted small fw-bold mb-2 px-1 d-flex align-items-center justify-content-between period-selector-title">
                 <div class="d-flex align-items-center gap-1">
                     <i class='bx bx-pointer text-warning fs-5'></i>
                     <span>แตะเลือกช่วงเวลาที่ต้องการเช็กชื่อ:</span>
@@ -449,43 +622,8 @@
         <?php endif; ?>
     </div>
 
-    <!-- Header Section -->
-    <div class="attendance-header">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-style2 mb-2">
-                        <li class="breadcrumb-item"><a href="<?= base_url('Admin/Attendance'); ?>" class="text-white opacity-75">ระบบเช็กชื่อ & ติดตามสถานะ</a></li>
-                        <li class="breadcrumb-item active text-white" aria-current="page"><?= $team['team_name']; ?></li>
-                    </ol>
-                </nav>
-                <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
-                    <h2 class="text-white fw-bold mb-0 me-2"><?= $periods[$selectedPeriod]['label'] ?? 'เช็กชื่อนักเรียน' ?>: <?= $team['team_name']; ?></h2>
-                    <span class="badge bg-white text-dark fw-bold rounded-pill px-3 py-1 shadow-sm">
-                        <i class='bx <?= $periods[$selectedPeriod]['icon'] ?? 'bx-sun' ?> text-warning me-1'></i>
-                        <?= $periods[$selectedPeriod]['label'] ?? 'เช็กเข้าแถวเช้า' ?> (<?= $periods[$selectedPeriod]['time'] ?? '' ?>)
-                    </span>
-                </div>
-                <div class="mt-2 text-white-50 small">
-                    <span class="me-3"><i class='bx bx-run me-1'></i> <?= $team['team_sport_type']; ?></span>
-                    <span class="me-3"><i class='bx bx-group me-1'></i> ทั้งหมด <?= count($athletes); ?> คน</span>
-                    <span><i class='bx bx-user-check me-1'></i> ผู้คุม/ผู้บันทึก: <strong class="text-white"><?= session()->get('username') ?></strong></span>
-                </div>
-            </div>
-            <div class="col-md-4 mt-3 mt-md-0">
-                <div class="date-card p-3">
-                    <label class="form-label fw-bold text-dark small mb-1">เลือกวันที่เช็กชื่อ</label>
-                    <div class="input-group input-group-merge">
-                        <span class="input-group-text border-0 bg-light"><i class='bx bx-calendar-event'></i></span>
-                        <input type="text" id="attendanceDate" class="form-control border-0 bg-light fw-bold" value="<?= $selectedDate; ?>" data-base-url="<?= base_url('Admin/Attendance/Team/' . $team['team_id']); ?>" data-period="<?= $selectedPeriod; ?>">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Dedicated Batch Action Card (แยกส่วนทางลัดเลือกสถานะทั้งทีม) -->
-    <div class="card border-0 shadow-sm rounded-20 mb-3 overflow-hidden" style="background: #ffffff; border: 1px solid #fed7aa !important;">
+    <div class="card batch-action-card border-0 shadow-sm rounded-20 mb-3 overflow-hidden" style="background: #ffffff; border: 1px solid #fed7aa !important;">
         <div class="card-body p-3">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2.5">
                 <div class="d-flex align-items-center gap-2">
@@ -501,17 +639,20 @@
                 <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="present">
                     <i class='bx bx-check-circle fs-5'></i> "มา" ทั้งทีม
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="home">
-                    <i class='bx bx-home fs-5'></i> "กลับบ้าน" ทั้งทีม
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="competition">
-                    <i class='bx bx-trophy fs-5'></i> "ไปแข่งขัน" ทั้งทีม
+                <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="absent">
+                    <i class='bx bx-x-circle fs-5'></i> "ไม่มา" ทั้งทีม
                 </button>
                 <button type="button" class="btn btn-outline-warning btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm text-dark flex-shrink-0" data-status="sick">
                     <i class='bx bx-plus-medical fs-5'></i> "ลาป่วย" ทั้งทีม
                 </button>
                 <button type="button" class="btn btn-outline-info btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="personal">
                     <i class='bx bx-briefcase fs-5'></i> "ลากิจ" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="home">
+                    <i class='bx bx-home fs-5'></i> "กลับบ้าน" ทั้งทีม
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3 py-2 quick-mark-all d-inline-flex align-items-center gap-1 shadow-sm flex-shrink-0" data-status="competition">
+                    <i class='bx bx-trophy fs-5'></i> "ไปแข่งขัน" ทั้งทีม
                 </button>
             </div>
         </div>
@@ -527,6 +668,7 @@
                     </h5>
                     <div class="d-flex gap-2 align-items-center flex-wrap">
                         <div class="badge bg-label-success rounded-pill px-3 py-2 fw-bold" id="presentBadge">0 มา</div>
+                        <div class="badge rounded-pill px-3 py-2 fw-bold" id="absentBadge" style="background: rgba(100, 116, 139, 0.16); color: #475569;">0 ไม่มา</div>
                         <div class="badge bg-label-warning rounded-pill px-3 py-2 fw-bold" id="sickBadge">0 ลาป่วย</div>
                         <div class="badge bg-label-info rounded-pill px-3 py-2 fw-bold" id="personalBadge">0 ลากิจ</div>
                         <div class="badge bg-label-danger rounded-pill px-3 py-2 fw-bold" id="homeBadge">0 กลับบ้าน</div>
@@ -596,6 +738,10 @@
                                                     <label class="status-btn" for="p_<?= $row['StudentID']; ?>">มา</label>
                                                 </div>
                                                 <div class="status-item">
+                                                    <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="ab_<?= $row['StudentID']; ?>" value="absent" <?= $currentStatus == 'absent' ? 'checked' : ''; ?>>
+                                                    <label class="status-btn" for="ab_<?= $row['StudentID']; ?>">ไม่มา</label>
+                                                </div>
+                                                <div class="status-item">
                                                     <input type="radio" class="status-btn-radio" name="st_<?= $row['StudentID']; ?>" id="s_<?= $row['StudentID']; ?>" value="sick" <?= $currentStatus == 'sick' ? 'checked' : ''; ?>>
                                                     <label class="status-btn" for="s_<?= $row['StudentID']; ?>">ลาป่วย</label>
                                                 </div>
@@ -648,11 +794,13 @@
                                     <div class="athlete-avatar-box p-0 overflow-hidden">
                                         <img src="<?= $photoUrl ?>" onerror="this.src='<?= $fallbackUrl ?>'" style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
-                                    <div class="flex-grow-1">
-                                        <div class="fw-bold text-dark lh-1 mb-1" style="font-size: 1rem;"><?= $row['StudentPrefix'] . $row['StudentFirstName'] . ' ' . $row['StudentLastName']; ?></div>
-                                        <div class="text-muted small">
-                                            <span class="me-2">#<?= $row['StudentCode']; ?></span>
-                                            <span>ชั้น: <?= $row['StudentClass']; ?></span>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="fw-bold text-dark lh-1 text-truncate" style="font-size: 0.9rem;"><?= $row['StudentPrefix'] . $row['StudentFirstName'] . ' ' . $row['StudentLastName']; ?></span>
+                                            <span class="badge bg-label-primary rounded-pill px-2 py-0.5 fw-bold flex-shrink-0 ms-1" style="font-size: 0.68rem;"><?= $row['StudentClass']; ?></span>
+                                        </div>
+                                        <div class="text-muted" style="font-size: 0.72rem; line-height: 1.2; margin-top: 2px;">
+                                            <span>#<?= $row['StudentCode']; ?></span>
                                         </div>
                                         <?php if (isset($attendanceMap[$row['StudentID']]) && !empty($currentStatus) && $currentStatus !== 'present'): 
                                             $att = $attendanceMap[$row['StudentID']];
@@ -666,8 +814,8 @@
                                             $rangeStr = ($sDate === $eDate) ? $sText : ($sText . ' - ' . $eText);
                                         ?>
                                             <div class="mt-1 leave-badge-info">
-                                                <span class="badge bg-label-<?= $stColor ?> fw-bold" style="font-size: 0.72rem;">
-                                                    <i class="bx bx-calendar-event me-1"></i><?= $stLabel ?> <?= $diffDays ?> วัน (<?= $rangeStr ?>)
+                                                <span class="badge bg-label-<?= $stColor ?> fw-bold" style="font-size: 0.68rem; padding: 2px 6px;">
+                                                    <i class="bx bx-calendar-event me-0.5"></i><?= $stLabel ?> <?= $diffDays ?> วัน (<?= $rangeStr ?>)
                                                 </span>
                                             </div>
                                         <?php endif; ?>
@@ -677,6 +825,10 @@
                                     <div class="status-item">
                                         <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mp_<?= $row['StudentID']; ?>" value="present" <?= ($currentStatus == 'present') ? 'checked' : ''; ?>>
                                         <label class="status-btn" for="mp_<?= $row['StudentID']; ?>">มา</label>
+                                    </div>
+                                    <div class="status-item">
+                                        <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="mab_<?= $row['StudentID']; ?>" value="absent" <?= $currentStatus == 'absent' ? 'checked' : ''; ?>>
+                                        <label class="status-btn" for="mab_<?= $row['StudentID']; ?>">ไม่มา</label>
                                     </div>
                                     <div class="status-item">
                                         <input type="radio" class="status-btn-radio" name="mst_<?= $row['StudentID']; ?>" id="ms_<?= $row['StudentID']; ?>" value="sick" <?= $currentStatus == 'sick' ? 'checked' : ''; ?>>
@@ -737,11 +889,12 @@ $(document).ready(function() {
             'sick': 'ลาป่วย',
             'personal': 'ลากิจธุระ',
             'home': 'ลากิจกลับบ้าน',
-            'competition': 'ไปแข่งขัน'
+            'competition': 'ไปแข่งขัน',
+            'absent': 'ขาดซ้อม / ขาดเรียน'
         };
         const statusLabel = statusLabels[targetStatus] || targetStatus;
 
-        if (targetStatus === 'present') {
+        if (targetStatus === 'present' || targetStatus === 'absent') {
             Swal.fire({
                 title: `ยืนยันบันทึก "${statusLabel}" ทั้งทีม?`,
                 text: `ระบบจะกำหนดสถานะนักเรียนทุกคนในทีมเป็น "${statusLabel}"`,
@@ -749,7 +902,7 @@ $(document).ready(function() {
                 showCancelButton: true,
                 confirmButtonText: '<i class="bx bx-check-double me-1"></i> ยืนยันบันทึก',
                 cancelButtonText: 'ยกเลิก',
-                confirmButtonColor: '#fd7e14'
+                confirmButtonColor: targetStatus === 'present' ? '#10b981' : '#64748b'
             }).then((res) => {
                 if (res.isConfirmed) {
                     saveBatchAttendance(targetStatus, currentDateStr, currentDateStr, '');
@@ -977,7 +1130,7 @@ $(document).ready(function() {
     const currentUsername = "<?= session()->get('username') ?>";
 
     function updateLiveStats() {
-        let p = 0, s = 0, pe = 0, h = 0, c = 0;
+        let p = 0, s = 0, pe = 0, h = 0, c = 0, ab = 0;
         let checkedStudentIds = new Set();
 
         $('input.status-btn-radio:checked').each(function() {
@@ -996,6 +1149,7 @@ $(document).ready(function() {
                 else if(val === 'personal') pe++;
                 else if(val === 'home') h++;
                 else if(val === 'competition') c++;
+                else if(val === 'absent') ab++;
             }
         });
 
@@ -1004,6 +1158,7 @@ $(document).ready(function() {
         $('#personalBadge').text(pe + ' กิจธุระ');
         $('#homeBadge').text(h + ' กลับบ้าน');
         $('#competitionBadge').text(c + ' แข่งขัน');
+        $('#absentBadge').text(ab + ' ไม่มา');
 
         // Dynamic Alert Banner Update
         const checkedCount = checkedStudentIds.size;
@@ -1089,8 +1244,8 @@ $(document).ready(function() {
         
         const prevVal = $(this).data('prev') || '';
 
-        if (val === 'present') {
-            saveStudentAttendance(row);
+        if (val === 'present' || val === 'absent') {
+            saveStudentAttendance(row, null, val);
             updateLiveStats();
         } else {
             // หาชื่อนักเรียนจาก Desktop (.fw-semibold) หรือ Mobile (.fw-bold)
@@ -1255,11 +1410,18 @@ $(document).ready(function() {
         $(this).data('prev', currentChecked);
     });
 
-    function saveStudentAttendance(row, endDate = null) {
+    function saveStudentAttendance(row, endDate = null, statusOverride = null) {
         const studentId = row.data('student-id');
-        const status = row.find('.status-btn-radio:checked').val();
+        // ใช้ค่า statusOverride ที่ส่งมาตรงๆ จาก onChange handler (ปลอดภัยกว่าการ re-query)
+        const status = statusOverride || $(`.status-btn-radio[name="st_${studentId}"]:checked, .status-btn-radio[name="mst_${studentId}"]:checked`).first().val();
         const date = $('#attendanceDate').val();
         const period = $('#attendanceDate').data('period') || 'morning';
+
+        // ถ้าไม่มีค่า status ไม่ต้องส่ง AJAX
+        if (!status) {
+            console.warn('saveStudentAttendance: status is empty for student', studentId);
+            return;
+        }
 
         $.ajax({
             url: '<?= base_url('Admin/Attendance/Save'); ?>',
@@ -1276,10 +1438,12 @@ $(document).ready(function() {
             success: function(res) {
                 if(res.success) {
                     // ถ้าเปลี่ยนเป็น "อยู่" ให้ลบป้ายวันลาและหมายเหตุออกจาก UI ทันที
-                    if (status === 'present') {
+                    // ถ้าเปลี่ยนเป็น "มา" หรือ "ไม่มา" ให้ลบป้ายวันลาและหมายเหตุออกจาก UI ทันที
+                    if (status === 'present' || status === 'absent') {
                         // ลบป้ายวันลาทั้ง Desktop และ Mobile ที่ตรงกับ student ID เดียวกัน
                         $(`.athlete-row[data-student-id="${studentId}"]`).each(function() {
                             $(this).find('.text-primary.fw-bold').remove();  // ป้ายช่วงวันลา
+                            $(this).find('.leave-badge-info').remove();     // กล่องวันลา
                             $(this).find('.text-muted.italic').remove();     // หมายเหตุ
                             // เปลี่ยนข้อความหมายเหตุในตาราง Desktop ให้เป็น "-"
                             $(this).find('td.text-center .text-muted.small').text('-');
@@ -1297,6 +1461,10 @@ $(document).ready(function() {
                         icon: 'success',
                         title: res.message
                     });
+                } else {
+                    Swal.fire('ข้อผิดพลาด', res.message || 'ไม่สามารถบันทึกข้อมูลได้', 'error');
+                    // Revert radio button checked state visually
+                    $(`.status-btn-radio[name="st_${studentId}"], .status-btn-radio[name="mst_${studentId}"]`).prop('checked', false);
                 }
             },
             error: function() {

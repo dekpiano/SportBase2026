@@ -73,6 +73,8 @@ $routes->post('Admin/Attendance/MarkAllPresent', 'ConAdminAttendance::markAllPre
 $routes->post('Admin/Attendance/MarkAllStatus', 'ConAdminAttendance::markAllStatus');
 $routes->get('Admin/Attendance/History', 'ConAdminAttendance::history');
 $routes->get('Admin/Attendance/History/(:num)', 'ConAdminAttendance::history/$1');
+$routes->get('Admin/Attendance/ExportExcel', 'ConAdminAttendance::exportExcel');
+$routes->get('Admin/Attendance/PrintHistory', 'ConAdminAttendance::printHistory');
 
 // Match Schedule Management (ตารางการแข่งขัน)
 $routes->get('Admin/Match', 'ConAdminMatch::index');

@@ -213,9 +213,16 @@
 
     <!-- History List (Desktop Table + Mobile Cards) -->
     <div class="card border-0 shadow-sm rounded-20 overflow-hidden">
-        <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+        <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
             <h5 class="mb-0 fw-bold"><i class='bx bx-list-ul me-2 text-primary'></i>รายละเอียดประวัติการเช็กชื่อ & การลา</h5>
-            <button class="btn btn-sm btn-outline-secondary rounded-pill fw-bold" onclick="window.print()"><i class='bx bx-printer me-1'></i> พิมพ์รายงาน</button>
+            <div class="d-flex align-items-center gap-2">
+                <a href="<?= base_url('Admin/Attendance/ExportExcel'); ?>?team=<?= $selectedTeam; ?>&start=<?= $startDate; ?>&end=<?= $endDate; ?>" class="btn btn-sm btn-success rounded-pill fw-bold text-white shadow-sm">
+                    <i class='bx bx-file me-1'></i> ดาวน์โหลดรายงาน Excel
+                </a>
+                <a href="<?= base_url('Admin/Attendance/PrintHistory'); ?>?team=<?= $selectedTeam; ?>&start=<?= $startDate; ?>&end=<?= $endDate; ?>" target="_blank" class="btn btn-sm btn-outline-secondary rounded-pill fw-bold">
+                    <i class='bx bx-printer me-1'></i> พิมพ์รายงาน (A4)
+                </a>
+            </div>
         </div>
         
         <!-- Desktop View Table -->
